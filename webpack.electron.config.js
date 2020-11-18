@@ -1,3 +1,5 @@
+/*https://medium.com/better-programming/start-a-new-electron-app-with-react-and-typescript-cdd6d9997933 */
+
 const path = require('path');
 
 module.exports = {

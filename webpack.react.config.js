@@ -1,3 +1,5 @@
+/*https://medium.com/better-programming/start-a-new-electron-app-with-react-and-typescript-cdd6d9997933 */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -34,6 +36,8 @@ module.exports = {
         publicPath: './'
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+          title: ' Squrl'
+        }),
     ]
 }

@@ -30,4 +30,10 @@ export const SideNavTabs = [
     icon: <GiIcons.GiLeafSwirl />,
     cName: 'nav-text'
   },
+  {
+    title: 'About',
+    path: '/About',
+    icon: <GiIcons.GiLeafSwirl />,
+    cName: 'nav-text'
+  },
 ]

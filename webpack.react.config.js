@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     resolve : {
@@ -18,6 +19,17 @@ module.exports = {
                     loader: 'babel-loader',
                 },
             },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                  ],
+            },
         ],
     },
     devServer: {
@@ -35,7 +47,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Squrl'
+            title: "Squrl"
         }),
+        new FaviconsWebpackPlugin(path.resolve(__dirname,'./assets/logo.svg'))
     ]
 }

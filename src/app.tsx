@@ -1,17 +1,38 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Main from './components/main'
-import Generator from './components/generator';
+//react-router-dom
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+//Styles
+import './Styles/App.scss'
+
+//components
+import SideNav from './components/SideNav';
+import Home from './testPages/home';
+import { dataGen } from './testPages/dataGen';
+import { About } from './testPages/About';
+import { dataViz } from './testPages/dataViz';
+import Generator from './components/generator'
+
 
 const mainElement = document.createElement('div');
 document.body.appendChild(mainElement);
 
-const App = () =>{
+
+
+const App: React.FC = () => {
     return (
-        <div>
-            <Main />
-            <Generator />
-        </div>
+        <>
+            <Router>
+                <SideNav/>
+                <Switch>
+                    <Route path='/' exact component={Home} />
+                    <Route path='/dataGen' component={Generator} />
+                    <Route path='/dataViz' component={dataViz}  />
+                    <Route path='/About' component={About} />
+                </Switch>
+            </Router>
+        </>
     )
 }
 

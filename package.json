@@ -25,8 +25,13 @@
     "@babel/preset-react": "^7.12.5",
     "@babel/preset-typescript": "^7.12.1",
     "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
     "electron": "^11.0.0",
+    "favicons-webpack-plugin": "^4.2.0",
     "html-webpack-plugin": "^4.5.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.11.0"
@@ -34,7 +39,10 @@
   "dependencies": {
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
+    "@types/react-router-dom": "^5.1.6",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-icons": "^3.11.0",
+    "react-router-dom": "^5.2.0"
   }
 }

@@ -108,13 +108,17 @@ var mainWindow;
 
 function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
-    width: 800,
-    height: 600,
+    width: 1600,
+    height: 1400,
     icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true
     }
-  });
+  }); //macOS dock settings for logo
+
+  if (process.platform === 'darwin') {
+    electron__WEBPACK_IMPORTED_MODULE_0__["app"].dock.setIcon("./assets/templogo.png");
+  }
 
   if (true) {
     mainWindow.loadURL("http://localhost:3000");

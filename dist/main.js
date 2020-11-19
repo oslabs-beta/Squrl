@@ -110,8 +110,6 @@ function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
     width: 800,
     height: 600,
-    transparent: true,
-    frame: false,
     icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true

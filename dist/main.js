@@ -110,6 +110,9 @@ function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
     width: 800,
     height: 600,
+    transparent: true,
+    frame: false,
+    icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true
     }
@@ -119,12 +122,12 @@ function createWindow() {
     mainWindow.loadURL("http://localhost:3000");
   } else {}
 
-  mainWindow.on('closed', function () {
+  mainWindow.on("closed", function () {
     mainWindow = null;
   });
 }
 
-electron__WEBPACK_IMPORTED_MODULE_0__["app"].on('ready', createWindow);
+electron__WEBPACK_IMPORTED_MODULE_0__["app"].on("ready", createWindow);
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true;
 
 /***/ }),

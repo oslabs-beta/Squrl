@@ -9,8 +9,8 @@ import './Styles/App.scss'
 //components
 import SideNav from './components/SideNav';
 import Home from './testPages/home';
-import { dataGen } from './testPages/dataGen';
 import { About } from './testPages/About';
+import { Settings } from './testPages/settings';
 import { dataViz } from './testPages/dataViz';
 import Generator from './components/generator'
 
@@ -30,6 +30,7 @@ const App: React.FC = () => {
                     <Route path='/dataGen' component={Generator} />
                     <Route path='/dataViz' component={dataViz}  />
                     <Route path='/About' component={About} />
+                    <Route path='/settings' component={Settings} />
                 </Switch>
             </Router>
         </>

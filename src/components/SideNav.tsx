@@ -9,35 +9,24 @@ import {IconContext} from 'react-icons'
 
 
 const SideNav: React.FC = () => {
-  const [visible, setVisible] = useState<boolean>(false)
+//   const [visible, setVisible] = useState<boolean>(false)
 
-  //toggle between showing sidenav by alternating [visible] in state  between true or false
-  const showSideNav = () => {
-    setVisible(!visible)
-  }
+//   //toggle between showing sidenav by alternating [visible] in state  between true or false
+//   const showSideNav = () => {
+//     setVisible(!visible)
+//   }
   
   return (
     <>
-    <IconContext.Provider value={{color:'3F7D20'}} >
-      <div className ='side-nav' onClick={showSideNav} >
-        <Link to='#' className='menu-bar'>
-          <Icons.FaBars />
-        </Link>
-      </div>
-      <nav className={ visible ? 'side-nav active' : 'nav-menu'}>
+    <IconContext.Provider value={{color:'3F7D20', size:'26px'}} >
+      <nav className='side-nav-active'>
         <ul className='nav-menu-items' >
-          <li className= 'side-nav-toggle' onClick={showSideNav} >
-            <Link to='#' className='menu-bars'>
-              <AiIcons.AiOutlineClose/>
-            </Link>
-          </li>
           {SideNavTabs.map((tab ,index) => (
-              <li key={index} className={tab.cName}>
-                  <Link to={tab.path}>
-                     {tab.icon} 
-                     <span>{tab.title}</span>
-                  </Link>
-              </li>
+            <li key={index} className={tab.cName} title={tab.title}>
+              <Link to={tab.path}>
+                {tab.icon} 
+              </Link>
+            </li>
           ))}
         </ul> 
       </nav>

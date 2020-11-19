@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import Fields from './generatorChildren/fields'
 import Exports from './generatorChildren/exports'
 
 type inputObj = {
@@ -75,6 +74,7 @@ const Generator: React.FC = () => {
         )
       })}
       <button onClick={addInput} id="addColumn" > Add Another Column</button>
+      {/* exports component holds the number of rows, table name, duplicate table, format, download */}
       <Exports />
     </div >
   )

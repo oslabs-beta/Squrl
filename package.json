@@ -42,6 +42,8 @@
     "@types/react-router-dom": "^5.1.6",
     "cross-env": "^7.0.2",
     "custom-electron-titlebar": "^3.2.5",
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",

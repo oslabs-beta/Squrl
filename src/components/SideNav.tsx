@@ -9,6 +9,7 @@ import { IconContext } from 'react-icons'
 
 
 const SideNav: React.FC = () => {
+<<<<<<< HEAD
   const [visible, setVisible] = useState<boolean>(false)
 
   //toggle between showing sidenav by alternating [visible] in state  between true or false
@@ -36,6 +37,19 @@ const SideNav: React.FC = () => {
                 <Link to={tab.path}>
                   {tab.icon}
                   <span>{tab.title}</span>
+=======
+  return (
+    <>
+      <IconContext.Provider value={{ color: '3F7D20', size: '26px' }} >
+        <nav className='side-nav-active'>
+          <ul className='nav-menu-items' >
+            {/* loops through SideNavTab array holding tab info --> creates li w/ link to new page via Router */}
+            {SideNavTabs.map((tab, index) => (
+              <li key={index} className={tab.cName} title={tab.title}>
+                <Link to={tab.path}>
+                  {/* component that holds icon */}
+                  {tab.icon}
+>>>>>>> e8d1a750a82ff9050cd8ba7873e7368cffb55049
                 </Link>
               </li>
             ))}

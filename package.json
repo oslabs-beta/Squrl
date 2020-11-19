@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:electron": "cross-env NODE_ENV=development webpack --config webpack.electron.config.js --mode development && electron .",
+<<<<<<< HEAD
     "dev:react": " cross-env NODE_ENV=development webpack-dev-server --config webpack.react.config.js --mode development"
+=======
+    "dev:react": "cross-env NODE_ENV=development webpack-dev-server --config webpack.react.config.js --mode development"
+>>>>>>> e8d1a750a82ff9050cd8ba7873e7368cffb55049
   },
   "repository": {
     "type": "git",
@@ -40,6 +44,10 @@
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.1.6",
+    "cross-env": "^7.0.2",
+    "custom-electron-titlebar": "^3.2.5",
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",

@@ -1,15 +1,25 @@
-import React from 'react';
+// import React from 'react';
 
+// interface props {
+//   number: number;
+// }
 
-const Fields = () => {
-    return (
-    <div>
-      <input placeholder="Field Name"></input>
-      <select placeholder="Data Type"><option>Data Type</option></select>
-     <input placeholder="% empty"></input>
-     <button>Add Another Column</button>
-   </div>
-    )
-}
+// const Fields: React.FC<props> = ({ number }) => {
 
-export default Fields;
+//   const logger = (e: React.ChangeEvent) => {
+//     console.log(e.target)
+//   }
+//   return (
+//     <div key={i}>
+//       <input value={el} placeholder="Field Name" onChange={(e) => handleChange(e, i)}></input>
+//       <select id="dataType" placeholder="Data Type"><option>Data Type</option></select>
+//       <div id="percentagediv">
+//         <input id="empty" value="0"></input><h3>% Empty</h3>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Fields;
+
+// // onChange = { logger } id = {`input-${number}`}

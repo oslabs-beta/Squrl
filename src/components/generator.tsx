@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Fields from './generatorChildren/fields'
+// import Fields from './generatorChildren/fields'
 import Exports from './generatorChildren/exports'
 
 
@@ -33,16 +33,16 @@ const Generator: React.FC = () => {
         return (
           <div key={i}>
             <input value={el} placeholder="Field Name" onChange={(e) => handleChange(e, i)}></input>
-            <select id="dataType" placeholder="Data Type"><option>Data Type</option></select>
+            < select id="dataType" placeholder="Data Type" > <option>Data Type</option></select>
             <div id="percentagediv">
               <input id="empty" placeholder="0"></input><h3>% Empty</h3>
             </div>
-          </div>
+          </div >
         )
       })}
       <button onClick={addInput} id="addColumn" > Add Another Column</button>
       <Exports />
-    </div>
+    </div >
   )
 
 }

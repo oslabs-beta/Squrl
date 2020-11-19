@@ -32,27 +32,6 @@ module.exports = {
           "sass-loader",
         ],
       },
-<<<<<<< HEAD
-      devServer: {
-        contentBase: path.join(__dirname, '../dist/renderer'),
-        historyApiFallback: true,
-        compress: true,
-        hot: true,
-        port: 3000,
-        publicPath: '/',
-      },
-      output: {
-        path: path.resolve(__dirname, '../dist/renderer'),
-        filename: 'js/[name].js',
-        publicPath: './'
-      },
-      plugins: [
-        new HtmlWebpackPlugin({
-          title: "Squrl"
-        }),
-        new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/logo.svg'))
-      ]
-=======
     ],
   },
   devServer: {
@@ -74,5 +53,4 @@ module.exports = {
     }),
     new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/logo.svg')),
   ]
->>>>>>> e8d1a750a82ff9050cd8ba7873e7368cffb55049
 }

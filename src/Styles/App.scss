@@ -22,6 +22,90 @@ button {
   // color: black;
   // background-color: purple;
 }
+
 body {
   background-color: #25272d;
+}
+
+
+// fields.tsx input fields for dunmmy generator
+
+//fulll div surrounding entire container
+#gencontainer {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  width: 500px;
+}
+
+//full div surrounding field name, data type, % empty and add another column button
+#geninputs {
+  display:flex;
+  flex-direction: column;
+}
+
+#fieldName {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dataType {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+
+#empty{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#addColumn {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+#percentagediv {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+
+#tablefields {
+  margin-bottom: 50px;
+  display: inline-flex;
+}
+
+#rowsfield {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: inline-flex;
+}
+
+#duplicate {
+   margin-bottom: 50px;
+  display: inline-flex;
+}
+
+#formatoption {
+  width: 90px;
+  height: 45px;
+}
+
+#formatinput {
+  display: inline-flex;
+}
+
+#download {
+  display: flex;
+  margin-top: 30px;
+}
+
+#gennytitle {
+  margin-bottom: 100px;
 }

@@ -1,22 +1,25 @@
-import React, {useState} from 'react';
+// import React from 'react';
 
-interface props {
-  number: number;
-  value: string;
-  dataType: string;
-  empty: number;
-  callback : any
-}
+// interface props {
+//   number: number;
+// }
 
-const Fields: React.FC<props> = ({ number, value, dataType, empty, callback}) => {
+// const Fields: React.FC<props> = ({ number }) => {
 
-  return (
-    <div className={`geninput`} >
-      <input onChange={callback} className={`${number}`} name={`input-${number}`} value={value} id="input" placeholder="Field Name"></input>
-      <select id="dataType" placeholder="Data Type"><option>Data Type</option></select>
-      <input id="empty" placeholder="% empty"></input><h3>%</h3>
-    </div >
-  )
-}
+//   const logger = (e: React.ChangeEvent) => {
+//     console.log(e.target)
+//   }
+//   return (
+//     <div key={i}>
+//       <input value={el} placeholder="Field Name" onChange={(e) => handleChange(e, i)}></input>
+//       <select id="dataType" placeholder="Data Type"><option>Data Type</option></select>
+//       <div id="percentagediv">
+//         <input id="empty" value="0"></input><h3>% Empty</h3>
+//       </div>
+//     </div>
+//   )
+// }
 
-export default Fields;
+// export default Fields;
+
+// // onChange = { logger } id = {`input-${number}`}

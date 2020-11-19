@@ -4,6 +4,7 @@ import * as GiIcons from "react-icons/gi";
 import * as Vscicons from "react-icons/vsc";
 //GiAcorn
 
+//array that holds the icons in sidebar
 export const SideNavTabs = [
   {
     title: "Home",

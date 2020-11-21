@@ -1,6 +1,9 @@
+//creates shell of desktop application in electron
+
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
 import * as url from "url";
+import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer'
 
 let mainWindow: Electron.BrowserWindow | null;
 
@@ -30,5 +33,9 @@ function createWindow() {
   });
 }
 
-app.on("ready", createWindow);
+app.on("ready", createWindow)
+
 app.allowRendererProcessReuse = true;
+
+
+//exports into webpack.electorn.config

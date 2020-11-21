@@ -1,0 +1,1 @@
+{"version":3,"file":"fakerRoute.js","sourceRoot":"","sources":["../../../backend/routes/fakerRoute.ts"],"names":[],"mappings":";;;;;;AAAA,sDAAmD;AAEtC,QAAA,MAAM,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAC;AAEvC,cAAM,CAAC,GAAG,CAAC,OAAO,EAAE,CAAC,GAAa,EAAE,GAAa,EAAE,EAAE;IACjD,GAAG,CAAC,IAAI,CAAC,iCAAiC,CAAC,CAAA;AAC/C,CAAC,CAAC,CAAA"}

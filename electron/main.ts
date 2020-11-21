@@ -1,6 +1,8 @@
 import { app, BrowserWindow } from "electron";
+import installExtension, {REACT_DEVELOPER_TOOLS} from "electron-devtools-installer"
 import * as path from "path";
 import * as url from "url";
+import('react-devtools-electron')
 
 let mainWindow: Electron.BrowserWindow | null;
 
@@ -17,7 +19,6 @@ function createWindow() {
   if (process.platform === 'darwin') {
     app.dock.setIcon("./assets/templogo.png");
   }
-
   if (process.env.NODE_ENV === "development") {
     mainWindow.loadURL(`http://localhost:3000`);
   } else {

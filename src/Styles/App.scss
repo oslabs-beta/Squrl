@@ -45,8 +45,9 @@ body {
 
 #tables {
   display: inline-flex;
-  flex-wrap: nowrap;
-  width: 500px;
+  flex-wrap: wrap;
+  // width: 1500px;
+  // margin-right: 50px;
   justify-content: center;
 }
 //full div surrounding field name, data type, % empty and add another column button
@@ -73,6 +74,14 @@ body {
 
 // dropdown for data type faker
 #dataType {
+  height: 50px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+}
+#category {
   height: 50px;
   width: 170px;
   display: flex;

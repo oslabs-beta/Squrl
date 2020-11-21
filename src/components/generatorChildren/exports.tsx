@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 // exports includes lower buttons on generator page
 const Exports = () => {
   return (
@@ -16,7 +17,7 @@ const Exports = () => {
       </div>
       {/* button to duplicate your table (option to change name) */}
       <div id="duplicatedata">
-        <button id="duplicate">Duplicate Table</button>
+        <button id="duplicate">Create New Table</button>
       </div>
       {/* format to export dummy data */}
       <div id="formatinput">

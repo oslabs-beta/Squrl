@@ -1,84 +1,101 @@
 import React, { useState } from 'react';
 import Exports from './generatorChildren/exports'
+const faker = require('faker')
+
 
 type inputObj = {
-  input: string;
-  type: string;
+  columnName: string;
+  category: string;
+  dataType: string; 
   percent: string;
 }
 const initVal = {
-  input : '',
-  type: '',
-  percent: "0"
+  columnName: '',
+  category: 'address',
+  dataType: '',
+  percent: '0'
 }
 
 const Generator: React.FC = () => {
-
-
+  //values is entire array of objects holding all table info
   const [values, setValues] = useState<inputObj[]>([])
-
+  //invoked on "add another colum" adds {} to values array
   function addInput() {
     setValues([...values, initVal])
   }
-  //update input value when a user types in new value
+
+  //update column name input when a user types in new value
   function handleChange(e: React.ChangeEvent<HTMLInputElement>, i: number) {
     let value = e.target.value
-    console.log(values)
-    setValues(prevValue => [...prevValue.slice(0, i), {...values[i], input : value}, ...prevValue.slice(i + 1)])
+    console.log(value)
+    setValues(prevValue => [...prevValue.slice(0, i), {...values[i], columnName : value}, ...prevValue.slice(i + 1)])
   }
-  //update option type when a new data type is selected
-  function handleOption(e: React.ChangeEvent<HTMLSelectElement>, i :number){
+  //update the category selected by the user from the drop down
+  function handleCategory(e: any, i :number){
     let value = e.target.value
-    setValues(prev => [...prev.slice(0, i), {...values[i], type: value},...prev.slice(i + 1)])
-    console.log(values)
+    setValues(prev => [...prev.slice(0, i), {...values[i], category: value}, ...prev.slice(i + 1)])
+    return value
+  }
+//updates data type when changed drop down button
+  function handleType(e: any, i :number){
+    let value = e.target.value
+    setValues(prev => [...prev.slice(0, i), {...values[i], dataType: value}, ...prev.slice(i + 1)])
   }
   //update the % empty value when percent is changed
   function handlePercent(e: React.ChangeEvent<HTMLInputElement>, i:number){
     let value = e.target.value;
-    //for testing use this:
-    // setValues(prev=> {
-    //   let val = [...prev.slice(0, i),{...values[i], percent:(value)},...prev.slice(i + 1)]
-    //   console.log(val)
-    //   return val
-    // })
     setValues(prev=> [...prev.slice(0, i),{...values[i], percent:(value)},...prev.slice(i + 1)])
     console.log(values)
   }
+
   return (
     <div id="gencontainer">
       <h1 id="gennytitle"> Dummy Data Generator </h1>
+      <div id="tables">
       {values.map((el, i) => {
         return (
           <div key={i}>
-            <input value={el.input} placeholder="Field Name" onChange={(e) => handleChange(e, i)}></input>
+            <input value={el.columnName} placeholder="Column Name" onChange={(e) => handleChange(e, i)}></input>
             <div>
-            <label>Choose a Data Type</label>
+            <label>Choose a Data Category</label>
             </div>
-            < select id="dataType" onChange={(e)=>handleOption(e,i)}>
-              <option value="first_name">Frist Name</option>
-              <option value="last_name">Last Name</option>
-              <option value="st_address">Street Address</option>
-              <option value="city">City</option>
-              <option value="state">State</option>
-              <option value="zip_code">Zip Code</option>
-              <option value="phone_number">Phone Number</option>
-              <option value="email">Email</option>
+            <select id="category" onChange={(e)=>handleCategory(e,i)}>
+              <option value="address">Address</option>
+              <option value="commerce">Commerce</option>
+              <option value="company">Company</option>
+              <option value="database">Database</option>
+              <option value="date">Date</option>
+              <option value="fake">Fake</option>
+              <option value="finance">Finance</option>
+              <option value="hacker">Hacker</option>
+              <option value="helpers">Helpers</option>
               <option value="image">Image</option>
-              <option value="username">Username</option>
-              <option value="password">Password</option>
-              </select>
-            <div id="percentagediv">
-              <input onChange={(e)=>handlePercent(e,i)} type='number' min='0' max='100' value={el.percent} id="empty" placeholder="0"></input><h3>% Empty</h3>
+              <option value="internet">Internet</option>
+              <option value="lorem">Lorem</option>
+              <option value="name">Name</option>
+              <option value="phone">Phone</option>
+              <option value="random">Random</option>
+              <option value="system">System</option>
+            </select>
+
+              <select id="datatype" onClick={(e)=>handleType(e,i)}> 
+                  {values[i].category ? Object.keys(faker[values[i].category]).map((el , i)=>{
+                    return (<option key={i}> {el} </option>)
+                  }):<option>N/a</option>}
+              </select><br></br>
+
+             <div id="percentagediv">
+              <input onChange={(e)=>handlePercent(e,i)} type='number' min='0' max='100' value={el.percent} id="empty" placeholder="0"></input><h3 id="emptyText">% Empty</h3>
             </div>
           </div >
         )
       })}
+      </div>
       <button onClick={addInput} id="addColumn" > Add Another Column</button>
       {/* exports component holds the number of rows, table name, duplicate table, format, download */}
       <Exports />
     </div >
   )
-
 }
 
 export default Generator;

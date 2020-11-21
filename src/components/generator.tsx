@@ -2,70 +2,71 @@ import React, { useState } from 'react';
 import Exports from './generatorChildren/exports'
 const faker = require('faker')
 
-
+//assign types for TS
 type inputObj = {
   columnName: string;
   category: string;
-  dataType: string; 
+  subcategory: string; 
   percent: string;
 }
-const initVal = {
+//create initial state for Columns of data
+const initColumnState = {
   columnName: '',
   category: 'address',
-  dataType: '',
+  subcategory: '',
   percent: '0'
 }
 
 const Generator: React.FC = () => {
-  //values is entire array of objects holding all table info
-  const [values, setValues] = useState<inputObj[]>([])
 
-  //passes current state + empty obj
-  function addInput() {
-    setValues([...values, initVal])
-  }
+  //genState is entire array of objects holding all table info
+  const [genState, setGenState] = useState<inputObj[]>([]);
+
+  //invoked on "add another colum" adds {} to genState array
+  function addNewColumn() {
+    setGenState([...genState, initColumnState]);
+  };
+
   //update column name input when a user types in new value
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>, i: number) {
-    let value = e.target.value
-    console.log(value)
-    setValues(prevValue => [...prevValue.slice(0, i), {...values[i], columnName : value}, ...prevValue.slice(i + 1)])
-  }
+  function handleColumnName(event: React.ChangeEvent<HTMLInputElement>, index: number) {
+    let value = event.target.value;
+    setGenState(prevValue => [...prevValue.slice(0, index), {...genState[index], columnName : value}, ...prevValue.slice(index + 1)]);
+  };
+
   //update the category selected by the user from the drop down
-
-
-
-  function handleCategory(e: any, i :number){
-    let value = e.target.value
-    setValues(prev => [...prev.slice(0, i), {...values[i], category: value}, ...prev.slice(i + 1)])
-    return value
-  }
+  function handleCategory(event: any, index :number){
+    let value = event.target.value;
+    setGenState(prev => [...prev.slice(0, index), {...genState[index], category: value}, ...prev.slice(index + 1)]);
+    return value;
+  };
 
 //updates data type when changed drop down button
-  function handleType(e: any, i :number){
-    // let value = e.target.value
-    // setValues(prev => [...prev.slice(0, i), {...values[i], dataType: value}, ...prev.slice(i + 1)])
-  }
+  function handleSubcategory(event: any, index :number){
+    let value = event.target.value;
+    setGenState(prev => [...prev.slice(0, index), {...genState[index], subcategory: value}, ...prev.slice(index + 1)]);
+  };
 
   //update the % empty value when percent is changed
-  function handlePercent(e: React.ChangeEvent<HTMLInputElement>, i:number){
-    let value = e.target.value;
-    setValues(prev=> [...prev.slice(0, i),{...values[i], percent:(value)},...prev.slice(i + 1)])
-    console.log(values)
-  }
-
+  function handlePercent(event: React.ChangeEvent<HTMLInputElement>, index:number){
+    let value = event.target.value;
+    setGenState(prev=> [...prev.slice(0, index),{...genState[index], percent:(value)},...prev.slice(index + 1)]);
+  };
 
   return (
     <div id="gencontainer">
       <h1 id="gennytitle"> Dummy Data Generator </h1>
-      {values.map((el, i) => {
+      <div id="tables">
+      {/* map all functions and category/subcategory choices to each newly created column */}
+      {genState.map((el, index) => {
         return (
-          <div key={i}>
-            <input value={el.columnName} placeholder="Column Name" onChange={(e) => handleChange(e, i)}></input>
+          <div key={index}>
+            <input value={el.columnName} placeholder="Column Name" onChange={(event) => handleColumnName(event, index)}></input>
             <div>
             <label>Choose a Data Category</label>
             </div>
-            <select id="category" onChange={(e)=>handleCategory(e,i)}>
-            {/* if query.selector(btn).value = address --> faker.${address} */}
+
+            {/* Category choices from faker */}
+            <select id="category" onChange={(event)=>handleCategory(event,index)}>
               <option value="address">Address</option>
               <option value="commerce">Commerce</option>
               <option value="company">Company</option>
@@ -82,21 +83,34 @@ const Generator: React.FC = () => {
               <option value="phone">Phone</option>
               <option value="random">Random</option>
               <option value="system">System</option>
-              </select>
+            </select>
 
-              <select id="datatype" onClick={(e)=>handleType(e,i)}> 
-                  {values[i].category ? Object.keys(faker[values[i].category]).map((el , i)=>{
-                    return (<option key={i}> {el} </option>)
-                  }):<option>N/a</option>}
-              </select><br></br>
-
-          <div id="percentagediv">
-              <input onChange={(e)=>handlePercent(e,i)} type='number' min='0' max='100' value={el.percent} id="empty" placeholder="0"></input><h3>% Empty</h3>
+            {/* map selected faker category object to create subcategory options from keys */}
+            <select id="subcategory" onClick={(event)=>handleSubcategory(event,index)}> 
+              {Object.keys(faker[genState[index].category])
+                .map((el, index) => {
+                return (
+                <option key={index}> 
+                  {el} 
+                </option>)
+                })
+              }
+            </select>
+            <br></br>
+            
+            {/* percentage box to determine percent of values that will be empty in each row*/}
+            <div id="percentagediv">
+              <input onChange={(event) => handlePercent(event, index)} type='number' min='0' max='100' value={el.percent} id="empty" placeholder="0"></input>
+              <h3 id="emptyText">% Empty</h3>
             </div>
-          </div >
+          </div>
         )
       })}
-      <button onClick={addInput} id="addColumn" > Add Another Column</button>
+      </div>
+
+      {/* creates new column and adds new state object to genState array */}
+      <button onClick={addNewColumn} id="addColumn">Add Another Column</button>
+
       {/* exports component holds the number of rows, table name, duplicate table, format, download */}
       <Exports />
     </div >

@@ -45,8 +45,9 @@ body {
 
 #tables {
   display: inline-flex;
-  flex-wrap: nowrap;
-  width: 500px;
+  flex-wrap: wrap;
+  // width: 1500px;
+  // margin-right: 50px;
   justify-content: center;
 }
 //full div surrounding field name, data type, % empty and add another column button

@@ -30,6 +30,10 @@
     "css-loader": "^5.0.1",
     "electron": "^11.0.0",
     "electron-devtools-installer": "^3.1.1",
+<<<<<<< HEAD
+=======
+    "electron-react-devtools": "^0.5.3",
+>>>>>>> a0da6c6aa1de646d82c1b857dfe6b542ebc9a930
     "favicons-webpack-plugin": "^4.2.0",
     "html-webpack-plugin": "^4.5.0",
     "react-devtools-electron": "^4.7.0",
@@ -41,8 +45,12 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@types/express": "^4.17.9",
     "@types/node": "^14.14.9",
+=======
+    "@types/electron-devtools-installer": "^2.2.0",
+>>>>>>> a0da6c6aa1de646d82c1b857dfe6b542ebc9a930
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.1.6",

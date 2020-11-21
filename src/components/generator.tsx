@@ -6,60 +6,60 @@ const faker = require('faker')
 type inputObj = {
   columnName: string;
   category: string;
-  dataType: string; 
+  subcategory: string; 
   percent: string;
 }
-const initVal = {
+const initColumnState = {
   columnName: '',
   category: 'address',
-  dataType: '',
+  subcategory: '',
   percent: '0'
 }
 
 const Generator: React.FC = () => {
-  //values is entire array of objects holding all table info
-  const [values, setValues] = useState<inputObj[]>([])
-  //invoked on "add another colum" adds {} to values array
+  //genState is entire array of objects holding all table info
+  const [genState, setGenState] = useState<inputObj[]>([])
+  //invoked on "add another colum" adds {} to genState array
   function addInput() {
-    setValues([...values, initVal])
+    setGenState([...genState, initColumnState])
   }
 
   //update column name input when a user types in new value
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>, i: number) {
-    let value = e.target.value
-    console.log(value)
-    setValues(prevValue => [...prevValue.slice(0, i), {...values[i], columnName : value}, ...prevValue.slice(i + 1)])
+  function handleColumnName(event: React.ChangeEvent<HTMLInputElement>, index: number) {
+    let value = event.target.value
+    console.log(event.target)
+    setGenState(prevValue => [...prevValue.slice(0, index), {...genState[index], columnName : value}, ...prevValue.slice(index + 1)])
   }
   //update the category selected by the user from the drop down
-  function handleCategory(e: any, i :number){
-    let value = e.target.value
-    setValues(prev => [...prev.slice(0, i), {...values[i], category: value}, ...prev.slice(i + 1)])
+  function handleCategory(event: any, index :number){
+    let value = event.target.value
+    setGenState(prev => [...prev.slice(0, index), {...genState[index], category: value}, ...prev.slice(index + 1)])
     return value
   }
 //updates data type when changed drop down button
-  function handleType(e: any, i :number){
-    let value = e.target.value
-    setValues(prev => [...prev.slice(0, i), {...values[i], dataType: value}, ...prev.slice(i + 1)])
+  function handleSubcategory(event: any, index :number){
+    let value = event.target.value
+    setGenState(prev => [...prev.slice(0, index), {...genState[index], subcategory: value}, ...prev.slice(index + 1)])
   }
   //update the % empty value when percent is changed
-  function handlePercent(e: React.ChangeEvent<HTMLInputElement>, i:number){
-    let value = e.target.value;
-    setValues(prev=> [...prev.slice(0, i),{...values[i], percent:(value)},...prev.slice(i + 1)])
-    console.log(values)
+  function handlePercent(event: React.ChangeEvent<HTMLInputElement>, index:number){
+    let value = event.target.value;
+    setGenState(prev=> [...prev.slice(0, index),{...genState[index], percent:(value)},...prev.slice(index + 1)])
+    console.log(genState)
   }
 
   return (
     <div id="gencontainer">
       <h1 id="gennytitle"> Dummy Data Generator </h1>
       <div id="tables">
-      {values.map((el, i) => {
+      {genState.map((el, index) => {
         return (
-          <div key={i}>
-            <input value={el.columnName} placeholder="Column Name" onChange={(e) => handleChange(e, i)}></input>
+          <div key={index}>
+            <input value={el.columnName} placeholder="Column Name" onChange={(event) => handleColumnName(event, index)}></input>
             <div>
             <label>Choose a Data Category</label>
             </div>
-            <select id="category" onChange={(e)=>handleCategory(e,i)}>
+            <select id="category" onChange={(event)=>handleCategory(event,index)}>
               <option value="address">Address</option>
               <option value="commerce">Commerce</option>
               <option value="company">Company</option>
@@ -78,14 +78,14 @@ const Generator: React.FC = () => {
               <option value="system">System</option>
             </select>
 
-              <select id="datatype" onClick={(e)=>handleType(e,i)}> 
-                  {values[i].category ? Object.keys(faker[values[i].category]).map((el , i)=>{
-                    return (<option key={i}> {el} </option>)
+              <select id="subcategory" onClick={(event)=>handleSubcategory(event,index)}> 
+                  {genState[index].category ? Object.keys(faker[genState[index].category]).map((el , index)=>{
+                    return (<option key={index}> {el} </option>)
                   }):<option>N/a</option>}
               </select><br></br>
 
              <div id="percentagediv">
-              <input onChange={(e)=>handlePercent(e,i)} type='number' min='0' max='100' value={el.percent} id="empty" placeholder="0"></input><h3 id="emptyText">% Empty</h3>
+              <input onChange={(event)=>handlePercent(event,index)} type='number' min='0' max='100' value={el.percent} id="empty" placeholder="0"></input><h3 id="emptyText">% Empty</h3>
             </div>
           </div >
         )

@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 
+const faker = require('faker')
 //Import for TypeScript types 
-import {tableType} from '../DataGenPage'
+import {tableType, inputObj} from '../DataGenPage'
 
 type props = {
     tableStateData : tableType;
@@ -13,25 +14,32 @@ type props = {
 //create initial state for Columns of data
 const initColumnState = {
     columnName: '',
-    category: 'address',
-    subcategory: '',
+    category: 'name',
+    subcategory: 'firstName',
     percent: '0'
     }
 
 const TableGeneratorPanel: React.FC<props> = ({tableStateData, tableName, setTableStateData, addTable, setTableName})=>{
-       /**
-     * Visual of tableData
-     * {
-     * Trent:[{...},{...}],
-     * Andy: [{...},{...}],
-     * Seamus: [{...},{...},{...}],
-     * Carlos: [{...},{...},{...}]
-     * }
-     */
+
     console.log(Object.keys(tableStateData))
 
     //State for updating/creating table name
     const [name, setName] = useState<string>('')
+
+    //create a temp column state 
+    const [columnState, setColumnState] = useState<inputObj>(initColumnState)
+
+    const updateColumn = (event:React.ChangeEvent<any>) =>{
+      let {value , name}= event.target;
+      setColumnState({...columnState, [name]:value})  
+      console.log(columnState)
+    }
+    const updateCategory = (event:React.ChangeEvent<any>) =>{
+      let {value , name}= event.target;
+      let arr = Object.keys(faker[value])
+      setColumnState({...columnState, [name]:value, subcategory:arr[0]})  
+      console.log(columnState)
+    }
 
     //when create table is clicked set name as table name
     const updateTableName = (event:any)=>{
@@ -40,15 +48,24 @@ const TableGeneratorPanel: React.FC<props> = ({tableStateData, tableName, setTab
     }
 
     //select the table name to access correct key value pair
-    const getTableName = (e:any) =>{
-        setName(e.target.value);
+    const getTableName = (event:any) =>{
+        setName(event.target.value);
     }
 
     const addColumn = () =>{
-        console.log(name)
-        setTableStateData({...tableStateData, [name]:[...tableStateData[name],initColumnState]})
+        if(name in tableStateData && columnState.columnName ){
+          ///!!!BUG!!! resets everything but category
+          setTableStateData({...tableStateData, [name]:[...tableStateData[name], columnState]})
+          setColumnState({...initColumnState})
+        }
+        else if (!(name in tableStateData ))
+          window.alert("SELECT YOUR TABLE!")
+        else
+          window.alert("Name your column!")
     }
- 
+
+    
+    // console.log(faker.separator);
     return(
         <div className="TableGeneratorContainer">
             <div className="top-left-panel">
@@ -57,6 +74,7 @@ const TableGeneratorPanel: React.FC<props> = ({tableStateData, tableName, setTab
                 <button onClick={(e)=>addTable(e)}>Generate Table</button>
             </div>
             <div className="bottom-left-panel">
+              
                 <select name="" id="" onChange={getTableName}>
                      <option style={{width:'200px'}}>Select Your Table</option>
                 {
@@ -67,6 +85,30 @@ const TableGeneratorPanel: React.FC<props> = ({tableStateData, tableName, setTab
                 }
                 </select>
                 
+                <h3>Column Name</h3>
+                <input type='text' placeholder='Column Name' name="columnName" value={columnState.columnName} onChange={(event) => updateColumn(event)}/>
+                <h3>Select a Category!</h3>
+                <select name='category' onChange={(event) => updateCategory(event)}>
+                  {Object.keys(faker.definitions).map((category, index) => {
+                    if(category !== "title" && category !== "separator")
+                      return (
+                          <option key={index} value={category}>
+                              {category}
+                          </option>
+                      )
+                  })}
+                </select>
+                <h3>Subcategory</h3>
+                <select name='subcategory' onChange={(event) => updateColumn(event)}>
+                    {Object.keys(faker[columnState.category]).map((subcategory, index) => {
+                        return (
+                            <option key={index} value={subcategory}>
+                                {subcategory}
+                            </option>
+                        )
+                    })}
+                </select>
+                <br/>
                 <button onClick={addColumn}>Add Column</button>
             </div>
         </div>

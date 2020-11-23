@@ -18,6 +18,7 @@ export type tableType = {
 const DataGenPage : React.FC = () => {
     const [tableStateData, setTableStateData] = useState<tableType>({})
     const [tableName , setTableName] = useState<string>('');
+    const [tableRow, setTableRow] = useState<[]>([]);
     const addTable = (e:any) => {
         tableName ? 
         setTableStateData(prev=>({...prev,[tableName]:[]}))

@@ -26,4 +26,9 @@ build/Release
 .eslintcache
 
 # dist folder should be re-bundled
+<<<<<<< HEAD
 dist
+=======
+dist
+
+>>>>>>> bb1b0d0cbc5f75ff771d9da380917937a78caab2

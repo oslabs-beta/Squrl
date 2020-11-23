@@ -3,7 +3,6 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
 import * as url from "url";
-import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer'
 
 let mainWindow: Electron.BrowserWindow | null;
 
@@ -16,7 +15,10 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
-
+  //macOS dock settings for logo
+  if (process.platform === 'darwin') {
+    app.dock.setIcon("./assets/templogo.png");
+  }
   if (process.env.NODE_ENV === "development") {
     mainWindow.loadURL(`http://localhost:3000`);
   } else {

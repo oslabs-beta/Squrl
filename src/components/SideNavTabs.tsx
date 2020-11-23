@@ -7,52 +7,20 @@ import * as Vscicons from "react-icons/vsc";
 //array that holds the icons in sidebar
 export const SideNavTabs = [
   {
-<<<<<<< HEAD
-    title: 'Home',
-    path: '/',
-    icon: <Vscicons.VscSquirrel />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'DataGen',
-    path: '/dataGen',
-    icon: <GiIcons.GiAcorn />,
-    cName: 'nav-text'
-  },
-  //AiOutlinePieChart
-  {
-    title: 'DataViz',
-    path: '/dataViz',
-    icon: <AiIcons.AiOutlinePieChart />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'About',
-    path: '/About',
-    icon: <GiIcons.GiLeafSwirl />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'About',
-    path: '/About',
-    icon: <GiIcons.GiLeafSwirl />,
-    cName: 'nav-text'
-=======
     title: "Home",
     path: "/",
     icon: <Vscicons.VscSquirrel />,
     cName: "nav-text",
   },
   {
-    title: "DataGen",
-    path: "/dataGen",
+    title: "Data Generation",
+    path: "/DataGeneration",
     icon: <GiIcons.GiAcorn />,
     cName: "nav-text",
   },
-  //AiOutlinePieChart
   {
-    title: "DataViz",
-    path: "/dataViz",
+    title: "Data Visualization",
+    path: "/DataVisualization",
     icon: <AiIcons.AiOutlinePieChart />,
     cName: "nav-text",
   },
@@ -61,7 +29,6 @@ export const SideNavTabs = [
     path: "/About",
     icon: <GiIcons.GiLeafSwirl />,
     cName: "nav-text",
->>>>>>> e8d1a750a82ff9050cd8ba7873e7368cffb55049
   },
   {
     title: "Settings",

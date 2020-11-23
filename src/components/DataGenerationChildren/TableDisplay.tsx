@@ -1,5 +1,5 @@
 import React from 'react'
-import {inputObj, tableType} from '../DataGenPage'
+import {inputObj, tableType} from '../../pageContainers/DataGeneration'
 const faker = require('faker')
 
 type props = {

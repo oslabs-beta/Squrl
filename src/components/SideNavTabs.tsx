@@ -20,6 +20,12 @@ export const SideNavTabs = [
   },
   //AiOutlinePieChart
   {
+    title: "dataPage",
+    path: "/dataPage",
+    icon: <AiIcons.AiFillApple />,
+    cName: "nav-text",
+  },
+  {
     title: "DataViz",
     path: "/dataViz",
     icon: <AiIcons.AiOutlinePieChart />,

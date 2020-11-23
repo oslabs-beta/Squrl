@@ -1,3 +1,3 @@
 let faker = require('faker');
-console.log(faker.address())
+console.log(faker.helpers.createCard())
 

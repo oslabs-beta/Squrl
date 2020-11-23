@@ -12,6 +12,7 @@ import About from './testPages/About';
 import Settings from './testPages/settings';
 import dataViz from './testPages/dataViz';
 import Generator from './components/generator'
+import DataGenPage from './components/DataGenPage';
 
 //div we will append REACT components too
 const mainElement = document.createElement('div');
@@ -33,6 +34,7 @@ const App: React.FC = () => {
                     <Route path='/dataViz' component={dataViz} />
                     <Route path='/About' component={About} />
                     <Route path='/settings' component={Settings} />
+                    <Route path='/dataPage' component={DataGenPage} />
                 </Switch>
             </Router>
         </>

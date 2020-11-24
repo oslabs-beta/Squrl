@@ -7,9 +7,7 @@ type props = {
 }
 
 const TableViewPanel: React.FC<props> = ({tableStateData})=>{
-  console.log(tableStateData)
   const wheel = (event:any) =>{
-    console.log(event.target.id)
     // console.log(document.getElementById(event.target.id))
     event.currentTarget.scrollLeft += event.deltaY
     // document.getElementById(event.target.id).scrollLeft += event.deltaY;

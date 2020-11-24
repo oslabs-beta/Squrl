@@ -11,24 +11,29 @@ const react_router_dom_1 = require("react-router-dom");
 require("./Styles/App.scss");
 //components -- when exporting solo component you need brackets
 const SideNav_1 = __importDefault(require("./components/SideNav"));
-const home_1 = __importDefault(require("./testPages/home"));
-const About_1 = __importDefault(require("./testPages/About"));
-const settings_1 = __importDefault(require("./testPages/settings"));
-const dataViz_1 = __importDefault(require("./testPages/dataViz"));
-const generator_1 = __importDefault(require("./components/generator"));
+const Home_1 = __importDefault(require("./pageContainers/Home"));
+const About_1 = __importDefault(require("./pageContainers/About"));
+const Settings_1 = __importDefault(require("./pageContainers/Settings"));
+const DataVisualization_1 = __importDefault(require("./pageContainers/DataVisualization"));
+const DataGeneration_1 = __importDefault(require("./pageContainers/DataGeneration"));
 //div we will append REACT components too
 const mainElement = document.createElement('div');
 document.body.appendChild(mainElement);
+/*
+App component utilizes router to render the different routes when the
+corresponding menu tab is selected. SideNav is always displated since it
+is outside of the switch tag.
+*/
 const App = () => {
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
             react_1.default.createElement(SideNav_1.default, null),
             react_1.default.createElement(react_router_dom_1.Switch, null,
-                react_1.default.createElement(react_router_dom_1.Route, { path: '/', exact: true, component: home_1.default }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: '/dataGen', component: generator_1.default }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: '/dataViz', component: dataViz_1.default }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/', exact: true, component: Home_1.default }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/DataGeneration', component: DataGeneration_1.default }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/DataVisualization', component: DataVisualization_1.default }),
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/About', component: About_1.default }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: '/settings', component: settings_1.default })))));
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/Settings', component: Settings_1.default })))));
 };
 // renders react Parent component to html 
 react_dom_1.default.render(react_1.default.createElement(App, null), mainElement);

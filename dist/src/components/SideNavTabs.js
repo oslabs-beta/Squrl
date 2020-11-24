@@ -37,15 +37,14 @@ exports.SideNavTabs = [
         cName: "nav-text",
     },
     {
-        title: "DataGen",
-        path: "/dataGen",
+        title: "Data Generation",
+        path: "/DataGeneration",
         icon: react_1.default.createElement(GiIcons.GiAcorn, null),
         cName: "nav-text",
     },
-    //AiOutlinePieChart
     {
-        title: "DataViz",
-        path: "/dataViz",
+        title: "Data Visualization",
+        path: "/DataVisualization",
         icon: react_1.default.createElement(AiIcons.AiOutlinePieChart, null),
         cName: "nav-text",
     },

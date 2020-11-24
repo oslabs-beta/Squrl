@@ -7,8 +7,8 @@ const faker = require('faker')
 //Import for TypeScript types 
 import { tableType, inputObj } from '../../pageContainers/DataGeneration'
 
-//Types for the passed down state/props from DataGeneration
-type props = {
+//Types for the passed down state/tableProps from DataGeneration
+type tableProps = {
   tableStateData: tableType;
   tableName: string;
   setTableStateData: any;
@@ -26,8 +26,8 @@ const initColumnState = {
   percent: '0'
 }
 
-//passed down state/props are passed in as arguments for our functional componenet 
-const TableGeneratorPanel: React.FC<props> = ({ tableStateData, tableName, setTableStateData, createTable, setTableName, setTableRow, tableRow }) => {
+//passed down state/tableProps are passed in as arguments for our functional componenet 
+const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, setTableStateData, createTable, setTableName, setTableRow, tableRow }) => {
 
   //State for updating/creating table name
   const [name, setName] = useState<string>('')
@@ -36,17 +36,18 @@ const TableGeneratorPanel: React.FC<props> = ({ tableStateData, tableName, setTa
   //initilize column state 
   const [columnState, setColumnState] = useState<inputObj>(initColumnState)
 
-  //when create table is clicked set name as table name
-  const createTableName = (event: any) => {
-    let { value } = event.target
-    setTableName(value)
-  }
   //set number of rows in final generated table
   const setRowAmount = (event: any) => {
     let { value } = event.target
     setRow(+value)
   }
 
+  //when create table is clicked set name as table name
+  const createTableName = (event: any) => {
+    let { value } = event.target
+    setTableName(value)
+  }
+ 
   //select the table name to add new columns to the table
   const selectTableName = (event: any) => {
     let { value } = event.target
@@ -79,9 +80,6 @@ const TableGeneratorPanel: React.FC<props> = ({ tableStateData, tableName, setTa
   const inputRows = () => {
     setTableRow([...tableRow, row])
   }
-
-
-
 
   return (
     <div className="TableGeneratorContainer">

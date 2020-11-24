@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import * as Icons from 'react-icons/fa'
-import * as AiIcons from 'react-icons/ai'
+import React from 'react';
 import { Link } from 'react-router-dom'
 import { SideNavTabs } from './SideNavTabs'
 import '../Styles/SideNavStyles.scss'

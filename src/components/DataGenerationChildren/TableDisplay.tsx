@@ -1,5 +1,5 @@
 import React from 'react'
-import {inputObj, tableType} from '../DataGenPage'
+import {inputObj, tableType} from '../../pageContainers/DataGeneration'
 const faker = require('faker')
 
 type props = {
@@ -7,9 +7,7 @@ type props = {
 }
 
 const TableViewPanel: React.FC<props> = ({tableStateData})=>{
-  console.log(tableStateData)
   const wheel = (event:any) =>{
-    console.log(event.target.id)
     // console.log(document.getElementById(event.target.id))
     event.currentTarget.scrollLeft += event.deltaY
     // document.getElementById(event.target.id).scrollLeft += event.deltaY;

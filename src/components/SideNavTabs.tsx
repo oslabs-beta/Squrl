@@ -13,21 +13,14 @@ export const SideNavTabs = [
     cName: "nav-text",
   },
   {
-    title: "DataGen",
-    path: "/dataGen",
+    title: "Data Generation",
+    path: "/DataGeneration",
     icon: <GiIcons.GiAcorn />,
     cName: "nav-text",
   },
-  //AiOutlinePieChart
   {
-    title: "dataPage",
-    path: "/dataPage",
-    icon: <AiIcons.AiFillApple />,
-    cName: "nav-text",
-  },
-  {
-    title: "DataViz",
-    path: "/dataViz",
+    title: "Data Visualization",
+    path: "/DataVisualization",
     icon: <AiIcons.AiOutlinePieChart />,
     cName: "nav-text",
   },

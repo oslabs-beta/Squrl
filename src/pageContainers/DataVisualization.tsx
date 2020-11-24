@@ -1,6 +1,6 @@
 import React from 'react'
 
-const dataViz: React.FC = () => {
+const DataVisualization: React.FC = () => {
   return (
     <div className='dataViz'>
       <h1>dataViz</h1>
@@ -8,4 +8,4 @@ const dataViz: React.FC = () => {
   )
 }
 
-export default dataViz;
+export default DataVisualization;

@@ -20,7 +20,7 @@ export type tableType = {
 
 //Container that will passdown state to TableGeneratorPanel and TableView Panel
 const DataGeneration: React.FC = () => {
-  
+
   //initialize the different states that will be used 
   const [tableStateData, setTableStateData] = useState<tableType>({})
   const [tableName, setTableName] = useState<string>('');
@@ -28,7 +28,7 @@ const DataGeneration: React.FC = () => {
 
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
-    if(tableName){
+    if (tableName) {
       setTableStateData(prev => ({ ...prev, [tableName]: [] }));
     } else {
       null;
@@ -59,6 +59,7 @@ const DataGeneration: React.FC = () => {
             />
           </div>
         </div>
+        <a href='#' download >Download</a>
       </div>
     </div>
   )

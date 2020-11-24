@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TableGeneratorPanel from '../components/DataGenerationChildren/TableGeneratorPanel';
 import TableDisplay from '../components/DataGenerationChildren/TableDisplay';
-import axios from 'axios'
+import { dialog } from 'electron'
 //DOES THIS NEED TO BE HERE?
 export type inputObj = {
   columnName: string;
@@ -36,17 +36,22 @@ const DataGeneration: React.FC = () => {
     setTableName('');
   }
 
-  const createFile = () => {
-    //tableStateData, tableRow
-    axios.post('http://localhost:30000/faker/create',
-      {
-        arrayOfTables: tableStateData,
-        arrayOfRows: tableRow
-      })
-      .then(data => console.log(data.status))
-      .catch(err => console.log(err));
+  const createFile = ():  => {
+    dialog.showSaveDialog(function (fileName) {
+      if (fileName === undefined) {
+        console.log("You didn't save the file");
+        return;
+      }
 
-  }
+      fs.writeFile(fileName, content, function (err) {
+        if (err) {
+          alert("An error ocurred creating the file " + err.message)
+        }
+
+        alert("The file has been succesfully saved");
+      });
+    });
+  },false);
 
   //Render react components TableGeneratorPanel and TableViewPanel with state passed down as props
   return (
@@ -72,7 +77,6 @@ const DataGeneration: React.FC = () => {
           </div>
         </div>
         <button onClick={createFile}>Download</button>
-        <a href='../../assets/templogo.png' download>DOWNLOAD ME</a>
       </div>
     </div>
   )

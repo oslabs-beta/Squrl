@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import TableGeneratorPanel from '../components/DataGenerationChildren/TableGeneratorPanel';
 import TableDisplay from '../components/DataGenerationChildren/TableDisplay';
+import {ipcRenderer} from 'electron'
+import path from 'path'
 import axios from 'axios'
+import fetch from "node-fetch"
+import fs from "fs"
+import os from "os"
+
+
 //DOES THIS NEED TO BE HERE?
 export type inputObj = {
   columnName: string;
@@ -25,7 +32,6 @@ const DataGeneration: React.FC = () => {
   const [tableStateData, setTableStateData] = useState<tableType>({})
   const [tableName, setTableName] = useState<string>('');
   const [tableRow, setTableRow] = useState<number[]>([]);
-
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
     if(tableName){
@@ -37,15 +43,10 @@ const DataGeneration: React.FC = () => {
   }
 
   const createFile =  () => {
-    //tableStateData, tableRow
-    axios.post('http://localhost:30000/faker/create', 
-    {
-      arrayOfTables : tableStateData,
-      arrayOfRows: tableRow
+    axios.post('http://localhost:30000/faker/create',{tableData: tableStateData, tableRow})
+    .then(()=>{
+      ipcRenderer.send('download')
     })
-    .then(data => console.log(data.status))
-    .catch(err=>console.log(err));
-   
   }
 
   //Render react components TableGeneratorPanel and TableViewPanel with state passed down as props
@@ -72,7 +73,6 @@ const DataGeneration: React.FC = () => {
           </div>
         </div>
         <button onClick= {createFile}>Download</button>
-        <a href='../../assets/templogo.png' download>DOWNLOAD ME</a>
       </div>
     </div>
   )

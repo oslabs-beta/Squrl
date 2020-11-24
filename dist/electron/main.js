@@ -1,4 +1,5 @@
 "use strict";
+//creates shell of desktop application in electron
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -25,8 +26,8 @@ const url = __importStar(require("url"));
 let mainWindow;
 function createWindow() {
     mainWindow = new electron_1.BrowserWindow({
-        width: 1600,
-        height: 1400,
+        width: 800,
+        height: 600,
         icon: "./assets/templogo.png",
         webPreferences: {
             nodeIntegration: true,
@@ -52,4 +53,5 @@ function createWindow() {
 }
 electron_1.app.on("ready", createWindow);
 electron_1.app.allowRendererProcessReuse = true;
+//exports into webpack.electorn.config
 //# sourceMappingURL=main.js.map

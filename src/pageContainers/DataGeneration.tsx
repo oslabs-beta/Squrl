@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import TableGeneratorPanel from '../components/DataGenerationChildren/TableGeneratorPanel';
 import TableDisplay from '../components/DataGenerationChildren/TableDisplay';
-import { dialog } from 'electron'
+import { ipcRenderer } from 'electron'
+import axios from 'axios'
+
+
+
 //DOES THIS NEED TO BE HERE?
 export type inputObj = {
   columnName: string;
@@ -25,7 +29,6 @@ const DataGeneration: React.FC = () => {
   const [tableStateData, setTableStateData] = useState<tableType>({})
   const [tableName, setTableName] = useState<string>('');
   const [tableRow, setTableRow] = useState<number[]>([]);
-
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
     if (tableName) {
@@ -36,22 +39,12 @@ const DataGeneration: React.FC = () => {
     setTableName('');
   }
 
-  const createFile = ():  => {
-    dialog.showSaveDialog(function (fileName) {
-      if (fileName === undefined) {
-        console.log("You didn't save the file");
-        return;
-      }
-
-      fs.writeFile(fileName, content, function (err) {
-        if (err) {
-          alert("An error ocurred creating the file " + err.message)
-        }
-
-        alert("The file has been succesfully saved");
-      });
-    });
-  },false);
+  const createFile = () => {
+    axios.post('http://localhost:30000/faker/create', { tableData: tableStateData, tableRow })
+      .then(() => {
+        ipcRenderer.send('download')
+      })
+  }
 
   //Render react components TableGeneratorPanel and TableViewPanel with state passed down as props
   return (

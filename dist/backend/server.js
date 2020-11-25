@@ -30,7 +30,7 @@ app.use(express_1.default.json());
 app.use(cors_1.default());
 app.options('*', cors_1.default());
 app.get('/', (req, res) => {
-    console.log('hi');
+    res.send('<div>Hello World!</div>');
 });
 app.use("/faker", fakerRouter.router);
 app.listen(30000, () => console.log("listening on port 30000"));

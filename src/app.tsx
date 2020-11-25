@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './Styles/main.scss'
 
 //components -- when exporting solo component you need brackets
-import SideNav from './components/SideNav';
+import SideNav from './pageContainers/SideNav';
 import Home from './pageContainers/Home';
 import About from './pageContainers/About';
 import Settings from './pageContainers/Settings';

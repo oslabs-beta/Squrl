@@ -11,7 +11,7 @@ app.use(cors());
 app.options('*', cors());
 
 app.get('/', (req:Request, res: Response)=>{
-    res.send('<div>Hello World!</div>');
+  console.log('hi')
 })
 
 app.use("/faker", fakerRouter.router)

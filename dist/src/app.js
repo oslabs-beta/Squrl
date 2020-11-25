@@ -8,9 +8,9 @@ const react_dom_1 = __importDefault(require("react-dom"));
 //react-router-dom
 const react_router_dom_1 = require("react-router-dom");
 //Styles
-require("./Styles/App.scss");
+require("./Styles/main.scss");
 //components -- when exporting solo component you need brackets
-const SideNav_1 = __importDefault(require("./components/SideNav"));
+const SideNav_1 = __importDefault(require("./pageContainers/SideNav"));
 const Home_1 = __importDefault(require("./pageContainers/Home"));
 const About_1 = __importDefault(require("./pageContainers/About"));
 const Settings_1 = __importDefault(require("./pageContainers/Settings"));

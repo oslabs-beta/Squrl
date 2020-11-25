@@ -48,27 +48,22 @@ const DataGeneration: React.FC = () => {
 
   //Render react components TableGeneratorPanel and TableViewPanel with state passed down as props
   return (
-    <div className="title">
-      <h1>GENERATE DATA!</h1>
-      <div className="datagen_page">
-        <div className="panels">
-          <div id="inputInfo">
-            <TableGeneratorPanel
-              tableStateData={tableStateData}
-              tableName={tableName}
-              setTableStateData={setTableStateData}
-              createTable={createTable}
-              setTableName={setTableName}
-              setTableRow={setTableRow}
-              tableRow={tableRow}
-            />
-          </div>
-          <div>
-            <TableDisplay
-              tableStateData={tableStateData}
-            />
-          </div>
-        </div>
+    <div className="data-gen-container">
+      <div className="data-panel-container">
+        <TableGeneratorPanel
+          tableStateData={tableStateData}
+          tableName={tableName}
+          setTableStateData={setTableStateData}
+          createTable={createTable}
+          setTableName={setTableName}
+          setTableRow={setTableRow}
+          tableRow={tableRow}
+        />
+      </div>
+      <div className='data-preview-container' >
+        <TableDisplay
+          tableStateData={tableStateData}
+        />
         <button onClick={createFile}>Download</button>
       </div>
     </div>

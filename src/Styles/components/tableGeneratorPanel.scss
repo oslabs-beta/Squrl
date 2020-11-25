@@ -137,14 +137,18 @@
 .panel-buttons {
   letter-spacing: .02rem;
   cursor: pointer;
+  width: 75%;
   background: transparent;
   border: .5rem solid currentColor;
   padding: 1.5rem 2rem;
-  font-size: 2.2rem;
+  // font-size: 14.5rem;
   color: $primary;
   position: relative;
   transition: color .3s;
   
+  span {
+    font-size: 2rem;
+  }
   &:hover {
     color: $secondary;
     &::before { width: 0; }

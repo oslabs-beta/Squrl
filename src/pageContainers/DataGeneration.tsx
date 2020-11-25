@@ -65,7 +65,7 @@ const DataGeneration: React.FC = () => {
         <TableDisplay
           tableStateData={tableStateData}
         />
-        <button onClick={createFile}>Download</button>
+        <button className='panel-buttons' style={{}} onClick={createFile}><span>Download</span></button>
       </div>
     </div>
   )

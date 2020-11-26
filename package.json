@@ -5,7 +5,7 @@
   "main": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node": "tsc && node dist/backend/server.js",
+    "node": "tsc && node --max-old-space-size=8192  dist/backend/server.js",
     "dev:electron": "cross-env NODE_ENV=development webpack --config webpack.electron.config.js --mode development && electron .",
     "dev:react": "cross-env NODE_ENV=development webpack-dev-server --config webpack.react.config.js --mode development"
   },

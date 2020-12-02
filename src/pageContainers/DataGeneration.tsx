@@ -45,7 +45,6 @@ const DataGeneration: React.FC = () => {
       .then(() => {
         ipcRenderer.send('download')
       })
-      
   }
 
   //Render react components TableGeneratorPanel and TableViewPanel with state passed down as props
@@ -66,7 +65,7 @@ const DataGeneration: React.FC = () => {
         <TableDisplay
           tableStateData={tableStateData}
         />
-        <button className='panel-buttons downloadbut' style={{}} onClick={createFile}><span>Download</span></button>
+        <button className='panel-buttons downloadbutt' style={{}} onClick={createFile}><span>Download</span></button>
       </div>
     </div>
   )

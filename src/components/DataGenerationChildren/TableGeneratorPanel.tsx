@@ -77,7 +77,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
       title: "Aw Nuts",
       text: "You forgot to select a table!",
       icon: "warning",
-      buttons: true,
       dangerMode: true,
     })
     else
@@ -85,7 +84,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
       title: "Aw Nuts",
       text: "You forgot to name your column!",
       icon: "warning",
-      buttons: true,
       dangerMode: true,
     })  }
 

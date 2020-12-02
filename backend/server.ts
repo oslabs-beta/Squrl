@@ -17,9 +17,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('<div>Hello World!</div>');
 })
 
-
-
-
 app.use("/faker", fakerRouter.router)
 
 app.listen(30000, () => console.log("listening on port 30000"))

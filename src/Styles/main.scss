@@ -1,22 +1,22 @@
-@import 'abstracts/variables.scss';
-@import 'components/exports.scss';
-@import 'components/sideNavTabs.scss';
-@import 'components/tableDisplay.scss';
-@import 'components/tableGeneratorPanel.scss';
-@import 'pages/about.scss';
-@import 'pages/dataGeneration.scss';
-@import 'pages/dataVisualization.scss';
-@import 'pages/home.scss';
-@import 'pages/setting.scss';
-@import 'pages/sideNav.scss';
-
+@import "abstracts/variables.scss";
+@import "components/exports.scss";
+@import "components/sideNavTabs.scss";
+@import "components/tableDisplay.scss";
+@import "components/tableGeneratorPanel.scss";
+@import "pages/about.scss";
+@import "pages/dataGeneration.scss";
+@import "pages/dataVisualization.scss";
+@import "pages/home.scss";
+@import "pages/setting.scss";
+@import "pages/sideNav.scss";
+@import "pages/topNav.scss";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
   list-style: none;
 }
 

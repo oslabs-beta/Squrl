@@ -43,19 +43,12 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@types/cors": "^2.8.8",
     "@types/electron-devtools-installer": "^2.2.0",
->>>>>>> datagen
     "@types/express": "^4.17.9",
     "@types/faker": "^5.1.4",
     "@types/node": "^14.14.9",
-<<<<<<< HEAD
-    "@types/electron-devtools-installer": "^2.2.0",
-=======
     "@types/node-fetch": "^2.5.7",
->>>>>>> datagen
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.1.6",
@@ -73,6 +66,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "sweetalert": "^2.1.2"
   }
 }

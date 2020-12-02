@@ -1,7 +1,6 @@
 import {Request, Response } from 'express'
 import path from 'path'
 import fs, { write } from 'fs'
-// import * as faker from 'faker'
 const faker = require('faker')
 
 function isNumeric(value:string) {
@@ -31,7 +30,6 @@ export const fakerController = {
     }
     // the finish event is emitted when all data has been flushed from the stream
     writeStream.on('finish', () => {
-      console.log('wrote all data to file');
       next();
     });
       // close the stream

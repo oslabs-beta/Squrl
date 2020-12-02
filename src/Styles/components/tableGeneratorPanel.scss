@@ -1,11 +1,11 @@
-@import 'src/Styles/abstracts/variables.scss';
+@import "src/Styles/abstracts/variables.scss";
 
-.table-gen-options{
+.table-gen-options {
   display: grid;
   height: 100%;
   width: 100%;
   background-color: #1a1d1e;
-
+  background: red;
 }
 
 .sub-panels {
@@ -13,16 +13,17 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  
 
   h1 {
     color: $white;
     font-size: 3rem;
+    // display: flex;
+    // justify-content: center;
     padding: 1rem 0rem;
   }
 }
 
-.create-table{
+.create-table {
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
@@ -30,7 +31,7 @@
   padding: 3rem;
   background: $darkgray;
 
-  h2{
+  h2 {
     color: $white;
     font-size: 1.5rem;
   }
@@ -38,10 +39,9 @@
   button {
     margin-top: 2rem;
   }
-
 }
 
-.create-column{
+.create-column {
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
@@ -50,7 +50,7 @@
   background: $darkgray;
   justify-content: space-around;
 
-  h2{
+  h2 {
     color: $white;
     font-size: 1.5rem;
   }
@@ -66,10 +66,10 @@
     background-color: $black;
   }
 
-  select:active, select:hover {
-    outline-color: red
+  select:active,
+  select:hover {
+    outline-color: red;
   }
-
 }
 
 //////////-----css for the table inputs //////////
@@ -119,65 +119,83 @@
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: $primary;
-    font-weight:700;    
+    color: #ffbf00;
+    font-weight: 700;
   }
-  padding-bottom: 6px;  
+  padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
-  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image: linear-gradient(to right, #ffbf00, rgb(159, 125, 25));
   border-image-slice: 1;
 }
 /* reset input */
-.create-table-input{
-  &:required,&:invalid { box-shadow:none; }
+.create-table-input {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
 }
 
 /////////////////////left panel create button///////////@at-root
 .panel-buttons {
-  letter-spacing: .02rem;
+  letter-spacing: 0.02rem;
   cursor: pointer;
+  width: 75%;
   background: transparent;
-  border: .5rem solid currentColor;
+  border: 0.1rem solid currentColor;
   padding: 1.5rem 2rem;
-  font-size: 2.2rem;
-  color: $primary;
+  color: #ffbf00;
   position: relative;
-  transition: color .3s;
-  
-  &:hover {
-    color: $secondary;
-    &::before { width: 0; }
-    &::after { height: 0; }
-  }
-  &:active {
-    border-width: .5rem / 2;
-  }
-  
-  span {
-    position: relative;
-    z-index: 2;
-  }
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    background: $darkgray;
-    z-index: 1;
-    transition: all .3s;
-  }
+  transition: color 0.3s;
 
-  &::before {
-    width: calc(100% - #{3rem});
-    height: calc(101% + #{.5rem * 2});
-    top: -.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+  span {
+    font-size: 2rem;
   }
-  &::after {
-    height: calc(100% - #{3rem});
-    width: calc(101% + #{.5rem * 2});
-    left: -.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+}
+
+.panel-buttons:hover {
+  background-color: #ffbf00;
+  color: black;
+}
+//   &:hover {
+//     color: #FFBF00;
+//     &::before { width: 0; }
+//     &::after { height: 0; }
+//   }
+//   &:active {
+//     border-width: .5rem / 2;
+//   }
+
+//   span {
+//     position: relative;
+//     z-index: 2;
+//   }
+//   &::before, &::after {
+//     content: '';
+//     position: absolute;
+//     background: $darkgray;
+//     z-index: 1;
+//     transition: all .3s;
+//   }
+
+//   &::before {
+//     width: calc(100% - #{3rem});
+//     height: calc(101% + #{.5rem * 2});
+//     top: -.5rem;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+//   &::after {
+//     height: calc(100% - #{3rem});
+//     width: calc(101% + #{.5rem * 2});
+//     left: -.5rem;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+// }
+
+.GennyTitle {
+  margin-top: 70px;
+  height: 100px;
+  width: 100%;
 }

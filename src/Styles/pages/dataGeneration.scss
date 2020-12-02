@@ -1,6 +1,6 @@
 // @import 'abstracts/variables.scss
 
-.data-gen-container{
+.data-gen-container {
   display: grid;
   grid-template-columns: minmax(150px, 25%) 1fr;
   height: 100vh;
@@ -8,15 +8,19 @@
   padding-left: 6rem;
 }
 
-.data-panel-container{
+.data-panel-container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
-.data-preview-container{
+.data-preview-container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+}
+
+.downloadbutt {
+  margin-bottom: 40px;
 }

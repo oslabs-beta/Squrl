@@ -1,6 +1,6 @@
 //import useState hook to create state
 import React, { useState } from 'react';
-
+import swal from 'sweetalert'
 //require faker.js npm  to be used to generate dummy data
 const faker = require('faker')
 
@@ -23,6 +23,7 @@ const initColumnState = {
   columnName: '',
   category: 'name',
   subcategory: 'firstName',
+  sampleData: '',
   percent: '0'
 }
 
@@ -47,7 +48,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
     let { value } = event.target
     setTableName(value)
   }
- 
+
   //select the table name to add new columns to the table
   const selectTableName = (event: any) => {
     let { value } = event.target
@@ -66,101 +67,138 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
     setColumnState({ ...columnState, [name]: value, subcategory: arr[0] })
   }
 
-   //!!!BUG!!! resets everything but category
+  //!!!BUG!!! resets everything but category
   const addColumn = () => {
     if (name in tableStateData && columnState.columnName) {
-      setTableStateData({ ...tableStateData, [name]: [...tableStateData[name], columnState] })
+      setTableStateData({ ...tableStateData, [name]: [...tableStateData[name], {...columnState, sampleData:faker[columnState.category][columnState.subcategory]()}]})
       setColumnState({ ...initColumnState })
     } else if (!(name in tableStateData))
-      window.alert("SELECT YOUR TABLE!")
+    swal({
+      title: "Aw Nuts",
+      text: "You forgot to select a table!",
+      icon: "warning",
+      dangerMode: true,
+    })
     else
-      window.alert("Name your column!")
-  }
+    swal({
+      title: "Aw Nuts",
+      text: "You forgot to name your column!",
+      icon: "warning",
+      dangerMode: true,
+    })  }
 
   const inputRows = () => {
     setTableRow([...tableRow, row])
   }
 
   return (
-    <div className="TableGeneratorContainer">
-      <div className="top-left-panel">
-        
-        <input 
-          onChange={createTableName} 
-          value={tableName} 
-          type="text" 
-          placeholder='Table Name'
-        />
+    <div className="table-gen-options">
+      <div className="sub-panels">
 
-        <input 
-          type="number" 
-          onChange= {(event) => setRowAmount(event)} 
-          placeholder= "0" 
-          value= {row === 0 ? '' : row} 
-        />
+        <div className="create-table ">
+        <h1 className="GennyTitle">Dummy Data Generator</h1>
 
-        <button onClick={(event) => { createTable(event); inputRows() }}>
-          Create Table
-        </button>
+          <h2>Create a Table</h2>
+
+          <div className="input-container">
+            <input
+              className='create-table-input'
+              type="text"
+              placeholder='Table Name'
+              onChange={createTableName}
+              value={tableName}
+            />
+            <label className="input-label">Table Name</label>
+          </div>
+
+          <div className="input-container">
+            <input
+              className='create-table-input'
+              type="input"
+              onChange={(event) => setRowAmount(event)}
+              placeholder="Number of Rows"
+              value={row === 0 ? '' : row}
+            />
+            <label className="input-label">Number of Rows</label>
+          </div>
+
+          <button
+            className='panel-buttons'
+            onClick={(event) => { createTable(event); inputRows() }}>
+            <span>Create Table</span>
+          </button>
+
+        </div>
 
       </div>
-      <div className="bottom-left-panel">
 
-        <select name="" id="" onChange={selectTableName}>
-          <option style={{ width: '200px' }}>Select Table</option>
-          {
-            Object.keys(tableStateData).map((table_name, index) => {
-              return <option 
-                style={{ width: '200px' }} 
-                key={index} 
-                value={table_name}>{table_name}
-              </option>
-            })
-          }
-        </select>
+      <div className="sub-panels">
+        <div className="create-column">
+          <h2>Create Columns</h2>
 
-        <h3>Set Column Name</h3>
-        <input 
-          type='text' 
-          placeholder='Column Name' 
-          name="columnName" 
-          value={columnState.columnName} 
-          onChange={(event) => updateColumn(event)} 
-        />
-
-        <h3>Select Category</h3>
-        <select name='category' onChange={(event) => updateCategory(event)}>
-          {Object.keys(faker.definitions).map((category, index) => {
-            if (category === 'phone_number'){
-              category = 'phone'
-              return (
-                <option key={index} value={category}>
-                  {category}
+          <select className="categorySelector" name="" id="" onChange={selectTableName}>
+            <option style={{ width: '200px' }}>Select Table</option>
+            {
+              Object.keys(tableStateData).map((table_name, index) => {
+                return <option
+                  style={{ width: '200px' }}
+                  key={index}
+                  value={table_name}>{table_name}
                 </option>
-              )
+              })
             }
-            if (category !== "title" && category !== "separator")
+          </select>
+
+          <div className="input-container">
+            <input
+              className='create-table-input'
+              type='text'
+              placeholder='Column Name'
+              name="columnName"
+              value={columnState.columnName}
+              onChange={(event) => updateColumn(event)}
+            />
+            <label className="input-label">Column Name</label>
+          </div>
+
+          <select
+            name='category'
+            onChange={(event) => updateCategory(event)}>
+            {Object.keys(faker.definitions).map((category, index) => {
+              if (category === 'phone_number') {
+                category = 'phone'
+                return (
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                )
+              }
+              if (category !== "title" && category !== "separator")
+                return (
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                )
+            })}
+          </select>
+
+          <select name='subcategory' onChange={(event) => updateColumn(event)}>
+            {Object.keys(faker[columnState.category]).map((subcategory, index) => {
               return (
-                <option key={index} value={category}>
-                  {category}
+                <option key={index} value={subcategory}>
+                  {subcategory}
                 </option>
               )
-          })}
-        </select>
-        <h3>Select Subcategory</h3>
-        <select name='subcategory' onChange={(event) => updateColumn(event)}>
-          {Object.keys(faker[columnState.category]).map((subcategory, index) => {
-            return (
-              <option key={index} value={subcategory}>
-                {subcategory}
-              </option>
-            )
-          })}
-        </select>
-        <br />
-        <button onClick={addColumn}>
-          Add Column
-        </button>
+            })}
+          </select>
+
+          <button
+            className='panel-buttons'
+            onClick={addColumn}>
+            <span>Add Column</span>
+          </button>
+
+        </div>
       </div>
     </div >
   )

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { app, BrowserWindow } from "electron";
-import * as path from "path";
-import * as url from "url";
-
-=======
 //creates shell of desktop application in electron
 import { app, BrowserWindow, ipcMain ,dialog } from "electron";
 import * as path from "path";
@@ -11,20 +5,14 @@ import * as url from "url";
 import fs from 'fs'
 import http from 'http'
 import axios from 'axios'
->>>>>>> datagen
 
 // let mainWindow: Electron.BrowserWindow | null;
 let mainWindow: any;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-<<<<<<< HEAD
-    width: 1600,
-    height: 1400,
-=======
     width: 1200,
     height: 800,
->>>>>>> datagen
     icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true,

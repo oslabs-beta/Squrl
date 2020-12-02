@@ -11,8 +11,10 @@ let mainWindow: any;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 1500,
+    height: 1000,
+    minHeight: 1000,
+    minWidth: 1500,
     icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true,
@@ -39,7 +41,6 @@ function createWindow() {
   });
 }
   ipcMain.on("download", (event, arg) => {
-    console.log(arg)
   dialog.showSaveDialog({
     title: "Save file",
     properties:['createDirectory']
@@ -47,7 +48,7 @@ function createWindow() {
     if (filePath_obj.canceled)
         console.log("canceled")
     else{
-      console.log('absolute path: ',filePath_obj.filePath);
+      console.log('absolute path: ', filePath_obj.filePath);
       const dest : any = fs.createWriteStream(filePath_obj.filePath);
       const request = http.get("http://localhost:30000/faker/create",arg, function(response) {
       response.pipe(dest);

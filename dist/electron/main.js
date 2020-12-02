@@ -32,8 +32,10 @@ const http_1 = __importDefault(require("http"));
 let mainWindow;
 function createWindow() {
     mainWindow = new electron_1.BrowserWindow({
-        width: 1200,
-        height: 800,
+        width: 1500,
+        height: 1000,
+        minHeight: 1000,
+        minWidth: 1500,
         icon: "./assets/templogo.png",
         webPreferences: {
             nodeIntegration: true,

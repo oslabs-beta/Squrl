@@ -33,6 +33,7 @@
     "electron-devtools-installer": "^3.1.1",
     "electron-react-devtools": "^0.5.3",
     "favicons-webpack-plugin": "^4.2.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "react-devtools-electron": "^4.7.0",
     "sass": "^1.29.0",
@@ -66,6 +67,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "sweetalert": "^2.1.2"
   }
 }

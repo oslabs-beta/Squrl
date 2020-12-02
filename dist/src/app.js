@@ -11,6 +11,7 @@ const react_router_dom_1 = require("react-router-dom");
 require("./Styles/main.scss");
 //components -- when exporting solo component you need brackets
 const SideNav_1 = __importDefault(require("./pageContainers/SideNav"));
+const TopNav_1 = __importDefault(require("./pageContainers/TopNav"));
 const Home_1 = __importDefault(require("./pageContainers/Home"));
 const About_1 = __importDefault(require("./pageContainers/About"));
 const Settings_1 = __importDefault(require("./pageContainers/Settings"));
@@ -27,6 +28,7 @@ is outside of the switch tag.
 const App = () => {
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
+            react_1.default.createElement(TopNav_1.default, null),
             react_1.default.createElement(SideNav_1.default, null),
             react_1.default.createElement(react_router_dom_1.Switch, null,
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/', exact: true, component: Home_1.default }),

@@ -1,6 +1,6 @@
 //import useState hook to create state
 import React, { useState } from 'react';
-
+import swal from 'sweetalert'
 //require faker.js npm  to be used to generate dummy data
 const faker = require('faker')
 
@@ -73,10 +73,21 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
       setTableStateData({ ...tableStateData, [name]: [...tableStateData[name], {...columnState, sampleData:faker[columnState.category][columnState.subcategory]()}]})
       setColumnState({ ...initColumnState })
     } else if (!(name in tableStateData))
-      window.alert("SELECT YOUR TABLE!")
+    swal({
+      title: "Aw Nuts",
+      text: "You forgot to select a table!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
     else
-      window.alert("Name your column!")
-  }
+    swal({
+      title: "Aw Nuts",
+      text: "You forgot to name your column!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })  }
 
   const inputRows = () => {
     setTableRow([...tableRow, row])
@@ -85,9 +96,9 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
   return (
     <div className="table-gen-options">
       <div className="sub-panels">
-        <h1>Dummy Data Generator</h1>
 
         <div className="create-table ">
+        <h1 className="GennyTitle">Dummy Data Generator</h1>
 
           <h2>Create a Table</h2>
 
@@ -127,7 +138,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
         <div className="create-column">
           <h2>Create Columns</h2>
 
-          <select name="" id="" onChange={selectTableName}>
+          <select className="categorySelector" name="" id="" onChange={selectTableName}>
             <option style={{ width: '200px' }}>Select Table</option>
             {
               Object.keys(tableStateData).map((table_name, index) => {

@@ -18,6 +18,7 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      
     ],
   },
   output: {

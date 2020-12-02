@@ -27,7 +27,24 @@ export type tableType = {
 const DataGeneration: React.FC = () => {
 
   //initialize the different states that will be used 
-  const [tableStateData, setTableStateData] = useState<tableType>({})
+  // const [tableStateData, setTableStateData] = useState<tableType>({})
+  //tester
+  const [tableStateData, setTableStateData] = useState<tableType>({'tr':[
+    {
+      columnName: 'test',
+      category: 'test',
+      subcategory: 'test',
+      percent: 'test',
+      sampleData : 'test',
+    },
+    {
+      columnName: 'test2',
+      category: 'test2',
+      subcategory: 'test2',
+      percent: 'test2',
+      sampleData : 'test2',
+    }
+]})
   const [tableName, setTableName] = useState<string>('');
   const [tableRow, setTableRow] = useState<number[]>([]);
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.

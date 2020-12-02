@@ -118,8 +118,8 @@ function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
     width: 1500,
     height: 1000,
-    minHeight: 1000,
-    minWidth: 1500,
+    // minHeight: 1000,
+    // minWidth: 1500,
     icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true
@@ -145,10 +145,8 @@ electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event,
     title: "Save file",
     properties: ['createDirectory']
   }).then(function (filePath_obj) {
-    console.log('no');
     if (filePath_obj.canceled) console.log("canceled");else {
       console.log('absolute path: ', filePath_obj.filePath);
-      console.log('no');
       var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath);
       var request = http__WEBPACK_IMPORTED_MODULE_4___default.a.get("http://localhost:30000/faker/create", arg, function (response) {
         response.pipe(dest);
@@ -157,7 +155,6 @@ electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event,
   })["catch"](function (err) {
     console.log(err);
   });
-  console.log('no');
 });
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].on("ready", createWindow);
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true; //exports into webpack.electorn.config

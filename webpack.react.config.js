@@ -49,6 +49,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Squrl"
     }),
-    new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/logo.svg')),
+    new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/templogo.png')),
   ]
 }

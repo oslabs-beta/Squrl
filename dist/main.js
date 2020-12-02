@@ -101,15 +101,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url */ "url");
 /* harmony import */ var url__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_2__);
+<<<<<<< HEAD
 
 
 
+=======
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! fs */ "fs");
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! http */ "http");
+/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(http__WEBPACK_IMPORTED_MODULE_4__);
+//creates shell of desktop application in electron
+
+
+
+
+
+// let mainWindow: Electron.BrowserWindow | null;
+>>>>>>> datagen
 var mainWindow;
 
 function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
+<<<<<<< HEAD
     width: 1600,
     height: 1400,
+=======
+    width: 1200,
+    height: 800,
+>>>>>>> datagen
     icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true
@@ -122,6 +141,7 @@ function createWindow() {
 
   if (true) {
     mainWindow.loadURL("http://localhost:3000");
+    mainWindow.webContents.openDevTools();
   } else {}
 
   mainWindow.on("closed", function () {
@@ -129,8 +149,30 @@ function createWindow() {
   });
 }
 
+<<<<<<< HEAD
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].on("ready", createWindow);
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true;
+=======
+electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event, arg) {
+  console.log(arg);
+  electron__WEBPACK_IMPORTED_MODULE_0__["dialog"].showSaveDialog({
+    title: "Save file",
+    properties: ['createDirectory']
+  }).then(function (filePath_obj) {
+    if (filePath_obj.canceled) console.log("canceled");else {
+      console.log('absolute path: ', filePath_obj.filePath);
+      var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath);
+      var request = http__WEBPACK_IMPORTED_MODULE_4___default.a.get("http://localhost:30000/faker/create", arg, function (response) {
+        response.pipe(dest);
+      });
+    }
+  })["catch"](function (err) {
+    console.log(err);
+  });
+});
+electron__WEBPACK_IMPORTED_MODULE_0__["app"].on("ready", createWindow);
+electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true; //exports into webpack.electorn.config
+>>>>>>> datagen
 
 /***/ }),
 
@@ -145,6 +187,7 @@ module.exports = require("electron");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "path":
 /*!***********************!*\
   !*** external "path" ***!
@@ -152,6 +195,37 @@ module.exports = require("electron");
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+=======
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "http":
+/*!***********************!*\
+  !*** external "http" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("http");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+>>>>>>> datagen
 module.exports = require("path");
 
 /***/ }),

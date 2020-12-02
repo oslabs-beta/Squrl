@@ -1,7 +1,14 @@
 import express, {Request, Response} from "express";
 import * as fakerRouter from "./routes/fakerRoute"
+import cors from 'cors';
+
 const app = express();
 
+app.use(express.json());
+
+app.use(cors());
+
+app.options('*', cors());
 
 app.get('/', (req:Request, res: Response)=>{
     res.send('<div>Hello World!</div>');

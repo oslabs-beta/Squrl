@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import TableGeneratorPanel from '../components/DataGenerationChildren/TableGeneratorPanel';
 import TableDisplay from '../components/DataGenerationChildren/TableDisplay';
 import {ipcRenderer} from 'electron'
-import path from 'path'
 import axios from 'axios'
-import fetch from "node-fetch"
-import fs from "fs"
-import os from "os"
 
 
 //DOES THIS NEED TO BE HERE?

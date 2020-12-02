@@ -31,6 +31,7 @@ body {
   background-color: #25272d;
 }
 
+
 // fields.tsx input fields for dunmmy generator
 
 //full div surrounding entire container
@@ -51,7 +52,7 @@ body {
 }
 //full div surrounding field name, data type, % empty and add another column button
 #geninputs {
-  display: flex;
+  display:flex;
   flex-direction: column;
 }
 #column {
@@ -61,6 +62,7 @@ body {
   height: 50px;
   width: 170px;
   font-size: 18px;
+
 }
 // column namn input
 #fieldName {
@@ -89,7 +91,7 @@ body {
 }
 
 // input for percent empty
-#empty {
+#empty{
   width: 55px;
   height: 50px;
   display: flex;
@@ -128,7 +130,7 @@ body {
   padding-right: 50px;
 }
 #duplicate {
-  margin-bottom: 50px;
+   margin-bottom: 50px;
   display: inline-flex;
 }
 #formatoption {
@@ -151,7 +153,7 @@ body {
   font-size: 70px;
 }
 #tablemanager {
-  display: inline-flex;
+  display: inline-flex
 }
 #duplicatedata {
   display: flex;
@@ -160,49 +162,4 @@ body {
 //padding for rows/tablename text
 #tableInputText {
   padding-right: 10px;
-}
-
-.datagen_page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.panels {
-  display: flex;
-  margin-top: 2rem;
-}
-.table div {
-  margin-top: 1rem;
-  height: 75px;
-  width: 600px;
-  // overflow: scroll;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-.title {
-  text-align: center;
-}
-
-table,
-th,
-td {
-  border: 1px solid white;
-  border-collapse: collapse;
-}
-
-
-#inputInfo {
-  display: flex;
-  
-}
-
-.table-view-container {
-  
-}
-
-.datagen_page {
-  height: 100vh;
-  display: flex;
-  // align-content: flex-end;
-  justify-content: flex-start;
 }

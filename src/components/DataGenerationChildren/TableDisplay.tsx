@@ -8,8 +8,9 @@ type props = {
 }
 
 const TableViewPanel: React.FC<props> = ({ tableStateData }) => {
-  const deleteColumn = (event: any) => {
-    console.log(event.target.id)
+  //delete column
+  const deleteColumn = (tableName: any, index: number) => {
+    console.log(tableName, index)
   }
   const wheel = (event: any) => {
     // console.log(document.getElementById(event.target.id))
@@ -34,7 +35,11 @@ const TableViewPanel: React.FC<props> = ({ tableStateData }) => {
                         <tr className="columntr row-first row-last">
                           <th className="columnth first last">
                             <span>{colInfo.columnName}</span>
-                            <button className='deleteColumnButton'id={`${index}`} onClick={deleteColumn}>X</button>
+                            <button 
+                            className='deleteColumnButton'id={`${index}`} 
+                            onClick={() => deleteColumn(table, index)}>
+                              X
+                            </button>
                           </th>
                         </tr>
                       </thead>

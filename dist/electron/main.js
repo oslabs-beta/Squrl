@@ -34,8 +34,8 @@ function createWindow() {
     mainWindow = new electron_1.BrowserWindow({
         width: 1500,
         height: 1000,
-        minHeight: 1000,
-        minWidth: 1500,
+        // minHeight: 1000,
+        // minWidth: 1500,
         icon: "./assets/templogo.png",
         webPreferences: {
             nodeIntegration: true,

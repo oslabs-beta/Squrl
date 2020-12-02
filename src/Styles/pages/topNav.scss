@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+//this should be the top bar
+.top-nav-container {
+  position: fixed;
+  // flex-direction: row;
+  width: 100%;
+  height: 6rem;
+  background-color: #1a1d1e;
+  display: grid;
+  align-items: center;
+}
+
+
+.topIcons {
+  display: grid;
+  grid-template-columns: 100px 1fr 3fr 1fr;
+  // flex-direction: row;
+  color: white;
+  // align-items: center;
+}
+
+.topIcons li {
+  font-size: 20px;
+  font-family: 'Montserrat' , sans-serif;
+}

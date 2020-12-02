@@ -1,0 +1,57 @@
+// @import 'abstracts/variables.scss';
+
+.side-nav-container{
+  height: 100%;
+  width: 6rem;
+  display: flex;
+  flex-direction: column;
+  background: #1a1d1e;
+}
+
+
+.side-nav-bar {
+  height: 100%;
+  width: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display:flex;
+  background: #1a1d1e;
+  
+}
+
+.nav-tab-items {
+  background: #1a1d1e;
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-text {
+  margin-top: 2rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+    width:100%;
+    padding: .5rem 0 .5rem 0;
+  }
+  a:hover {
+    background-color: #FFBF00;
+  }
+}
+
+.nav-tab-items:hover {
+  color: white;
+}
+
+.settings-icon {
+  margin-top: auto;
+  margin-bottom: 2rem;
+}

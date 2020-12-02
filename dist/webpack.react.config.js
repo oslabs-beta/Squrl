@@ -1,4 +1,5 @@
 "use strict";
+/*https://medium.com/better-programming/start-a-new-electron-app-with-react-and-typescript-cdd6d9997933 */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -18,6 +19,14 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 },
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
             },
             {
                 test: /\.s[ac]ss$/i,

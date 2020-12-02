@@ -1,0 +1,27 @@
+@import 'abstracts/variables.scss';
+@import 'components/exports.scss';
+@import 'components/sideNavTabs.scss';
+@import 'components/tableDisplay.scss';
+@import 'components/tableGeneratorPanel.scss';
+@import 'pages/about.scss';
+@import 'pages/dataGeneration.scss';
+@import 'pages/dataVisualization.scss';
+@import 'pages/home.scss';
+@import 'pages/setting.scss';
+@import 'pages/sideNav.scss';
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  list-style: none;
+}
+
+body {
+  background-color: #25272d;
+  height: 100%;
+  width: 100%;
+}

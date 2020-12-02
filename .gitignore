@@ -28,3 +28,5 @@ build/Release
 # dist folder should be re-bundled
 dist
 
+#SQL database
+output.sql

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const react_router_dom_1 = require("react-router-dom");
 const SideNavTabs_1 = require("./SideNavTabs");
-require("../Styles/SideNavStyles.scss");
+// import '../Styles/SideNavStyles.scss'
 const react_icons_1 = require("react-icons");
 const SideNav = () => {
     return (react_1.default.createElement(react_1.default.Fragment, null,

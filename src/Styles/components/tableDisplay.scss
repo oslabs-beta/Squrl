@@ -1,0 +1,96 @@
+// @import 'abstracts/variables.scss';
+
+// .columnth {
+//   color: green;
+//   // border: 1px solid white;
+// }
+
+// .columntr {
+//   color: green;
+// }
+
+
+// //also surrounds columns and rows
+// .container {
+//   background-color: grey;
+// }
+
+
+// //surrounds columns and rows
+// .tableContainer {
+//   border: 1px solid white;
+// }
+
+
+//surrounds all tables
+
+
+table {
+  font-family: 'Arial';
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #00cccc;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+     0px 10px 20px rgba(0,0,0,0.05),
+     0px 20px 20px rgba(0,0,0,0.05),
+     0px 30px 20px rgba(0,0,0,0.05);
+  tr {
+     &:hover {
+      background: #f4f4f4;
+      
+      td {
+        color: #555;
+      }
+    }
+  }
+  th, td {
+    color: #999;
+    border: 1px solid #eee;
+    padding: 12px 35px;
+    border-collapse: collapse;
+  }
+  th {
+    background: $black;
+    color: $primary;
+    text-transform: uppercase;
+    font-size: 12px;
+    &.last {
+      border-right: none;
+    }
+  }
+}
+
+
+.tableHeader {
+  font-size: 50px;
+}
+
+
+
+.tableContainer{
+  display: flex;
+  height: 100px;
+  margin: 0;
+  width: 800px;
+  overflow-y: hidden;
+  overflow-x:scroll;
+}
+
+.table-view-container {
+  height: 100%;
+  width: 100%;
+  // margin: 3rem;
+  // margin-left: 6rem;
+  // margin-right: 6rem;
+}
+.table-wrapper{
+  display:flex;
+  
+}
+
+
+//surrounds entire table
+.table {
+text-align: center;
+}
+

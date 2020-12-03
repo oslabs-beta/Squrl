@@ -6,6 +6,7 @@
   width: 100%;
   background-color: #1a1d1e;
   background: red;
+  margin-top: 64px;
 }
 
 .sub-panels {
@@ -153,6 +154,10 @@
   }
 }
 
+.downloadbutt{
+  width: 50%;
+}
+
 .panel-buttons:hover {
   background-color: #ffbf00;
   color: black;
@@ -195,7 +200,6 @@
 // }
 
 .GennyTitle {
-  margin-top: 70px;
   height: 100px;
   width: 100%;
 }

@@ -34,8 +34,8 @@ function createWindow() {
     mainWindow = new electron_1.BrowserWindow({
         width: 1500,
         height: 1000,
-        minHeight: 1000,
-        minWidth: 1500,
+        // minHeight: 1000,
+        // minWidth: 1500,
         icon: "./assets/templogo.png",
         webPreferences: {
             nodeIntegration: true,
@@ -65,12 +65,10 @@ electron_1.ipcMain.on("download", (event, arg) => {
         title: "Save file",
         properties: ['createDirectory']
     }).then((filePath_obj) => {
-        console.log('no');
         if (filePath_obj.canceled)
             console.log("canceled");
         else {
             console.log('absolute path: ', filePath_obj.filePath);
-            console.log('no');
             const dest = fs_1.default.createWriteStream(filePath_obj.filePath);
             const request = http_1.default.get("http://localhost:30000/faker/create", arg, function (response) {
                 response.pipe(dest);
@@ -79,7 +77,6 @@ electron_1.ipcMain.on("download", (event, arg) => {
     }).catch(err => {
         console.log(err);
     });
-    console.log('no');
 });
 electron_1.app.on("ready", createWindow);
 electron_1.app.allowRendererProcessReuse = true;

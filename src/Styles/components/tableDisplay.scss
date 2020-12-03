@@ -26,6 +26,7 @@
 
 
 table {
+  align-self: center;
   font-family: 'Arial';
   border-collapse: collapse;
   border: 1px solid #eee;
@@ -62,7 +63,8 @@ table {
 
 
 .tableHeader {
-  font-size: 50px;
+  font-size: 32px;
+  margin-top: 64px;
 }
 
 
@@ -70,19 +72,20 @@ table {
 .tableContainer{
   display: flex;
   height: 100px;
-  margin: 0;
+  margin-top: 32px;
   width: 800px;
   overflow-y: hidden;
   overflow-x:scroll;
 }
 
 .table-view-container {
+  display: flex;
   height: 100%;
   width: 100%;
-  // margin: 3rem;
-  // margin-left: 6rem;
-  // margin-right: 6rem;
+  margin-top: 64px;
+  justify-content: center;
 }
+//WHAT DOES THIS DO?
 .table-wrapper{
   display:flex;
   
@@ -93,4 +96,21 @@ table {
 .table {
 text-align: center;
 }
+
+//need to align button to right of cell
+.deleteColumnButton{
+  color: white;
+  background-color: rgb(221, 79, 79);
+}
+
+.deleteAllColumns{
+  color: white;
+  background-color: rgb(221, 79, 79);
+}
+
+.deleteTableButton{
+  color: white;
+  background-color: rgb(221, 79, 79);
+}
+
 

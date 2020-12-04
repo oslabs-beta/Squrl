@@ -1,7 +1,6 @@
 // @import 'abstracts/variables.scss';
 
-.dataViz
- {
+.dataViz {
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
@@ -11,12 +10,3 @@
   font-size: 2rem;
   color: #f3eff5;
 }
-
-p {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  font-size: 10px;
-  color: white;
-  margin-top: 500px;
-} 

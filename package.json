@@ -39,6 +39,7 @@
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.11.0"
@@ -51,6 +52,7 @@
     "@types/faker": "^5.1.4",
     "@types/node": "^14.14.9",
     "@types/node-fetch": "^2.5.7",
+    "@types/pg": "^7.14.7",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.1.6",
@@ -72,6 +74,7 @@
     "file-url": "^3.0.0",
     "http": "0.0.1-security",
     "node-fetch": "^2.6.1",
+    "pg": "^8.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",

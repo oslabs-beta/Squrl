@@ -58,7 +58,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Squrl"
         }),
-        new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/templogo.png')),
+        new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/logo.png')),
     ]
 };
 //# sourceMappingURL=webpack.react.config.js.map

@@ -22,12 +22,15 @@ export type tableStateData = inputObj[];
 export type tableType = {
   [key: string]: tableStateData
 }
-
+type props = {
+  tableStateData: tableType;
+  setTableStateData: any;
+}
 //Container that will passdown state to TableGeneratorPanel and TableView Panel
-const DataGeneration: React.FC = () => {
-
+const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData}) => {
+  console.log(tableStateData)
   //initialize the different states that will be used 
-  const [tableStateData, setTableStateData] = useState<tableType>({})
+  // const [tableStateData, setTableStateData] = useState<tableType>({})
 
   //UNCOMMENT TESTER STATE TO HELP WITH STYLING
   // const [tableStateData, setTableStateData] = useState<tableType>(
@@ -86,7 +89,7 @@ const DataGeneration: React.FC = () => {
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
     if (tableName) {
-      setTableStateData(prev => ({ ...prev, [tableName]: [] }));
+      setTableStateData(({ ...tableStateData, [tableName]: [] }));
     } else {
       null;
     }

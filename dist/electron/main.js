@@ -36,14 +36,14 @@ function createWindow() {
         height: 1000,
         // minHeight: 1000,
         // minWidth: 1500,
-        icon: "./assets/templogo.png",
+        icon: "./assets/logo.png",
         webPreferences: {
             nodeIntegration: true,
         },
     });
     //macOS dock settings for logo
     if (process.platform === 'darwin') {
-        electron_1.app.dock.setIcon("./assets/templogo.png");
+        electron_1.app.dock.setIcon("./assets/logo.png");
     }
     if (process.env.NODE_ENV === "development") {
         mainWindow.loadURL(`http://localhost:3000`);
@@ -61,6 +61,7 @@ function createWindow() {
     });
 }
 electron_1.ipcMain.on("download", (event, arg) => {
+    console.log(arg);
     electron_1.dialog.showSaveDialog({
         title: "Save file",
         properties: ['createDirectory']
@@ -69,7 +70,7 @@ electron_1.ipcMain.on("download", (event, arg) => {
             console.log("canceled");
         else {
             console.log('absolute path: ', filePath_obj.filePath);
-            const dest = fs_1.default.createWriteStream(filePath_obj.filePath);
+            const dest = fs_1.default.createWriteStream(filePath_obj.filePath + '.sql');
             const request = http_1.default.get("http://localhost:30000/faker/create", arg, function (response) {
                 response.pipe(dest);
             });
@@ -80,5 +81,4 @@ electron_1.ipcMain.on("download", (event, arg) => {
 });
 electron_1.app.on("ready", createWindow);
 electron_1.app.allowRendererProcessReuse = true;
-//exports into webpack.electorn.config
 //# sourceMappingURL=main.js.map

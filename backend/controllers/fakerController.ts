@@ -13,9 +13,6 @@ export const fakerController = {
     let writeStream = fs.createWriteStream('output.sql');
     const {tableData, tableRow} = req.body;
     const tableNameArray = Object.keys(tableData);
-    console.log(tableNameArray, tableRow)
-    // write some data with a base64 encoding
-    // writeStream.write("insert into MOCK_DATA (id, first_name, last_name, email, gender, ip_address) values (1, 'Catlaina', 'Newdick', 'cnewdick0@irs.gov', 'Female', '82.14.134.175');", 'utf-8');writeStream.write("insert into MOCK_DATA (id, first_name, last_name, email, gender, ip_address) values (2, 'Minnaminnie', 'Linklater', 'mlinklater1@ft.com', 'Female', '60.225.100.116');", 'utf-8');
     let start = 0;
     for(const tablename of tableNameArray){
       for(let row = 0; row<tableRow[start]; row++){
@@ -32,12 +29,10 @@ export const fakerController = {
       start+=1;
       writeStream.write('\n','utf-8')
     }
-
     // the finish event is emitted when all data has been flushed from the stream
     writeStream.on('finish', () => {
       next();
     });
-      
       // close the stream
       writeStream.end();
   }

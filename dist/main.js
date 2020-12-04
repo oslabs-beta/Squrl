@@ -110,8 +110,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // let mainWindow: Electron.BrowserWindow | null;
 
-// let mainWindow: Electron.BrowserWindow | null;
 var mainWindow;
 
 function createWindow() {
@@ -120,14 +120,14 @@ function createWindow() {
     height: 1000,
     // minHeight: 1000,
     // minWidth: 1500,
-    icon: "./assets/templogo.png",
+    icon: "./assets/logo.png",
     webPreferences: {
       nodeIntegration: true
     }
   }); //macOS dock settings for logo
 
   if (process.platform === 'darwin') {
-    electron__WEBPACK_IMPORTED_MODULE_0__["app"].dock.setIcon("./assets/templogo.png");
+    electron__WEBPACK_IMPORTED_MODULE_0__["app"].dock.setIcon("./assets/logo.png");
   }
 
   if (true) {
@@ -141,13 +141,14 @@ function createWindow() {
 }
 
 electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event, arg) {
+  console.log(arg);
   electron__WEBPACK_IMPORTED_MODULE_0__["dialog"].showSaveDialog({
     title: "Save file",
     properties: ['createDirectory']
   }).then(function (filePath_obj) {
     if (filePath_obj.canceled) console.log("canceled");else {
       console.log('absolute path: ', filePath_obj.filePath);
-      var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath);
+      var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath + '.sql');
       var request = http__WEBPACK_IMPORTED_MODULE_4___default.a.get("http://localhost:30000/faker/create", arg, function (response) {
         response.pipe(dest);
       });
@@ -157,7 +158,7 @@ electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event,
   });
 });
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].on("ready", createWindow);
-electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true; //exports into webpack.electorn.config
+electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true;
 
 /***/ }),
 

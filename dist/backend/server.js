@@ -24,6 +24,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const fakerRouter = __importStar(require("./routes/fakerRoute"));
+const modelRouter = __importStar(require("./routes/api"));
 const cors_1 = __importDefault(require("cors"));
 const app = express_1.default();
 app.use(express_1.default.json());
@@ -33,5 +34,6 @@ app.get('/', (req, res) => {
     res.send('<div>Hello World!</div>');
 });
 app.use("/faker", fakerRouter.router);
+app.use("/api", modelRouter.router);
 app.listen(30000, () => console.log("listening on port 30000"));
 //# sourceMappingURL=server.js.map

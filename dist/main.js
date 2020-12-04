@@ -110,21 +110,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // let mainWindow: Electron.BrowserWindow | null;
 
-// let mainWindow: Electron.BrowserWindow | null;
 var mainWindow;
 
 function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
-<<<<<<< HEAD
-    width: 1200,
-    height: 800,
-=======
     width: 1500,
     height: 1000,
     // minHeight: 1000,
     // minWidth: 1500,
->>>>>>> b67a4795f1f3dc79b328da5f4e61f188d67c7678
     icon: "./assets/templogo.png",
     webPreferences: {
       nodeIntegration: true
@@ -153,7 +148,7 @@ electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event,
   }).then(function (filePath_obj) {
     if (filePath_obj.canceled) console.log("canceled");else {
       console.log('absolute path: ', filePath_obj.filePath);
-      var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath);
+      var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath + '.sql');
       var request = http__WEBPACK_IMPORTED_MODULE_4___default.a.get("http://localhost:30000/faker/create", arg, function (response) {
         response.pipe(dest);
       });

@@ -61,6 +61,7 @@ function createWindow() {
     });
 }
 electron_1.ipcMain.on("download", (event, arg) => {
+    console.log(arg);
     electron_1.dialog.showSaveDialog({
         title: "Save file",
         properties: ['createDirectory']
@@ -69,7 +70,7 @@ electron_1.ipcMain.on("download", (event, arg) => {
             console.log("canceled");
         else {
             console.log('absolute path: ', filePath_obj.filePath);
-            const dest = fs_1.default.createWriteStream(filePath_obj.filePath);
+            const dest = fs_1.default.createWriteStream(filePath_obj.filePath + '.sql');
             const request = http_1.default.get("http://localhost:30000/faker/create", arg, function (response) {
                 response.pipe(dest);
             });
@@ -80,5 +81,4 @@ electron_1.ipcMain.on("download", (event, arg) => {
 });
 electron_1.app.on("ready", createWindow);
 electron_1.app.allowRendererProcessReuse = true;
-//exports into webpack.electorn.config
 //# sourceMappingURL=main.js.map

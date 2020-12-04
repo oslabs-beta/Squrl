@@ -18,7 +18,6 @@ import DataGeneration from './pageContainers/DataGeneration';
 const mainElement = document.createElement('div');
 document.body.appendChild(mainElement);
 
-
 /*
 App component utilizes router to render the different routes when the
 corresponding menu tab is selected. SideNav is always displated since it

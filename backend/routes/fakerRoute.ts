@@ -9,6 +9,7 @@ router.get('/user', (req : Request, res: Response) =>{
 })
 
 router.post('/create', fakerController.create,  (req :Request, res:Response) => {
+    console.log('inside create')
     res.status(200).json({})
 })
 router.get('/create', (req :Request, res:Response) => {

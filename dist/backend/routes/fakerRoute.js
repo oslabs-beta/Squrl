@@ -12,6 +12,7 @@ exports.router.get('/user', (req, res) => {
     res.send("<h1>creating user data....</h1>");
 });
 exports.router.post('/create', fakerController_1.fakerController.create, (req, res) => {
+    console.log('inside create');
     res.status(200).json({});
 });
 exports.router.get('/create', (req, res) => {

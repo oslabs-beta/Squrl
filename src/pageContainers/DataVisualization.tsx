@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const DataVisualization: React.FC = () => {
+const DataVizualization: React.FC = () => {
   return (
-    <div className='dataViz'>
-      <h1>dataViz</h1>
-    </div>
+      <div className="home">
+          <h1>HOME</h1>
+      </div>
   )
 }
+export default DataVizualization;
 
-export default DataVisualization;
+
+

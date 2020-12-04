@@ -94,6 +94,7 @@ const DataGeneration: React.FC = () => {
   }
 
   const createFile = () => {
+    // console.log('here')
     axios.post('http://localhost:30000/faker/create', { tableData: tableStateData, tableRow })
       .then(() => {
         ipcRenderer.send('download')

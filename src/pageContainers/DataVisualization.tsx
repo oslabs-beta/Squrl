@@ -1,9 +1,12 @@
 import React from 'react'
+import PieChart from '../components/DataVisualizationChildren/PieChart'
+import DataVisualizationPanel from '../components/DataVisualizationChildren/DataVisualizationPanel'
 
 const DataVisualization: React.FC = () => {
   return (
-    <div className='dataViz'>
-      <h1>dataViz</h1>
+    <div className='dataVisualization'>
+      <DataVisualizationPanel />
+      <PieChart />
     </div>
   )
 }

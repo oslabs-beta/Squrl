@@ -162,42 +162,7 @@
   background-color: #FFBF00;
   color: black;
 }
-//   &:hover {
-//     color: #FFBF00;
-//     &::before { width: 0; }
-//     &::after { height: 0; }
-//   }
-//   &:active {
-//     border-width: .5rem / 2;
-//   }
-  
-//   span {
-//     position: relative;
-//     z-index: 2;
-//   }
-//   &::before, &::after {
-//     content: '';
-//     position: absolute;
-//     background: $darkgray;
-//     z-index: 1;
-//     transition: all .3s;
-//   }
 
-//   &::before {
-//     width: calc(100% - #{3rem});
-//     height: calc(101% + #{.5rem * 2});
-//     top: -.5rem;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-//   &::after {
-//     height: calc(100% - #{3rem});
-//     width: calc(101% + #{.5rem * 2});
-//     left: -.5rem;
-//     top: 50%;
-//     transform: translateY(-50%);
-//   }
-// }
 
 
 .GennyTitle {

@@ -1,13 +1,17 @@
 // @import 'abstracts/variables.scss';
 
-.dataViz
+.dataVisualization
  {
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-template-columns: minmax(200px, 30%) 2fr;
   height: 100vh;
-  margin-left: 3rem;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: #f3eff5;
+  width: 100%;
+  padding-left: 6rem;
+}
+
+.chart{
+  display: flex;
+  margin-top: 64px;
+  width:100%;
+  padding: 32px;
 }

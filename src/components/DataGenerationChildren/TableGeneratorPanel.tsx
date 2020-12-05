@@ -32,7 +32,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
 
   //State for updating/creating table name
   const [name, setName] = useState<string>('')
-  const [row, setRow] = useState<number>(0)
+  const [row, setRow] = useState<number>(1)
 
   //initilize column state 
   const [columnState, setColumnState] = useState<inputObj>(initColumnState)
@@ -114,17 +114,22 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           <div className="input-container">
             <input
               className='create-table-input'
-              type="input"
+              type="number"
               onChange={(event) => setRowAmount(event)}
               placeholder="Number of Rows"
               value={row === 0 ? '' : row}
+              // value={row}
             />
             <label className="input-label">Number of Rows</label>
           </div>
 
           <button
             className='panel-buttons'
-            onClick={(event) => { createTable(event); inputRows() }}>
+            onClick={(event) => { 
+              createTable(event); 
+              inputRows(); 
+            }
+              }>
             <span>Create Table</span>
           </button>
 

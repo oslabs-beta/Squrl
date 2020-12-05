@@ -4,6 +4,7 @@ import * as path from "path";
 import * as url from "url";
 import fs from 'fs'
 import http from 'http'
+import axios from 'axios'
 
 // let mainWindow: Electron.BrowserWindow | null;
 let mainWindow: any;
@@ -49,7 +50,7 @@ function createWindow() {
         console.log("canceled")
     else{
       console.log('absolute path: ',filePath_obj.filePath);
-      const dest : any = fs.createWriteStream(filePath_obj.filePath+'.sql');
+      const dest : any = fs.createWriteStream(filePath_obj.filePath);
       const request = http.get("http://localhost:30000/faker/create",arg, function(response) {
       response.pipe(dest);
       });
@@ -58,7 +59,6 @@ function createWindow() {
     console.log(err)
   })
 });
-
 
 app.on("ready", createWindow);
 app.allowRendererProcessReuse = true;

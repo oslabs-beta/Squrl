@@ -1,5 +1,6 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import ReactDom from 'react-dom';
+import axios from 'axios'
 //react-router-dom
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 //Styles
@@ -36,64 +37,100 @@ export type inputObj = {
     [key: string]: tableStateData
   }
 
+  const bytes = require('bytes');
+  const randomColor = require('randomcolor')
+
 /*
 App component utilizes router to render the different routes when the
 corresponding menu tab is selected. SideNav is always displated since it
 is outside of the switch tag. 
 */
 const App: React.FC = () => {
-    // const [tableStateData, setTableStateData] = useState<tableType>({})
-      const [tableStateData, setTableStateData] = useState<tableType>(
-    {'test1':
-      [
-        {
-          columnName: 'test',
-          category: 'test',
-          subcategory: 'test',
-          percent: 'test',
-          sampleData : 'test',
-        },
-        {
-          columnName: 'test2',
-          category: 'test2',
-          subcategory: 'test2',
-          percent: 'test2',
-          sampleData : 'test2',
-        },
-        {
-          columnName: 'test3',
-          category: 'test3',
-          subcategory: 'test3',
-          percent: 'test3',
-          sampleData : 'test3',
-        }
-      ],
-      'test2':
-      [
-        {
-          columnName: 'test',
-          category: 'test',
-          subcategory: 'test',
-          percent: 'test',
-          sampleData : 'test',
-        },
-        {
-          columnName: 'test2',
-          category: 'test2',
-          subcategory: 'test2',
-          percent: 'test2',
-          sampleData : 'test2',
-        },
-        {
-          columnName: 'test3',
-          category: 'test3',
-          subcategory: 'test3',
-          percent: 'test3',
-          sampleData : 'test3',
-        }
-      ]
-    }
-  )
+    const [tableStateData, setTableStateData] = useState<tableType>({})
+    const [tableRow, setTableRow] = useState<number[]>([]);
+    const [data, setData] = useState<any>({})
+
+    useEffect(()=>{
+      axios.get('http://localhost:30000/api')
+      .then((data:any)=>{
+        console.log(data.data)
+        const resArray = data.data;
+  
+        const tableNameArr = resArray.map((el:any)=>{
+          return el.table_name;
+        })
+        const tableArr = resArray.map((el:any)=>{
+          let elArr = el.full_size.toUpperCase().split(' ');
+          return bytes(elArr.join(''))/1024
+        })
+        let color = randomColor({
+          count:tableNameArr.length,
+          hue: 'random'
+        })
+        let tempData = {
+          labels:tableNameArr,
+          datasets:[{
+            data: tableArr,
+            backgroundColor:color,
+            hoverBackgroundColor:color
+          }
+        ]}
+        setData({...tempData})
+        console.log(tableArr,tableNameArr)
+        console.log('temp ',tempData)
+      })
+    },[])
+  //     const [tableStateData, setTableStateData] = useState<tableType>(
+  //   {'test1':
+  //     [
+  //       {
+  //         columnName: 'test',
+  //         category: 'test',
+  //         subcategory: 'test',
+  //         percent: 'test',
+  //         sampleData : 'test',
+  //       },
+  //       {
+  //         columnName: 'test2',
+  //         category: 'test2',
+  //         subcategory: 'test2',
+  //         percent: 'test2',
+  //         sampleData : 'test2',
+  //       },
+  //       {
+  //         columnName: 'test3',
+  //         category: 'test3',
+  //         subcategory: 'test3',
+  //         percent: 'test3',
+  //         sampleData : 'test3',
+  //       }
+  //     ],
+  //     'test2':
+  //     [
+  //       {
+  //         columnName: 'test',
+  //         category: 'test',
+  //         subcategory: 'test',
+  //         percent: 'test',
+  //         sampleData : 'test',
+  //       },
+  //       {
+  //         columnName: 'test2',
+  //         category: 'test2',
+  //         subcategory: 'test2',
+  //         percent: 'test2',
+  //         sampleData : 'test2',
+  //       },
+  //       {
+  //         columnName: 'test3',
+  //         category: 'test3',
+  //         subcategory: 'test3',
+  //         percent: 'test3',
+  //         sampleData : 'test3',
+  //       }
+  //     ]
+  //   }
+  // )
     return (
         <>
             <Router>
@@ -106,9 +143,13 @@ const App: React.FC = () => {
                     <DataGeneration 
                     tableStateData={tableStateData}
                     setTableStateData={setTableStateData}
+                    tableRow={tableRow}
+                    setTableRow={setTableRow}
                     />
                     )}/>
-                    <Route path='/DataVisualization' component={DataVisualization} />
+                    <Route path='/DataVisualization' component={()=>{
+                      return <DataVisualization dataValue={data}/>
+                      }} />
                     <Route path='/About' component={About} />
                     <Route path='/Settings' component={Settings} />
                 </Switch>

@@ -70,7 +70,7 @@ electron_1.ipcMain.on("download", (event, arg) => {
             console.log("canceled");
         else {
             console.log('absolute path: ', filePath_obj.filePath);
-            const dest = fs_1.default.createWriteStream(filePath_obj.filePath + '.sql');
+            const dest = fs_1.default.createWriteStream(filePath_obj.filePath);
             const request = http_1.default.get("http://localhost:30000/faker/create", arg, function (response) {
                 response.pipe(dest);
             });

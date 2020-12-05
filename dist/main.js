@@ -148,7 +148,7 @@ electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event,
   }).then(function (filePath_obj) {
     if (filePath_obj.canceled) console.log("canceled");else {
       console.log('absolute path: ', filePath_obj.filePath);
-      var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath + '.sql');
+      var dest = fs__WEBPACK_IMPORTED_MODULE_3___default.a.createWriteStream(filePath_obj.filePath);
       var request = http__WEBPACK_IMPORTED_MODULE_4___default.a.get("http://localhost:30000/faker/create", arg, function (response) {
         response.pipe(dest);
       });

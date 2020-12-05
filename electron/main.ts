@@ -4,7 +4,6 @@ import * as path from "path";
 import * as url from "url";
 import fs from 'fs'
 import http from 'http'
-import axios from 'axios'
 
 // let mainWindow: Electron.BrowserWindow | null;
 let mainWindow: any;
@@ -41,6 +40,7 @@ function createWindow() {
   });
 }
   ipcMain.on("download", (event, arg) => {
+    console.log(arg)
   dialog.showSaveDialog({
     title: "Save file",
     properties:['createDirectory']
@@ -59,9 +59,6 @@ function createWindow() {
   })
 });
 
-app.on("ready", createWindow)
 
+app.on("ready", createWindow);
 app.allowRendererProcessReuse = true;
-
-
-//exports into webpack.electorn.config

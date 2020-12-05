@@ -61,6 +61,7 @@ function createWindow() {
     });
 }
 electron_1.ipcMain.on("download", (event, arg) => {
+    console.log(arg);
     electron_1.dialog.showSaveDialog({
         title: "Save file",
         properties: ['createDirectory']
@@ -80,5 +81,4 @@ electron_1.ipcMain.on("download", (event, arg) => {
 });
 electron_1.app.on("ready", createWindow);
 electron_1.app.allowRendererProcessReuse = true;
-//exports into webpack.electorn.config
 //# sourceMappingURL=main.js.map

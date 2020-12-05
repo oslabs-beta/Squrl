@@ -110,8 +110,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // let mainWindow: Electron.BrowserWindow | null;
 
-// let mainWindow: Electron.BrowserWindow | null;
 var mainWindow;
 
 function createWindow() {
@@ -141,6 +141,7 @@ function createWindow() {
 }
 
 electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event, arg) {
+  console.log(arg);
   electron__WEBPACK_IMPORTED_MODULE_0__["dialog"].showSaveDialog({
     title: "Save file",
     properties: ['createDirectory']
@@ -157,7 +158,7 @@ electron__WEBPACK_IMPORTED_MODULE_0__["ipcMain"].on("download", function (event,
   });
 });
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].on("ready", createWindow);
-electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true; //exports into webpack.electorn.config
+electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true;
 
 /***/ }),
 

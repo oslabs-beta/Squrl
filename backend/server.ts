@@ -1,9 +1,7 @@
 import express, { Request, Response } from "express";
 import * as fakerRouter from "./routes/fakerRoute"
+import * as modelRouter from "./routes/api"
 import cors from 'cors';
-import * as path from 'path'
-import * as axios from 'axios'
-import * as fs from 'fs'
 
 const app = express();
 
@@ -18,5 +16,6 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.use("/faker", fakerRouter.router)
+app.use("/api", modelRouter.router)
 
 app.listen(30000, () => console.log("listening on port 30000"))

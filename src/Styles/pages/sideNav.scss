@@ -1,6 +1,6 @@
 // @import 'abstracts/variables.scss';
 
-.side-nav-container{
+.side-nav-container {
   height: 100%;
   width: 6rem;
   display: flex;
@@ -8,16 +8,14 @@
   background: #1a1d1e;
 }
 
-
 .side-nav-bar {
   height: 100%;
   width: 4rem;
   position: fixed;
   top: 0;
   left: 0;
-  display:flex;
+  display: flex;
   background: #1a1d1e;
-  
 }
 
 .nav-tab-items {
@@ -31,7 +29,7 @@
 
 .nav-text {
   margin-top: 2rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   a {
@@ -39,11 +37,11 @@
     justify-content: center;
     text-decoration: none;
     border-radius: 4px;
-    width:100%;
-    padding: .5rem 0 .5rem 0;
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0;
   }
   a:hover {
-    background-color: #FFBF00;
+    background-color: #ffbf00;
   }
 }
 

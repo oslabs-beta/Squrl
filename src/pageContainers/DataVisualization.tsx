@@ -22,6 +22,9 @@ const DataVisualization: React.FC = () => {
       <button onClick={changeDB}>Change Database</button>
       <button onClick={clicked}>Button</button>
     </div>
+
+
+
   )
 }
 export default DataVisualization;

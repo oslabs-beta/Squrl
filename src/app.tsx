@@ -48,38 +48,6 @@ is outside of the switch tag.
 const App: React.FC = () => {
     const [tableStateData, setTableStateData] = useState<tableType>({})
     const [tableRow, setTableRow] = useState<number[]>([]);
-    const [data, setData] = useState<any>({})
-
-    useEffect(()=>{
-      axios.get('http://localhost:30000/api')
-      .then((data:any)=>{
-        console.log(data.data)
-        const resArray = data.data;
-  
-        const tableNameArr = resArray.map((el:any)=>{
-          return el.table_name;
-        })
-        const tableArr = resArray.map((el:any)=>{
-          let elArr = el.full_size.toUpperCase().split(' ');
-          return bytes(elArr.join(''))/1024
-        })
-        let color = randomColor({
-          count:tableNameArr.length,
-          hue: 'random'
-        })
-        let tempData = {
-          labels:tableNameArr,
-          datasets:[{
-            data: tableArr,
-            backgroundColor:color,
-            hoverBackgroundColor:color
-          }
-        ]}
-        setData({...tempData})
-        console.log(tableArr,tableNameArr)
-        console.log('temp ',tempData)
-      })
-    },[])
   //     const [tableStateData, setTableStateData] = useState<tableType>(
   //   {'test1':
   //     [
@@ -148,7 +116,7 @@ const App: React.FC = () => {
                     />
                     )}/>
                     <Route path='/DataVisualization' component={()=>{
-                      return <DataVisualization dataValue={data}/>
+                      return <DataVisualization/>
                       }} />
                     <Route path='/About' component={About} />
                     <Route path='/Settings' component={Settings} />

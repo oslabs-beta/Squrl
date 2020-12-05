@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import PieChart from '../components/DataVisualizationChildren/PieChart'
+import DataVisualizationPanel from '../components/DataVisualizationChildren/DataVisualizationPanel'
 import axios from 'axios'
 import  Chart  from '../components/Charts/PieChart'
 
@@ -6,7 +8,7 @@ const bytes = require('bytes');
 type props ={
   dataValue: {}
 }
-const DataVisualization: React.FC<props> = ({dataValue}) => {
+const DataVisualization: React.FC = () => {
   const [input, setInput] = useState<string>('')
   // const [labels, setLabels] = useState<string[]>([])
   // const [data, setData] = useState<any>([])
@@ -56,6 +58,11 @@ const DataVisualization: React.FC<props> = ({dataValue}) => {
     setInput(e.target.value)
   }
   return (
+    <div>
+    <div className='dataVisualization'>
+      <DataVisualizationPanel />
+      <PieChart />
+    </div>
     <div className='dataViz'>
       <h1>dataViz</h1>
       <input type="text" name="" id="" value={input} onChange={updateDB}/>
@@ -64,7 +71,8 @@ const DataVisualization: React.FC<props> = ({dataValue}) => {
       <h1>All Data are shown as (kB) </h1>
       {/* {clicked()} */}
 
-      <Chart dataValue={dataValue}/>
+      <Chart/>
+    </div>
     </div>
   )
 }

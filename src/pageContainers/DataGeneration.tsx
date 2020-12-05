@@ -34,60 +34,8 @@ const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData,table
   //initialize the different states that will be used 
   // const [tableStateData, setTableStateData] = useState<tableType>({})
 
-  //UNCOMMENT TESTER STATE TO HELP WITH STYLING
-  // const [tableStateData, setTableStateData] = useState<tableType>(
-  //   {'test1':
-  //     [
-  //       {
-  //         columnName: 'test',
-  //         category: 'test',
-  //         subcategory: 'test',
-  //         percent: 'test',
-  //         sampleData : 'test',
-  //       },
-  //       {
-  //         columnName: 'test2',
-  //         category: 'test2',
-  //         subcategory: 'test2',
-  //         percent: 'test2',
-  //         sampleData : 'test2',
-  //       },
-  //       {
-  //         columnName: 'test3',
-  //         category: 'test3',
-  //         subcategory: 'test3',
-  //         percent: 'test3',
-  //         sampleData : 'test3',
-  //       }
-  //     ],
-  //     'test2':
-  //     [
-  //       {
-  //         columnName: 'test',
-  //         category: 'test',
-  //         subcategory: 'test',
-  //         percent: 'test',
-  //         sampleData : 'test',
-  //       },
-  //       {
-  //         columnName: 'test2',
-  //         category: 'test2',
-  //         subcategory: 'test2',
-  //         percent: 'test2',
-  //         sampleData : 'test2',
-  //       },
-  //       {
-  //         columnName: 'test3',
-  //         category: 'test3',
-  //         subcategory: 'test3',
-  //         percent: 'test3',
-  //         sampleData : 'test3',
-  //       }
-  //     ]
-  //   }
-  // )
   const [tableName, setTableName] = useState<string>('');
- 
+  
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
     if (tableName) {

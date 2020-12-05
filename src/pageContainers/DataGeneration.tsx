@@ -25,67 +25,14 @@ export type tableType = {
 type props = {
   tableStateData: tableType;
   setTableStateData: any;
+  tableRow:number[];
+  setTableRow: any;
 }
 //Container that will passdown state to TableGeneratorPanel and TableView Panel
-const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData}) => {
-  console.log(tableStateData)
-  //initialize the different states that will be used 
-  // const [tableStateData, setTableStateData] = useState<tableType>({})
+const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData, tableRow, setTableRow}) => {
 
-  //UNCOMMENT TESTER STATE TO HELP WITH STYLING
-  // const [tableStateData, setTableStateData] = useState<tableType>(
-  //   {'test1':
-  //     [
-  //       {
-  //         columnName: 'test',
-  //         category: 'test',
-  //         subcategory: 'test',
-  //         percent: 'test',
-  //         sampleData : 'test',
-  //       },
-  //       {
-  //         columnName: 'test2',
-  //         category: 'test2',
-  //         subcategory: 'test2',
-  //         percent: 'test2',
-  //         sampleData : 'test2',
-  //       },
-  //       {
-  //         columnName: 'test3',
-  //         category: 'test3',
-  //         subcategory: 'test3',
-  //         percent: 'test3',
-  //         sampleData : 'test3',
-  //       }
-  //     ],
-  //     'test2':
-  //     [
-  //       {
-  //         columnName: 'test',
-  //         category: 'test',
-  //         subcategory: 'test',
-  //         percent: 'test',
-  //         sampleData : 'test',
-  //       },
-  //       {
-  //         columnName: 'test2',
-  //         category: 'test2',
-  //         subcategory: 'test2',
-  //         percent: 'test2',
-  //         sampleData : 'test2',
-  //       },
-  //       {
-  //         columnName: 'test3',
-  //         category: 'test3',
-  //         subcategory: 'test3',
-  //         percent: 'test3',
-  //         sampleData : 'test3',
-  //       }
-  //     ]
-  //   }
-  // )
   const [tableName, setTableName] = useState<string>('');
-  const [tableRow, setTableRow] = useState<number[]>([]);
+  
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
     if (tableName) {

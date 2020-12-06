@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { SideNavTabs } from '../components/SideNavTabs'
 import { IconContext } from 'react-icons'
-import logo from '../../assets/insidelogo.png'
+// import logo from '../../assets/insidelogo.png'
 
 const SideNav: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const SideNav: React.FC = () => {
         <nav className='side-nav-bar'>
 
           <ul className='nav-tab-items'>
-          <img src={logo}></img>
+          {/* <img src={logo}></img> */}
               {/* //logo here */}
             {SideNavTabs.map((tab, index) => (
               <li key={index} className={tab.cName} title={tab.title}>

@@ -33,7 +33,7 @@ export const fakerController = {
     writeStream.on('finish', () => {
       next();
     });
-      // close the stream
-      writeStream.end();
+    // close the stream
+    writeStream.end();
   }
 };

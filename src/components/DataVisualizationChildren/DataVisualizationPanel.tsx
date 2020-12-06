@@ -5,10 +5,16 @@ const faker = require('faker')
 
 //Import for TypeScript types 
 
+type props ={
+  input: string;
+  setInput: any;
+  updateDB: any;
+  changeDB: any;
+} 
 
 
 //passed down state/tableProps are passed in as arguments for our functional componenet 
-const DataVisualizationPanel: React.FC = () => {
+const DataVisualizationPanel: React.FC<props> = ({input,setInput,updateDB,changeDB}) => {
   return (
     <div className="table-gen-options">
       <div className="sub-panels">
@@ -21,7 +27,7 @@ const DataVisualizationPanel: React.FC = () => {
               className='create-table-input'
               type="text"
               placeholder='Table Name'
-              value=''
+              value={input} onChange={updateDB}
             />
             <label className="input-label">Database Connection</label>
           </div>
@@ -40,7 +46,7 @@ const DataVisualizationPanel: React.FC = () => {
 
           <button
             className='panel-buttons'
-            onClick={(event) => { console.log(event)}}>
+            onClick={() => {changeDB()}}>
             <span>Connect to Database</span>
           </button>
 

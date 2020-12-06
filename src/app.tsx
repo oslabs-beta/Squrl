@@ -1,5 +1,6 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import ReactDom from 'react-dom';
+import axios from 'axios'
 //react-router-dom
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 //Styles
@@ -13,7 +14,7 @@ import About from './pageContainers/About';
 import Settings from './pageContainers/Settings';
 import DataVisualization from './pageContainers/DataVisualization';
 import DataGeneration from './pageContainers/DataGeneration';
-
+import Percentages from '../src/components/DataVisualizationChildren/Percentages'
 //div we will append REACT components too
 const mainElement = document.createElement('div');
 document.body.appendChild(mainElement);
@@ -35,6 +36,9 @@ export type inputObj = {
   export type tableType = {
     [key: string]: tableStateData
   }
+
+  const bytes = require('bytes');
+  const randomColor = require('randomcolor')
 
 /*
 App component utilizes router to render the different routes when the
@@ -111,7 +115,9 @@ const App: React.FC = () => {
                     setTableRow={setTableRow}
                     />
                     )}/>
-                    <Route path='/DataVisualization' component={DataVisualization} />
+                    <Route path='/DataVisualization' component={()=>{
+                      return <DataVisualization/>
+                      }} />
                     <Route path='/About' component={About} />
                     <Route path='/Settings' component={Settings} />
                 </Switch>

@@ -8,9 +8,6 @@ const express_1 = __importDefault(require("express"));
 const fakerController_1 = require("../controllers/fakerController");
 const path_1 = __importDefault(require("path"));
 exports.router = express_1.default.Router();
-exports.router.get('/user', (req, res) => {
-    res.send("<h1>creating user data....</h1>");
-});
 exports.router.post('/create', fakerController_1.fakerController.create, (req, res) => {
     console.log('inside create');
     res.status(200).json({});

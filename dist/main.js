@@ -110,8 +110,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // let mainWindow: Electron.BrowserWindow | null;
 
+// let mainWindow: Electron.BrowserWindow | null;
 var mainWindow;
 
 function createWindow() {

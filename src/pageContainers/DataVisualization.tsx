@@ -65,6 +65,7 @@ const DataVisualization: React.FC = () => {
   const updateDB = (e:any) => {
     setInput(e.target.value)
   }
+
   return (
     <div>
       <div className='dataVisualization'>

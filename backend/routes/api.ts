@@ -13,7 +13,7 @@ router.get('/', modelController.getTableSize, (req : Request, res: Response) =>{
 // router.get('/tablesize', modelController.getTableSize, (req : Request, res: Response) =>{
 //   res.status(200).json(res.locals.data)
 // })
-// router.get('/', modelController.getCachePercentage, (req : Request, res: Response) =>{
-//   res.status(200).json(res.locals.data)
-// })
+router.get('/cache', modelController.getCachePercentage, (req : Request, res: Response) =>{
+  res.status(200).json(res.locals.data)
+})
 

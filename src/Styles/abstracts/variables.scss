@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@400;700&display=swap';
+
 //Brand Colors
 $PrimaryBrand: #155264;
 $PrimaryBlack: #212932;
@@ -8,15 +10,13 @@ $Warning: #E05A61;
 $DarkGrey1: #414c59;
 $DarkGrey2: #646e7c;
 $LightGrey1: #9da5b0;
-$LightGrey2: #e4e7eb
+$LightGrey2: #e4e7eb;
 
 //Brand Fonts
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@400;700&display=swap');
-
-$Display: 'Comfortaa', san-serif;
+$Display: 'Comfortaa', cursive;
 $Content: 'Montserrat', san-serif;
 
-//Styles
+//Font Styles
 h1 {
   font-family: $Display;
   font-weight: 700;

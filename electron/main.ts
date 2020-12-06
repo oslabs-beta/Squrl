@@ -4,6 +4,7 @@ import * as path from "path";
 import * as url from "url";
 import fs from 'fs'
 import http from 'http'
+import axios from 'axios'
 
 // let mainWindow: Electron.BrowserWindow | null;
 let mainWindow: any;
@@ -58,7 +59,6 @@ function createWindow() {
     console.log(err)
   })
 });
-
 
 app.on("ready", createWindow);
 app.allowRendererProcessReuse = true;

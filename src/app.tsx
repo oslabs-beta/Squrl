@@ -1,5 +1,6 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import ReactDom from 'react-dom';
+import axios from 'axios'
 //react-router-dom
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 //Styles
@@ -35,6 +36,9 @@ export type inputObj = {
   export type tableType = {
     [key: string]: tableStateData
   }
+
+  const bytes = require('bytes');
+  const randomColor = require('randomcolor')
 
 /*
 App component utilizes router to render the different routes when the
@@ -111,7 +115,9 @@ const App: React.FC = () => {
                     setTableRow={setTableRow}
                     />
                     )}/>
-                    <Route path='/DataVisualization' component={DataVisualization} />
+                    <Route path='/DataVisualization' component={()=>{
+                      return <DataVisualization/>
+                      }} />
                     <Route path='/About' component={About} />
                     <Route path='/Settings' component={Settings} />
                 </Switch>

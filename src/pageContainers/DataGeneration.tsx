@@ -25,11 +25,14 @@ export type tableType = {
 type props = {
   tableStateData: tableType;
   setTableStateData: any;
-  tableRow:number[];
+  tableRow: number[];
   setTableRow: any;
 }
 //Container that will passdown state to TableGeneratorPanel and TableView Panel
-const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData, tableRow, setTableRow}) => {
+const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData,tableRow,setTableRow}) => {
+  // console.log(tableStateData)
+  //initialize the different states that will be used 
+  // const [tableStateData, setTableStateData] = useState<tableType>({})
 
   const [tableName, setTableName] = useState<string>('');
   
@@ -44,6 +47,7 @@ const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData, tabl
   }
 
   const createFile = () => {
+    console.log(tableStateData, tableRow)
     axios.post('http://localhost:30000/faker/create', { tableData: tableStateData, tableRow })
       .then(() => {
         ipcRenderer.send('download')

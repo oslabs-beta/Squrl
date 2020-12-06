@@ -1,6 +1,42 @@
-$primary: #3f7d20;
-$secondary: #72b01d;
-$white: #fff;
-$gray: #9b9b9b;
-$darkgray: #25272d;
-$black: #1a1d1e;
+//Brand Colors
+$PrimaryBrand: #155264;
+$PrimaryBlack: #212932;
+$PrimaryWhite: #f5f7fa;
+$SecondaryBrand: #FDAD34;
+$Affirmation: #95d1be;
+$Warning: #E05A61;
+$DarkGrey1: #414c59;
+$DarkGrey2: #646e7c;
+$LightGrey1: #9da5b0;
+$LightGrey2: #e4e7eb
+
+//Brand Fonts
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+$Display: 'Comfortaa', san-serif;
+$Content: 'Montserrat', san-serif;
+
+//Styles
+h1 {
+  font-family: $Display;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: $Display;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: $Display;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: $Content;
+  font-weight: 400;
+  font-size: 1rem;
+}

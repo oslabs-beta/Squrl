@@ -24,7 +24,7 @@ export const fakerController = {
         let value:any = (!isNumeric(faker[columnArray[i].category][columnArray[i].subcategory]()[0]))? `"${faker[columnArray[i].category][columnArray[i].subcategory]()}"`: faker[columnArray[i].category][columnArray[i].subcategory]()
         fakeDataArray.push(value)
       }
-      writeStream.write(`insert into ${tablename} (${columnNameArray.join(', ')}) values (${fakeDataArray.join(', ')});\n`, 'utf-8');
+      writeStream.write(`INSERT INTO ${tablename} (${columnNameArray.join(', ')}) VALUES (${fakeDataArray.join(', ')});\n`, 'utf-8');
     }
       start+=1;
       writeStream.write('\n','utf-8')

@@ -48,7 +48,7 @@ function createWindow() {
     if (filePath_obj.canceled)
         console.log("canceled")
     else{
-      console.log('absolute path: ',filePath_obj.filePath);
+      console.log('absolute path: ', filePath_obj.filePath);
       const dest : any = fs.createWriteStream(filePath_obj.filePath+'.sql');
       const request = http.get("http://localhost:30000/faker/create",arg, function(response) {
       response.pipe(dest);

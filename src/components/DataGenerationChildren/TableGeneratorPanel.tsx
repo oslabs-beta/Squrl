@@ -114,7 +114,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           <div className="input-container">
             <input
               className='create-table-input'
-              type="input"
+              type="number"
               onChange={(event) => setRowAmount(event)}
               placeholder="Number of Rows"
               value={row === 0 ? '' : row}

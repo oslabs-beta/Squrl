@@ -1,4 +1,4 @@
-@import "src/Styles/abstracts/variables.scss";
+@import 'src/Styles/abstracts/variables.scss';
 
 .table-gen-options {
   display: grid;
@@ -8,6 +8,7 @@
   background: red;
   margin-top: 64px;
 }
+
 
 .sub-panels {
   display: flex;
@@ -24,14 +25,15 @@
   }
 }
 
-.create-table {
+
+.create-table{
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
   width: 100%;
   background: $darkgray;
 
-  h2 {
+  h2{
     color: $white;
     font-size: 1.5rem;
   }
@@ -39,9 +41,10 @@
   button {
     margin-top: 2rem;
   }
+
 }
 
-.create-column {
+.create-column{
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
@@ -50,7 +53,7 @@
   background: $darkgray;
   justify-content: space-around;
 
-  h2 {
+  h2{
     color: $white;
     font-size: 1.5rem;
   }
@@ -66,10 +69,10 @@
     background-color: $black;
   }
 
-  select:active,
-  select:hover {
-    outline-color: red;
+  select:active, select:hover {
+    outline-color: red
   }
+
 }
 
 //////////-----css for the table inputs //////////
@@ -103,6 +106,7 @@
   }
 }
 
+
 .input-label {
   position: absolute;
   top: 0;
@@ -119,35 +123,32 @@
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #ffbf00;
-    font-weight: 700;
+    color: #FFBF00;
+    font-weight:700;    
   }
-  padding-bottom: 6px;
+  padding-bottom: 6px;  
   font-weight: 700;
   border-width: 3px;
-  border-image: linear-gradient(to right, #ffbf00, rgb(159, 125, 25));
+  border-image: linear-gradient(to right, #FFBF00, rgb(159, 125, 25));
   border-image-slice: 1;
 }
 /* reset input */
-.create-table-input {
-  &:required,
-  &:invalid {
-    box-shadow: none;
-  }
+.create-table-input{
+  &:required,&:invalid { box-shadow:none; }
 }
 
 /////////////////////left panel create button///////////@at-root
 .panel-buttons {
-  letter-spacing: 0.02rem;
+  letter-spacing: .02rem;
   cursor: pointer;
   width: 75%;
   background: transparent;
-  border: 0.1rem solid currentColor;
+  border: .1rem solid currentColor;
   padding: 1.5rem 2rem;
-  color: #ffbf00;
+  color: #FFBF00;
   position: relative;
-  transition: color 0.3s;
-
+  transition: color .3s;
+  
   span {
     font-size: 2rem;
   }
@@ -158,45 +159,11 @@
 }
 
 .panel-buttons:hover {
-  background-color: #ffbf00;
+  background-color: #FFBF00;
   color: black;
 }
-//   &:hover {
-//     color: #FFBF00;
-//     &::before { width: 0; }
-//     &::after { height: 0; }
-//   }
-//   &:active {
-//     border-width: .5rem / 2;
-//   }
 
-//   span {
-//     position: relative;
-//     z-index: 2;
-//   }
-//   &::before, &::after {
-//     content: '';
-//     position: absolute;
-//     background: $darkgray;
-//     z-index: 1;
-//     transition: all .3s;
-//   }
 
-//   &::before {
-//     width: calc(100% - #{3rem});
-//     height: calc(101% + #{.5rem * 2});
-//     top: -.5rem;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-//   &::after {
-//     height: calc(100% - #{3rem});
-//     width: calc(101% + #{.5rem * 2});
-//     left: -.5rem;
-//     top: 50%;
-//     transform: translateY(-50%);
-//   }
-// }
 
 .GennyTitle {
   height: 100px;

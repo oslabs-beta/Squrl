@@ -5,6 +5,7 @@ import randomColor from 'randomcolor';
 import axios from 'axios'
 import { Pie } from 'react-chartjs-2';
 const bytes = require('bytes');
+import Percentages from '../components/DataVisualizationChildren/Percentages'
 
 type props ={
   dataValue: {}
@@ -48,9 +49,9 @@ const DataVisualization: React.FC = () => {
   const getCache = () =>{
     axios.get('http://localhost:30000/api/cache')
     .then((data:any)=> {
-      console.log(data.data)
-      setCacheData([...data.data])
-      console.log(cacheData)
+      console.log('data.data', data.data)
+      setCacheData(([...data.data]))
+      console.log('cachedata', cacheData)
     })
   }
 
@@ -64,20 +65,26 @@ const DataVisualization: React.FC = () => {
   const updateDB = (e:any) => {
     setInput(e.target.value)
   }
+
   return (
     <div>
-    <div className='dataVisualization'>
+      <div className='dataVisualization'>
       <DataVisualizationPanel 
       input={input} 
       setInput={setInput}  
       updateDB={updateDB}
       changeDB={changeDB}
-      />
-      <PieChart data={sizeData}/>
+       />
+       <div>
+         <PieChart data={sizeData}/>
+        </div>
+       <div>
+         <Percentages data={cacheData} />
+       </div>
     </div>
     </div>
   )
 }
-
 export default DataVisualization;
+
 

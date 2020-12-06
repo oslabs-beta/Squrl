@@ -120,14 +120,14 @@ function createWindow() {
     height: 1000,
     // minHeight: 1000,
     // minWidth: 1500,
-    icon: "./assets/templogo.png",
+    icon: "./assets/logo.png",
     webPreferences: {
       nodeIntegration: true
     }
   }); //macOS dock settings for logo
 
   if (process.platform === 'darwin') {
-    electron__WEBPACK_IMPORTED_MODULE_0__["app"].dock.setIcon("./assets/templogo.png");
+    electron__WEBPACK_IMPORTED_MODULE_0__["app"].dock.setIcon("./assets/logo.png");
   }
 
   if (true) {

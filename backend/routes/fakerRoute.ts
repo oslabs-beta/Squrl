@@ -5,6 +5,7 @@ import path from 'path'
 export const router = express.Router();
 
 router.post('/create', fakerController.create,  (req :Request, res:Response) => {
+    console.log('inside create')
     res.status(200).json({})
 })
 router.get('/create', (req :Request, res:Response) => {

@@ -14,7 +14,7 @@ import About from './pageContainers/About';
 import Settings from './pageContainers/Settings';
 import DataVisualization from './pageContainers/DataVisualization';
 import DataGeneration from './pageContainers/DataGeneration';
-
+import Percentages from '../src/components/DataVisualizationChildren/Percentages'
 //div we will append REACT components too
 const mainElement = document.createElement('div');
 document.body.appendChild(mainElement);

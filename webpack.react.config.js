@@ -26,7 +26,9 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'file-loader', 
+          //  loader: 'url-loader',
+          //  loader: 'file-loader'
           },
         ],
       },
@@ -60,6 +62,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Squrl"
     }),
-    new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/templogo.png')),
+    new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/logo.png')),
   ]
 }

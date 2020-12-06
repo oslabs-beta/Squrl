@@ -70,9 +70,11 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
                         </tr>
                       </thead>
                       <tbody>
-                        <td>
-                          {colInfo.sampleData}
-                        </td>
+                        <tr>
+                          <td>
+                           {colInfo.sampleData}
+                         </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>

@@ -46,8 +46,8 @@ table {
     border-collapse: collapse;
   }
   th {
-    background: $black;
-    color: $primary;
+    background: $PrimaryBlack;
+    color: $PrimaryBrand;
     text-transform: uppercase;
     font-size: 12px;
     &.last {

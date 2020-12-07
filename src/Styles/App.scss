@@ -1,3 +1,18 @@
+.app-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto repeat(11, 1fr);
+  grid-template-rows:auto repeat(3, 1fr);
+  grid-template-areas: 
+  "h h h h h h h h h h h h"
+  "m p c c c c c c c c c c"
+  "m p c c c c c c c c c c"
+  "m p c c c c c c c c c c"
+  ;
+}
+
+
+
 // //full div surrounding entire container
 // #gencontainer {
 //   display: flex;

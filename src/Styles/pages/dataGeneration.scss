@@ -1,25 +1,25 @@
 // @import 'abstracts/variables.scss
 
-.data-gen-container {
-  display: grid;
-  grid-template-columns: minmax(20rem, 25%) 1fr;
-  height: 100%;
-  width: 100%;
-}
+// .data-gen-container {
+//   display: grid;
+//   grid-template-columns: minmax(20rem, 25%) 1fr;
+//   height: 100%;
+//   width: 100%;
+// }
 
-.data-panel-container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
+// .data-panel-container {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   align-items: center;
+// }
 
-.data-preview-container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-}
+// .data-preview-container {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-.downloadbutt {
-  margin-bottom: 40px;
-}
+// .downloadbutt {
+//   margin-bottom: 40px;
+// }

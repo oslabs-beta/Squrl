@@ -11,9 +11,8 @@ import SideNav from './pageContainers/SideNav';
 import TopNav from './pageContainers/TopNav';
 import Home from './pageContainers/Home';
 import About from './pageContainers/About';
-import Settings from './pageContainers/Settings';
-import DataVisualization from './pageContainers/DataVisualization';
-import DataGeneration from './pageContainers/DataGeneration';
+//import DataVisualization from './pageContainers/DataVisualization';
+//import DataGeneration from './pageContainers/DataGeneration';
 import Percentages from '../src/components/DataVisualizationChildren/Percentages'
 //div we will append REACT components too
 const mainElement = document.createElement('div');
@@ -101,14 +100,14 @@ const App: React.FC = () => {
     }
   )
   return (
-    <>
+    <div className="app-container">
       <Router>
         <TopNav />
         <SideNav />
         <Switch>
           <Route path='/' exact component={Home} />
           {/* <Route path='/DataGeneration' component={DataGeneration} /> */}
-          <Route path='/DataGeneration' component={() => (
+          {/* <Route path='/DataGeneration' component={() => (
             <DataGeneration
               tableStateData={tableStateData}
               setTableStateData={setTableStateData}
@@ -119,11 +118,10 @@ const App: React.FC = () => {
           <Route path='/DataVisualization' component={() => {
             return <DataVisualization />
           }} />
-          <Route path='/About' component={About} />
-          <Route path='/Settings' component={Settings} />
+          <Route path='/About' component={About} /> */}
         </Switch>
       </Router>
-    </>
+    </div>
   )
 }
 

@@ -21,84 +21,84 @@
 
 //surrounds all tables
 
-table {
-  align-self: center;
-  font-family: "Arial";
-  border-collapse: collapse;
-  border: 1px solid #eee;
-  border-bottom: 2px solid #00cccc;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05),
-    0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
-  tr {
-    &:hover {
-      background: #f4f4f4;
+// table {
+//   align-self: center;
+//   font-family: "Arial";
+//   border-collapse: collapse;
+//   border: 1px solid #eee;
+//   border-bottom: 2px solid #00cccc;
+//   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05),
+//     0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+//   tr {
+//     &:hover {
+//       background: #f4f4f4;
 
-      td {
-        color: #555;
-      }
-    }
-  }
-  th,
-  td {
-    color: #999;
-    border: 1px solid #eee;
-    padding: 12px 35px;
-    border-collapse: collapse;
-  }
-  th {
-    background: $PrimaryBlack;
-    color: $PrimaryBrand;
-    text-transform: uppercase;
-    font-size: 12px;
-    &.last {
-      border-right: none;
-    }
-  }
-}
+//       td {
+//         color: #555;
+//       }
+//     }
+//   }
+//   th,
+//   td {
+//     color: #999;
+//     border: 1px solid #eee;
+//     padding: 12px 35px;
+//     border-collapse: collapse;
+//   }
+//   th {
+//     background: $PrimaryBlack;
+//     color: $PrimaryBrand;
+//     text-transform: uppercase;
+//     font-size: 12px;
+//     &.last {
+//       border-right: none;
+//     }
+//   }
+// }
 
-.tableHeader {
-  font-size: 32px;
-  margin-top: 64px;
-}
+// .tableHeader {
+//   font-size: 32px;
+//   margin-top: 64px;
+// }
 
-.tableContainer {
-  display: flex;
-  height: 100px;
-  margin-top: 32px;
-  width: 800px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
+// .tableContainer {
+//   display: flex;
+//   height: 100px;
+//   margin-top: 32px;
+//   width: 800px;
+//   overflow-y: hidden;
+//   overflow-x: scroll;
+// }
 
-.table-view-container {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  margin-top: 64px;
-  justify-content: center;
-}
-//WHAT DOES THIS DO?
-.table-wrapper {
-  display: flex;
-}
+// .table-view-container {
+//   display: flex;
+//   height: 100%;
+//   width: 100%;
+//   margin-top: 64px;
+//   justify-content: center;
+// }
+// //WHAT DOES THIS DO?
+// .table-wrapper {
+//   display: flex;
+// }
 
-//surrounds entire table
-.table {
-  text-align: center;
-}
+// //surrounds entire table
+// .table {
+//   text-align: center;
+// }
 
-//need to align button to right of cell
-.deleteColumnButton {
-  color: white;
-  background-color: rgb(221, 79, 79);
-}
+// //need to align button to right of cell
+// .deleteColumnButton {
+//   color: white;
+//   background-color: rgb(221, 79, 79);
+// }
 
-.deleteAllColumns {
-  color: white;
-  background-color: rgb(221, 79, 79);
-}
+// .deleteAllColumns {
+//   color: white;
+//   background-color: rgb(221, 79, 79);
+// }
 
-.deleteTableButton {
-  color: white;
-  background-color: rgb(221, 79, 79);
-}
+// .deleteTableButton {
+//   color: white;
+//   background-color: rgb(221, 79, 79);
+// }

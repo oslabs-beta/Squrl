@@ -14,8 +14,7 @@ const DataVisualization: React.FC = () => {
   const [input, setInput] = useState<string>('')
   const [sizeData, setSizeData] = useState<{}>({})
   const [cacheData, setCacheData] = useState<{}[]>([])
-  
-  
+  const [indexHitRate, setIndexHitRate] = useState<{}[]>([])
 
   const clicked = () =>{
     axios.get('http://localhost:30000/api')
@@ -55,11 +54,21 @@ const DataVisualization: React.FC = () => {
     })
   }
 
+  const getIndexHitRate = () => {
+    axios.get('http://localhost:30000/api/indexHitRate')
+    .then((data:any)=> {
+      console.log('indexhitrate', data.data)
+      setIndexHitRate(([...data.data]))
+      console.log('indexHitRate', indexHitRate)
+  })}
+
+
   const changeDB = () =>{
     axios.post('http://localhost:30000/api',{input})
     .then((data:any)=>{
       clicked();
       getCache();
+      getIndexHitRate();
     })
   }
   const updateDB = (e:any) => {
@@ -79,7 +88,7 @@ const DataVisualization: React.FC = () => {
          <PieChart data={sizeData}/>
         </div>
        <div>
-         <Percentages data={cacheData} />
+         <Percentages indexHit={indexHitRate} data={cacheData} />
        </div>
     </div>
     </div>

@@ -39,6 +39,16 @@ export const modelController ={
       next();
     })
   },
+  getIndexHitRate: function(req:Request, res: Response, next:any){
+    pool.query('SELECT sum(idx_blks_read) as idx_read,sum(idx_blks_hit)  as idx_hit, sum(idx_blks_hit) / (sum(idx_blks_hit) + sum(idx_blks_read)) as ratio FROM pg_statio_user_indexes')
+    .then((data:any)=>{
+      res.locals.data = data.rows
+      console.log('indexhitrate backend', res.locals.data)
+      next();
+    })
+  }, 
+
+
   changeDB : function(req:Request, res:Response, next:any){
     // console.log(req.body.input)
    

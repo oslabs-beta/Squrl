@@ -1,169 +1,216 @@
 @import "src/Styles/abstracts/variables.scss";
 
-.table-gen-options {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  background-color: #1a1d1e;
-  background: red;
-  margin-top: 64px;
-}
-
-.sub-panels {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-
-  h1 {
-    color: white;
-    font-size: 3rem;
-    // display: flex;
-    // justify-content: center;
-    padding: 1rem 0rem;
-  }
-}
-
-.create-table {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-  width: 100%;
-  background: $DarkGrey1;
-
-  h2 {
-    color: $PrimaryWhite;
-    font-size: 1.5rem;
-  }
-
-  button {
-    margin-top: 2rem;
-  }
-}
-
-.create-column {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-  width: 100%;
-  padding: 3rem;
-  background: $DarkGrey1;
-  justify-content: space-around;
-
-  h2 {
-    color: $PrimaryWhite;
-    font-size: 1.5rem;
-  }
-
-  button {
-    margin-top: 2rem;
-  }
-
-  select {
-    width: 50%;
-    font-size: 2rem;
-    color: $DarkGrey2;
-    background-color: $PrimaryBlack;
-  }
-
-  select:active,
-  select:hover {
-    outline-color: red;
-  }
-}
-
-//////////-----css for the table inputs //////////
-
-.input-container {
-  position: relative;
-  padding: 2rem 0 0;
-  width: 50%;
-}
-
-.create-table-input {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid $DarkGrey2;
-  outline: 0;
-  font-size: 1.3rem;
-  color: $PrimaryWhite;
-  padding: 1rem 0;
-  background: transparent;
-  transition: border-color 0.2s;
-
-  &::placeholder {
-    color: transparent;
-  }
-
-  &:placeholder-shown ~ .input-label {
-    font-size: 1.3rem;
-    cursor: text;
-    top: 20px;
-  }
-}
-
-.input-label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: $DarkGrey2;
-}
-
-.create-table-input:focus {
-  ~ .input-label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: #ffbf00;
-    font-weight: 700;
-  }
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, #ffbf00, rgb(159, 125, 25));
-  border-image-slice: 1;
-}
-/* reset input */
-.create-table-input {
-  &:required,
-  &:invalid {
-    box-shadow: none;
-  }
-}
-
-/////////////////////left panel create button///////////@at-root
-.panel-buttons {
-  letter-spacing: 0.02rem;
-  cursor: pointer;
-  width: 75%;
-  background: transparent;
-  border: 0.1rem solid currentColor;
-  padding: 1.5rem 2rem;
-  color: #ffbf00;
-  position: relative;
-  transition: color 0.3s;
-
-  span {
-    font-size: 2rem;
-  }
-}
-
-.downloadbutt{
-  width: 50%;
-}
-
-.panel-buttons:hover {
-  background-color: #ffbf00;
-  color: black;
-}
 
 
-.GennyTitle {
-  height: 100px;
-  width: 100%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .table-gen-options {
+//   display: grid;
+//   height: 100%;
+//   width: 100%;
+//   background-color: #1a1d1e;
+//   background: red;
+//   margin-top: 64px;
+// }
+
+// .sub-panels {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: center;
+//   align-items: center;
+
+//   h1 {
+//     color: white;
+//     font-size: 3rem;
+//     // display: flex;
+//     // justify-content: center;
+//     padding: 1rem 0rem;
+//   }
+// }
+
+// .create-table {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   height: 100%;
+//   width: 100%;
+//   background: $DarkGrey1;
+
+//   h2 {
+//     color: $PrimaryWhite;
+//     font-size: 1.5rem;
+//   }
+
+//   button {
+//     margin-top: 2rem;
+//   }
+// }
+
+// .create-column {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   height: 100%;
+//   width: 100%;
+//   padding: 3rem;
+//   background: $DarkGrey1;
+//   justify-content: space-around;
+
+//   h2 {
+//     color: $PrimaryWhite;
+//     font-size: 1.5rem;
+//   }
+
+//   button {
+//     margin-top: 2rem;
+//   }
+
+//   select {
+//     width: 50%;
+//     font-size: 2rem;
+//     color: $DarkGrey2;
+//     background-color: $PrimaryBlack;
+//   }
+
+//   select:active,
+//   select:hover {
+//     outline-color: red;
+//   }
+// }
+
+// //////////-----css for the table inputs //////////
+
+// .input-container {
+//   position: relative;
+//   padding: 2rem 0 0;
+//   width: 50%;
+// }
+
+// .create-table-input {
+//   font-family: inherit;
+//   width: 100%;
+//   border: 0;
+//   border-bottom: 2px solid $DarkGrey2;
+//   outline: 0;
+//   font-size: 1.3rem;
+//   color: $PrimaryWhite;
+//   padding: 1rem 0;
+//   background: transparent;
+//   transition: border-color 0.2s;
+
+//   &::placeholder {
+//     color: transparent;
+//   }
+
+//   &:placeholder-shown ~ .input-label {
+//     font-size: 1.3rem;
+//     cursor: text;
+//     top: 20px;
+//   }
+// }
+
+// .input-label {
+//   position: absolute;
+//   top: 0;
+//   display: block;
+//   transition: 0.2s;
+//   font-size: 1rem;
+//   color: $DarkGrey2;
+// }
+
+// .create-table-input:focus {
+//   ~ .input-label {
+//     position: absolute;
+//     top: 0;
+//     display: block;
+//     transition: 0.2s;
+//     font-size: 1rem;
+//     color: #ffbf00;
+//     font-weight: 700;
+//   }
+//   padding-bottom: 6px;
+//   font-weight: 700;
+//   border-width: 3px;
+//   border-image: linear-gradient(to right, #ffbf00, rgb(159, 125, 25));
+//   border-image-slice: 1;
+// }
+// /* reset input */
+// .create-table-input {
+//   &:required,
+//   &:invalid {
+//     box-shadow: none;
+//   }
+// }
+
+// /////////////////////left panel create button///////////@at-root
+// .panel-buttons {
+//   letter-spacing: 0.02rem;
+//   cursor: pointer;
+//   width: 75%;
+//   background: transparent;
+//   border: 0.1rem solid currentColor;
+//   padding: 1.5rem 2rem;
+//   color: #ffbf00;
+//   position: relative;
+//   transition: color 0.3s;
+
+//   span {
+//     font-size: 2rem;
+//   }
+// }
+
+// .downloadbutt{
+//   width: 50%;
+// }
+
+// .panel-buttons:hover {
+//   background-color: #ffbf00;
+//   color: black;
+// }
+
+
+// .GennyTitle {
+//   height: 100px;
+//   width: 100%;
+// }

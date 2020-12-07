@@ -12,7 +12,7 @@ export type inputObj = {
   category: string;
   subcategory: string;
   percent: string;
-  sampleData : string;
+  sampleData: string;
 }
 
 //The state type will be an array of inputObj that was defined above 
@@ -29,13 +29,13 @@ type props = {
   setTableRow: any;
 }
 //Container that will passdown state to TableGeneratorPanel and TableView Panel
-const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData,tableRow,setTableRow}) => {
+const DataGeneration: React.FC<props> = ({ tableStateData, setTableStateData, tableRow, setTableRow }) => {
   // console.log(tableStateData)
   //initialize the different states that will be used 
   // const [tableStateData, setTableStateData] = useState<tableType>({})
 
   const [tableName, setTableName] = useState<string>('');
-  
+
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
     if (tableName) {

@@ -70,22 +70,23 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
   //!!!BUG!!! resets everything but category
   const addColumn = () => {
     if (name in tableStateData && columnState.columnName) {
-      setTableStateData({ ...tableStateData, [name]: [...tableStateData[name], {...columnState, sampleData:faker[columnState.category][columnState.subcategory]()}]})
+      setTableStateData({ ...tableStateData, [name]: [...tableStateData[name], { ...columnState, sampleData: faker[columnState.category][columnState.subcategory]() }] })
       setColumnState({ ...initColumnState })
     } else if (!(name in tableStateData))
-    swal({
-      title: "Aw Nuts",
-      text: "You forgot to select a table!",
-      icon: "warning",
-      dangerMode: true,
-    })
+      swal({
+        title: "Aw Nuts",
+        text: "You forgot to select a table!",
+        icon: "warning",
+        dangerMode: true,
+      })
     else
-    swal({
-      title: "Aw Nuts",
-      text: "You forgot to name your column!",
-      icon: "warning",
-      dangerMode: true,
-    })  }
+      swal({
+        title: "Aw Nuts",
+        text: "You forgot to name your column!",
+        icon: "warning",
+        dangerMode: true,
+      })
+  }
 
   const inputRows = () => {
     setTableRow([...tableRow, row])
@@ -96,7 +97,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
       <div className="sub-panels">
 
         <div className="create-table ">
-        <h1 className="GennyTitle">Dummy Data Generator</h1>
+          <h1 className="GennyTitle">Dummy Data Generator</h1>
 
           <h2>Create a Table</h2>
 
@@ -118,18 +119,18 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
               onChange={(event) => setRowAmount(event)}
               placeholder="Number of Rows"
               value={row === 0 ? '' : row}
-              // value={row}
+            // value={row}
             />
             <label className="input-label">Number of Rows</label>
           </div>
 
           <button
             className='panel-buttons'
-            onClick={(event) => { 
-              createTable(event); 
-              inputRows(); 
+            onClick={(event) => {
+              createTable(event);
+              inputRows();
             }
-              }>
+            }>
             <span>Create Table</span>
           </button>
 

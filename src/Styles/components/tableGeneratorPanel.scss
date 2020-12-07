@@ -29,10 +29,10 @@
   flex-flow: column nowrap;
   height: 100%;
   width: 100%;
-  background: $darkgray;
+  background: $DarkGrey1;
 
   h2 {
-    color: $white;
+    color: $PrimaryWhite;
     font-size: 1.5rem;
   }
 
@@ -47,11 +47,11 @@
   height: 100%;
   width: 100%;
   padding: 3rem;
-  background: $darkgray;
+  background: $DarkGrey1;
   justify-content: space-around;
 
   h2 {
-    color: $white;
+    color: $PrimaryWhite;
     font-size: 1.5rem;
   }
 
@@ -62,8 +62,8 @@
   select {
     width: 50%;
     font-size: 2rem;
-    color: $gray;
-    background-color: $black;
+    color: $DarkGrey2;
+    background-color: $PrimaryBlack;
   }
 
   select:active,
@@ -84,10 +84,10 @@
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid $gray;
+  border-bottom: 2px solid $DarkGrey2;
   outline: 0;
   font-size: 1.3rem;
-  color: $white;
+  color: $PrimaryWhite;
   padding: 1rem 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -109,7 +109,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: $gray;
+  color: $DarkGrey2;
 }
 
 .create-table-input:focus {
@@ -161,42 +161,7 @@
   background-color: #ffbf00;
   color: black;
 }
-//   &:hover {
-//     color: #FFBF00;
-//     &::before { width: 0; }
-//     &::after { height: 0; }
-//   }
-//   &:active {
-//     border-width: .5rem / 2;
-//   }
 
-//   span {
-//     position: relative;
-//     z-index: 2;
-//   }
-//   &::before, &::after {
-//     content: '';
-//     position: absolute;
-//     background: $darkgray;
-//     z-index: 1;
-//     transition: all .3s;
-//   }
-
-//   &::before {
-//     width: calc(100% - #{3rem});
-//     height: calc(101% + #{.5rem * 2});
-//     top: -.5rem;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-//   &::after {
-//     height: calc(100% - #{3rem});
-//     width: calc(101% + #{.5rem * 2});
-//     left: -.5rem;
-//     top: 50%;
-//     transform: translateY(-50%);
-//   }
-// }
 
 .GennyTitle {
   height: 100px;

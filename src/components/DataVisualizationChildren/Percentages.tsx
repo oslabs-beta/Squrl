@@ -10,12 +10,19 @@ type props ={
 }
 
 const Percentages: React.FC<props> = ({data, indexHit}) => {
-  const [percentages, setPercentages] = useState<number>(0)
+  // const [percentages, setPercentages] = useState<number>(0)
 
 const createCacheRatioPercent = () => {
   return (
     <div>
       <h1>Cache Hit Ratio:  {(data[0]["ratio"] * 100).toFixed(2)} %</h1> 
+    </div>
+  )
+}
+
+const createIndexHitRatio = () => {
+  return (
+    <div>
       <h1>Index Hit Ratio:  {(indexHit[0]["ratio"] * 100).toFixed(2)} %</h1>
     </div>
   )
@@ -23,7 +30,8 @@ const createCacheRatioPercent = () => {
 
 return (
   <div className="chart">
-      {data[0] === undefined ? null : createCacheRatioPercent()}
+      {data[0] === undefined ? null : createCacheRatioPercent() }
+      {indexHit[0] === undefined ? null : createIndexHitRatio()}
   </div>  
 )
 }

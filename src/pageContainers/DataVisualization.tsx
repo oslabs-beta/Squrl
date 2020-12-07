@@ -32,7 +32,7 @@ const DataVisualization: React.FC = () => {
       })
       let colorArray = randomColor({
         count: tableNameArr.length,
-        hue: 'random'
+        hue: 'blue'
       })
       const dataset: any = {
         labels: [...tableNameArr],
@@ -41,7 +41,14 @@ const DataVisualization: React.FC = () => {
           data: [...tableArr],
           backgroundColor: [...colorArray],
           hoverBackgroundColor: [...colorArray]
-        }]
+        }],
+        options: {
+          plugins: {
+            legend : {
+             position: "bottom"
+              }
+          }
+        }
       };
       setSizeData(({...dataset}))
     })
@@ -79,7 +86,7 @@ const DataVisualization: React.FC = () => {
       console.log('2', indexUsed)
 
       const barChartData = {labels: relName, datasets: [{label: "Index Ratio", data: indexUsed, backgroundColor: randomColor({ 
-        count: indexUsed.length, hue: 'random'
+        count: indexUsed.length, hue: 'blue'
       })}]}
       setIndexUsage(({...barChartData}))
   })}

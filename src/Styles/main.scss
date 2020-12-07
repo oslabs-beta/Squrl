@@ -1,13 +1,11 @@
 @import "abstracts/variables.scss";
 @import "components/exports.scss";
-@import "components/sideNavTabs.scss";
 @import "components/tableDisplay.scss";
 @import "components/tableGeneratorPanel.scss";
 @import "pages/about.scss";
 @import "pages/dataGeneration.scss";
 @import "pages/dataVisualization.scss";
 @import "pages/home.scss";
-@import "pages/setting.scss";
 @import "pages/sideNav.scss";
 @import "pages/topNav.scss";
 @import "components/percentages.scss";
@@ -18,9 +16,16 @@
   padding: 0;
   font-size: 16px;
   list-style: none;
+  text-decoration: none;
+}
+
+html{
+  height: 100%;
+  width: 100%;
 }
 
 body {
+  background-color: $DarkGrey2;
   height: 100%;
   width: 100%;
 }

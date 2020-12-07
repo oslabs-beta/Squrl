@@ -39,6 +39,27 @@ export const modelController ={
       next();
     })
   },
+  getIndexHitRate: function(req:Request, res: Response, next:any){
+    pool.query('SELECT sum(idx_blks_read) as idx_read,sum(idx_blks_hit)  as idx_hit, sum(idx_blks_hit) / (sum(idx_blks_hit) + sum(idx_blks_read)) as ratio FROM pg_statio_user_indexes')
+    .then((data:any)=>{
+      res.locals.data = data.rows
+      console.log('indexhitrate backend', res.locals.data)
+      next();
+    })
+  }, 
+
+  getIndexUsage: function(req:Request, res: Response, next:any){
+    pool.query('SELECT relname, 100 * idx_scan / (seq_scan + idx_scan) percent_of_times_index_used, n_live_tup rows_in_table FROM pg_stat_user_tables WHERE seq_scan + idx_scan > 0 ORDER BY n_live_tup DESC')
+    .then((data:any)=>{
+      res.locals.data = data.rows
+      console.log('indexusage backend', res.locals.data)
+      next();
+    })
+  }, 
+
+
+
+
   changeDB : function(req:Request, res:Response, next:any){
     // console.log(req.body.input)
    

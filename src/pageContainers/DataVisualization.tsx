@@ -119,11 +119,11 @@ const DataVisualization: React.FC = () => {
       </div>
       <div className='data-viz-dash-wrapper'>
         <div className="data-viz-dash">
-          <div className='piechart'>
-            <PieChart data={sizeData} />
-          </div>
           <div className='barchart'>
             <BarChart data={indexUsage} />
+          </div>
+          <div className='piechart'>
+            <PieChart data={sizeData} />
           </div>
           <div className='percentages'>
             <Percentages indexHit={indexHitRate} data={cacheData} />

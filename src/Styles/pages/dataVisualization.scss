@@ -30,9 +30,40 @@
 }
 
 .data-viz-dash{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   grid-column: 2 / 12;
   grid-row: 2 / 12;
   border: 3px solid $LightGrey1;
   border-radius: 20px;
   background-color: $LightGrey1;
+}
+
+.barchart{
+  grid-column: 1 / 13;
+  grid-row: 1 / 4;
+  background-color: lightblue;
+}
+
+.piechart{
+  grid-column: 1 / 13;
+  grid-row: 4 / 10;
+  background-color: lightcoral;
+}
+
+.percentages{
+  grid-column: 1 / 13;
+  grid-row: 10 / 13;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percentage-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: lightgrey;
 }

@@ -107,7 +107,6 @@ const App: React.FC = () => {
         <SideNav />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/DataGeneration' component={DataGeneration} />
           <Route path='/DataGeneration' component={() => (
             <DataGeneration
               tableStateData={tableStateData}

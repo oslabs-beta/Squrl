@@ -3,15 +3,12 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <div className="about">
-      <h1>About</h1>
-      <p>dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf
-      dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf
-      dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf
-      dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf</p>
+    <div className="about-container">
+      <div className="about-background-frame">
+      </div>
     </div>
-  );
-};
+  )
+}
 
 
 export default About;

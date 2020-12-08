@@ -1,42 +1,16 @@
-// @import 'abstracts/variables.scss';
+@import '../abstracts/variables.scss';
 
-.home {
-  display: flex;
-  flex-flow: column nowrap;
-  // height: 100%;
-  width: 100%;
-  margin-left: 3rem;
-  align-items: center;
-  justify-content: center;
-  font-size: 10rem;
-  color: #f3eff5;
-  margin-top: 64px;
+.home-container {
+  grid-column: 3 / 12;
+  grid-row: 2 / -1;
+  padding: 5rem 0rem;
 }
 
-.homeLogo {
-  color:white;
-
-  margin-bottom: 100px;
-}
-
-.info {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-content: center;
-  width: 600px;
-  text-align:center;
-  margin-top: 100px;
-  text-shadow: 0.5px 0.5px black;
-  // text-shadow: 4px black;
-  // margin-bottom: 30px;
-}
-
-.aboutsqurl {
-  margin-bottom: 40px;
-  font-size: 20px;
-}
-
-.welcome {
-  text-shadow: 1px 1px black;
+.home-background-frame{
+  background-color: $LightGrey1;
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  height: 100%;
+  border: 3px solid $LightGrey1;
+  border-radius: 20px;
 }

@@ -1,169 +1,117 @@
 @import "src/Styles/abstracts/variables.scss";
 
-.table-gen-options {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  background-color: #1a1d1e;
-  background: red;
-  margin-top: 64px;
+.GennyTitle {
+font-size: 44px;
+margin-bottom: 200px;
+margin-top: 100px;
+color: $PrimaryWhite;
 }
 
-.sub-panels {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-
-  h1 {
-    color: white;
-    font-size: 3rem;
-    // display: flex;
-    // justify-content: center;
-    padding: 1rem 0rem;
-  }
+.table-gen-options{
+  grid-column: 2 / 4;
+  grid-row: 2 / -1;
+  background-color: $DarkGrey1;
+  margin-left: 18px;
+  color: $PrimaryWhite;
 }
 
 .create-table {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-  width: 100%;
-  background: $DarkGrey1;
-
-  h2 {
-    color: $PrimaryWhite;
-    font-size: 1.5rem;
-  }
-
-  button {
-    margin-top: 2rem;
-  }
+  margin-bottom: 100px;
+  // border: 10px solid white;
 }
 
-.create-column {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-  width: 100%;
-  padding: 3rem;
-  background: $DarkGrey1;
-  justify-content: space-around;
-
-  h2 {
-    color: $PrimaryWhite;
-    font-size: 1.5rem;
-  }
-
-  button {
-    margin-top: 2rem;
-  }
-
-  select {
-    width: 50%;
-    font-size: 2rem;
-    color: $DarkGrey2;
-    background-color: $PrimaryBlack;
-  }
-
-  select:active,
-  select:hover {
-    outline-color: red;
-  }
-}
-
-//////////-----css for the table inputs //////////
-
-.input-container {
-  position: relative;
-  padding: 2rem 0 0;
-  width: 50%;
-}
-
-.create-table-input {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid $DarkGrey2;
-  outline: 0;
-  font-size: 1.3rem;
+//input fields on generator
+.create-table-input{
+  background-color: $PrimaryBlack;
+  height: 60px;
+  width: 360px;
+  border: 2px solid white;
   color: $PrimaryWhite;
-  padding: 1rem 0;
-  background: transparent;
-  transition: border-color 0.2s;
 
-  &::placeholder {
-    color: transparent;
-  }
+}
 
-  &:placeholder-shown ~ .input-label {
-    font-size: 1.3rem;
-    cursor: text;
-    top: 20px;
-  }
+
+.categorySelector {
+  background-color: $PrimaryBlack;
+  // color: $PrimaryWhite;
+  border: 2px solid white;
+  margin-top: 20px;
+  width: 360px;
+  height: 60px;
+  color: $PrimaryWhite
+
+}
+
+.category {
+  background-color: $PrimaryBlack;
+  border: 2px solid white;
+  height: 60px;
+  margin-top: 20px;
+  color: $PrimaryWhite;
+  width: 360px;
+}
+
+
+
+.createTable { 
+  color: $PrimaryWhite;
+  font-size: 40px;
+  margin-bottom: 40px;
+  // border: 2px solid white;
+
+}
+
+.panel-buttons {
+  display: flex;
+  justify-content: center;
+  background-color: $Affirmation;
+  height: 60px;
+  width: 260px;
+  margin-top: 85px;
+  // font-size: 20px;
+  border-radius: 50px;
+  border: 1px solid black;
+  // font-size: 40px;
+
+}
+
+
+.panel-buttons span {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .input-label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: $DarkGrey2;
+  font-size: 20px;
 }
 
-.create-table-input:focus {
-  ~ .input-label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: #ffbf00;
-    font-weight: 700;
-  }
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, #ffbf00, rgb(159, 125, 25));
-  border-image-slice: 1;
-}
-/* reset input */
-.create-table-input {
-  &:required,
-  &:invalid {
-    box-shadow: none;
-  }
-}
-
-/////////////////////left panel create button///////////@at-root
-.panel-buttons {
-  letter-spacing: 0.02rem;
-  cursor: pointer;
-  width: 75%;
-  background: transparent;
-  border: 0.1rem solid currentColor;
-  padding: 1.5rem 2rem;
-  color: #ffbf00;
-  position: relative;
-  transition: color 0.3s;
-
-  span {
-    font-size: 2rem;
-  }
-}
-
-.downloadbutt{
-  width: 50%;
-}
-
-.panel-buttons:hover {
-  background-color: #ffbf00;
-  color: black;
+.input-container {
+  margin-top: 20px;
 }
 
 
-.GennyTitle {
-  height: 100px;
-  width: 100%;
+.create-column {
+  justify-items: end;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

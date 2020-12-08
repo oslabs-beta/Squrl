@@ -9,6 +9,7 @@
 @import "pages/sideNav.scss";
 @import "pages/topNav.scss";
 @import "components/percentages.scss";
+@import "./App.scss";
 @import "components/ProgressBar.scss";
 
 * {
@@ -20,13 +21,8 @@
   text-decoration: none;
 }
 
-html{
+html body {
   height: 100%;
   width: 100%;
-}
-
-body {
   background-color: $DarkGrey2;
-  height: 100%;
-  width: 100%;
 }

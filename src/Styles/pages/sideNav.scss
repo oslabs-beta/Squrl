@@ -1,12 +1,10 @@
 @import '../abstracts/variables.scss';
 
 .side-nav-container {
-  height: 100vh;
+  grid-area: m;
   width: 4.5rem;
-  padding-top: 4.5rem;
-  display: flex;
-  flex-direction: column;
-  background: $PrimaryBlack;
+  margin: 0;
+ 
 }
 
 .side-nav-bar {
@@ -22,6 +20,7 @@
   border-right: 1px solid $LightGrey1;
   height: 100%;
   width: 4.5rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

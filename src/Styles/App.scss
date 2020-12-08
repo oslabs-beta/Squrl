@@ -1,129 +1,145 @@
-//full div surrounding entire container
-#gencontainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: grey;
+.app-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto repeat(11, 1fr);
+  grid-template-rows:auto repeat(3, 1fr);
+  grid-template-areas: 
+  "h h h h h h h h h h h h"
+  "m p p p c c c c c c c c"
+  "m p p p c c c c c c c c"
+  "m p p p c c c c c c c c"
+  ;
 }
 
-#tables {
-  display: inline-flex;
-  flex-wrap: wrap;
-  // width: 1500px;
-  // margin-right: 50px;
-  justify-content: center;
-}
-//full div surrounding field name, data type, % empty and add another column button
-#geninputs {
-  display:flex;
-  flex-direction: column;
-}
-#column {
-  margin-left: 20px;
-}
-#columnName {
-  height: 50px;
-  width: 170px;
-  font-size: 18px;
 
-}
-// column namn input
-#fieldName {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-// dropdown for data type faker
-#dataType {
-  height: 50px;
-  width: 170px;
-  display: flex;
-  justify-content: center;
-  font-size: 18px;
-  text-align: center;
-}
-#category {
-  height: 50px;
-  width: 170px;
-  display: flex;
-  justify-content: center;
-  font-size: 18px;
-  text-align: center;
-}
+// //full div surrounding entire container
+// #gencontainer {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   color: grey;
+// }
 
-// input for percent empty
-#empty{
-  width: 55px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-}
+// #tables {
+//   display: inline-flex;
+//   flex-wrap: wrap;
+//   // width: 1500px;
+//   // margin-right: 50px;
+//   justify-content: center;
+// }
+// //full div surrounding field name, data type, % empty and add another column button
+// #geninputs {
+//   display:flex;
+//   flex-direction: column;
+// }
+// #column {
+//   margin-left: 20px;
+// }
+// #columnName {
+//   height: 50px;
+//   width: 170px;
+//   font-size: 18px;
 
-#emptyText {
-  font-size: 27px;
-  display: flex;
-  margin-top: 10px;
-  align-content: center;
-  justify-content: center;
-}
-// add column button generator
-#addColumn {
-  width: 150px;
-  display: flex;
-  justify-content: center;
-}
+// }
+// // column namn input
+// #fieldName {
+//   height: 50px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-//divs to hold generator inputs and in-line them because i forgot <br> existed
-#percentagediv {
-  display: inline-flex;
-  margin-bottom: 30px;
-}
-#tablefields {
-  margin-bottom: 50px;
-  display: inline-flex;
-}
-#rowsfield {
-  margin-bottom: 50px;
-  margin-top: 50px;
-  display: inline-flex;
-  padding-right: 50px;
-}
-#duplicate {
-   margin-bottom: 50px;
-  display: inline-flex;
-}
-#formatoption {
-  width: 90px;
-  height: 45px;
-  justify-content: center;
-}
-#formatinput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#download {
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
-}
-#gennytitle {
-  margin-bottom: 100px;
-  font-size: 70px;
-}
-#tablemanager {
-  display: inline-flex
-}
-#duplicatedata {
-  display: flex;
-  justify-content: center;
-}
-//padding for rows/tablename text
-#tableInputText {
-  padding-right: 10px;
-}
+// // dropdown for data type faker
+// #dataType {
+//   height: 50px;
+//   width: 170px;
+//   display: flex;
+//   justify-content: center;
+//   font-size: 18px;
+//   text-align: center;
+// }
+// #category {
+//   height: 50px;
+//   width: 170px;
+//   display: flex;
+//   justify-content: center;
+//   font-size: 18px;
+//   text-align: center;
+// }
+
+// // input for percent empty
+// #empty{
+//   width: 55px;
+//   height: 50px;
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+//   font-size: 18px;
+// }
+
+// #emptyText {
+//   font-size: 27px;
+//   display: flex;
+//   margin-top: 10px;
+//   align-content: center;
+//   justify-content: center;
+// }
+// // add column button generator
+// #addColumn {
+//   width: 150px;
+//   display: flex;
+//   justify-content: center;
+// }
+
+// //divs to hold generator inputs and in-line them because i forgot <br> existed
+// #percentagediv {
+//   display: inline-flex;
+//   margin-bottom: 30px;
+// }
+// #tablefields {
+//   margin-bottom: 50px;
+//   display: inline-flex;
+// }
+// #rowsfield {
+//   margin-bottom: 50px;
+//   margin-top: 50px;
+//   display: inline-flex;
+//   padding-right: 50px;
+// }
+// #duplicate {
+//    margin-bottom: 50px;
+//   display: inline-flex;
+// }
+// #formatoption {
+//   width: 90px;
+//   height: 45px;
+//   justify-content: center;
+// }
+// #formatinput {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// #download {
+//   display: flex;
+//   margin-top: 30px;
+//   justify-content: center;
+// }
+// #gennytitle {
+//   margin-bottom: 100px;
+//   font-size: 70px;
+// }
+// #tablemanager {
+//   display: inline-flex
+// }
+// #duplicatedata {
+//   display: flex;
+//   justify-content: center;
+// }
+// //padding for rows/tablename text
+// #tableInputText {
+//   padding-right: 10px;
+// }

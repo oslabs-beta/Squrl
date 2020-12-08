@@ -1,6 +1,6 @@
 @import '../abstracts/variables.scss';
 
-
+//-----structural layout of page----//
 .data-viz-container{
   display: grid;
   grid-template-columns: auto repeat(11, 1fr);
@@ -40,10 +40,27 @@
   background-color: $LightGrey1;
 }
 
+
+//----css to layout graphs appropiately within data-viz dash----//
 .barchart{
   grid-column: 1 / 13;
   grid-row: 1 / 4;
-  background-color: lightblue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.barchart-container{
+  width: 100%;
+  height: 100%;
+  padding: 0rem 1rem;
+  background-color: $LightGrey1;
+  border: 3px solid $LightGrey2;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .piechart{
@@ -61,6 +78,7 @@
   align-items: center;
 }
 
+//found in /dataVizualizationChildren 
 .percentage-container{
   display: flex;
   width: 100%;

@@ -106,7 +106,6 @@ const App = () => {
             react_1.default.createElement(SideNav_1.default, null),
             react_1.default.createElement(react_router_dom_1.Switch, null,
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/', exact: true, component: Home_1.default }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: '/DataGeneration', component: DataGeneration_1.default }),
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/DataGeneration', component: () => (react_1.default.createElement(DataGeneration_1.default, { tableStateData: tableStateData, setTableStateData: setTableStateData, tableRow: tableRow, setTableRow: setTableRow })) }),
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/DataVisualization', component: () => {
                         return react_1.default.createElement(DataVisualization_1.default, null);

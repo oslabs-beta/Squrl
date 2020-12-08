@@ -21,7 +21,7 @@
 .data-viz-dash-wrapper{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   grid-column: 4 / -1;
   grid-row: 2 / -1;
   height: 100%;
@@ -30,7 +30,7 @@
 
 .data-viz-dash{
   grid-column: 2 / 12;
-  grid-row: 2 / 8;
+  grid-row: 2 / 12;
   border: 3px solid $LightGrey1;
   border-radius: 20px;
   background-color: $LightGrey1;

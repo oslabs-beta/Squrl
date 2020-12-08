@@ -69,10 +69,12 @@ const DataGeneration: React.FC<props> = ({ tableStateData, setTableStateData, ta
         />
       </div>
       <div className='data-preview-container' >
-        <TableDisplay
-          tableStateData={tableStateData}
-          setTableStateData={setTableStateData}
-        />
+        <div className="data-preview-scroll-y">
+          <TableDisplay
+            tableStateData={tableStateData}
+            setTableStateData={setTableStateData}
+          />
+        </div>
         <button className='panel-buttons downloadbutt' style={{}} onClick={createFile}><span>Download</span></button>
       </div>
     </div>

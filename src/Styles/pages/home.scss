@@ -1,9 +1,9 @@
 @import '../abstracts/variables.scss';
 
 .home-container {
-  grid-column: 2 / -1;
+  grid-column: 3 / 12;
   grid-row: 2 / -1;
-  padding: 5rem 5rem;
+  padding: 5rem 0rem;
 }
 
 .home-background-frame{

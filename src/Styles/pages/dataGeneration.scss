@@ -1,18 +1,24 @@
 @import '../abstracts/variables.scss';
 
-// .data-panel-container {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   align-items: center;
-// }
+.data-gen-container {
+  grid-column: 2/-1;
+  grid-row: 2 / -1;
+}
 
-// .data-preview-container {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   align-items: center;
-//   justify-content: center;
-// }
+.data-panel-container {
+ grid-area: p;
+  background-color: $DarkGrey1;
+  display: flex;
+  flex-flow: column nowrap;
+}
 
-// .downloadbutt {
-//   margin-bottom: 40px;
-// }
+.data-preview-container {
+  grid-area: c; 
+  background-color: lightblue;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+

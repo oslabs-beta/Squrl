@@ -113,22 +113,26 @@ const DataVisualization: React.FC = () => {
   }
 
   return (
-    <div>
-      <div className='dataVisualization'>
+    <div className="data-viz-container">
+      <div className='data-viz-panel'>
         <DataVisualizationPanel
           input={input}
           setInput={setInput}
           updateDB={updateDB}
           changeDB={changeDB}
         />
-        <div>
-          <PieChart data={sizeData} />
-        </div>
-        <div>
-          <BarChart data={indexUsage} />
-        </div>
-        <div>
-          <Percentages indexHit={indexHitRate} data={cacheData} />
+      </div>
+      <div className='data-viz-dash-wrapper'>
+        <div className="data-viz-dash">
+          <div className='piechart'>
+            <PieChart data={sizeData} />
+          </div>
+          <div className='barchart'>
+            <BarChart data={indexUsage} />
+          </div>
+          <div className='percentages'>
+            <Percentages indexHit={indexHitRate} data={cacheData} />
+          </div>
         </div>
       </div>
     </div>

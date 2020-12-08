@@ -15,7 +15,8 @@
 .data-viz-panel {
   grid-column: 2/ 4;
   grid-row: 2 / -1;
-  background-color:$DarkGrey1 ;
+  background-color:$DarkGrey1;
+  border-right: 1px solid $LightGrey1;
 }
 
 .data-viz-dash-wrapper{

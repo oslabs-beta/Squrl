@@ -69,6 +69,7 @@ const DataGeneration: React.FC<props> = ({ tableStateData, setTableStateData, ta
         />
       </div>
       <div className='data-preview-container' >
+        <h1 className="tablePreview">Table Preview</h1>
         <div className="data-preview-scroll-y">
           <TableDisplay
             tableStateData={tableStateData}

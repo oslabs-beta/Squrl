@@ -1,11 +1,11 @@
 import React from 'react'
-import LogoType from '../../assets/insidelogo.png'
+// import LogoType from '../../assets/insidelogo.png'
 
 const Home: React.FC =() =>{
     return (
         <div className="home">
         <div className="squrl">
-            <img className="homeLogo" src={LogoType} alt='LogoType' />
+            {/* <img className="homeLogo" src={LogoType} alt='LogoType' /> */}
         </div>
         <h1 className="welcome">Welcome To SQURL!</h1>
         <div className="info">

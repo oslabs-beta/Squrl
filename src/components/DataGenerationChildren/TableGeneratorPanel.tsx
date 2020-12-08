@@ -91,7 +91,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
   const inputRows = () => {
     setTableRow([...tableRow, row])
   }
-
+  console.log(tableStateData);
   return (
     <div className="table-gen-options">
       <div className="sub-panels">

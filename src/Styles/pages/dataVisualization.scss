@@ -1,17 +1,16 @@
-// @import 'abstracts/variables.scss';
+@import '../abstracts/variables.scss';
 
-// .dataVisualization
-//  {
-//   display: grid;
-//   grid-template-columns: minmax(200px, 30%) 2fr;
-//   height: 100%;
-//   width: 100%;
-//   padding-left: 6rem;
-// }
+.dataVisualization {
+  display: grid;
+  grid-template-columns: minmax(200px, 30%) 2fr;
+  height: 100%;
+  width: 100%;
+  padding-left: 6rem;
+}
 
-// .chart{
-//   display: flex;
-//   margin-top: 64px;
-//   width:100%;
-//   padding: 32px;
-// }
+.chart {
+  display: flex;
+  margin-top: 64px;
+  width:100%;
+  padding: 32px;
+}

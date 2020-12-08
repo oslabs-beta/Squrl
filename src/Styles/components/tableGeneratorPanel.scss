@@ -1,6 +1,10 @@
 @import "src/Styles/abstracts/variables.scss";
 
-
+.table-gen-options{
+  grid-column: 2 / 4;
+  grid-row: 2 / -1;
+  background-color: $DarkGrey1;
+}
 
 
 

@@ -1,9 +1,14 @@
 import React from "react";
 
+
 const About: React.FC = () => {
   return (
-    <div className="settings">
-      <h1>Settings</h1>
+    <div className="about">
+      <h1>About</h1>
+      <p>dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf
+      dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf
+      dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf
+      dfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdfdfasdf</p>
     </div>
   );
 };

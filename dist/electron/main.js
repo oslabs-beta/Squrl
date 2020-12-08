@@ -32,10 +32,10 @@ const http_1 = __importDefault(require("http"));
 let mainWindow;
 function createWindow() {
     mainWindow = new electron_1.BrowserWindow({
-        width: 1500,
-        height: 1000,
-        // minHeight: 1000,
-        // minWidth: 1500,
+        width: 1920,
+        height: 1080,
+        minHeight: 960,
+        minWidth: 540,
         icon: "./assets/logo.png",
         webPreferences: {
             nodeIntegration: true,

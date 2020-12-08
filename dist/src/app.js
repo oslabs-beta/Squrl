@@ -53,53 +53,8 @@ const App = () => {
     //   {'test1':
     //     [
     //       {
-    //         columnName: 'test',
-    //         category: 'test',
-    //         subcategory: 'test',
-    //         percent: 'test',
-    //         sampleData : 'test',
-    //       },
-    //       {
-    //         columnName: 'test2',
-    //         category: 'test2',
-    //         subcategory: 'test2',
-    //         percent: 'test2',
-    //         sampleData : 'test2',
-    //       },
-    //       {
-    //         columnName: 'test3',
-    //         category: 'test3',
-    //         subcategory: 'test3',
-    //         percent: 'test3',
-    //         sampleData : 'test3',
-    //       }
-    //     ],
-    //     'test2':
-    //     [
-    //       {
-    //         columnName: 'test',
-    //         category: 'test',
-    //         subcategory: 'test',
-    //         percent: 'test',
-    //         sampleData : 'test',
-    //       },
-    //       {
-    //         columnName: 'test2',
-    //         category: 'test2',
-    //         subcategory: 'test2',
-    //         percent: 'test2',
-    //         sampleData : 'test2',
-    //       },
-    //       {
-    //         columnName: 'test3',
-    //         category: 'test3',
-    //         subcategory: 'test3',
-    //         percent: 'test3',
-    //         sampleData : 'test3',
-    //       }
-    //     ]
-    //   }
-    // )
+    //  leData : 'test2',
+    //
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
             react_1.default.createElement(TopNav_1.default, null),

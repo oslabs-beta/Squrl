@@ -1,7 +1,7 @@
 import React from 'react'
 import { inputObj, tableType } from '../../pageContainers/DataGeneration'
+//imputting faker for data generator
 const faker = require('faker')
-
 
 type props = {
   tableStateData: tableType;
@@ -15,21 +15,19 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
     delete newTableStateData[tableName]
     setTableStateData({...newTableStateData})
   }
+  //delete column
   const deleteColumn = (tableName: string, index: number) => {
-    // console.log({...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)]})
    setTableStateData({...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)]})
-    
   }
+  //delete all columns
   const deleteAllColumns = (tableName: string) => {
-    // console.log({...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)]})
    setTableStateData({...tableStateData, [tableName]: []})
     
   }
   const wheel = (event: any) => {
-    // console.log(document.getElementById(event.target.id))
     event.currentTarget.scrollLeft += event.deltaY
-    // document.getElementById(event.target.id).scrollLeft += event.deltaY;
-  }
+   }
+   
   const createTable = (tableStateData: tableType) => {
     let arr = [];
     for (const table in tableStateData) {

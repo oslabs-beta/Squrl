@@ -1,9 +1,9 @@
 //import useState hook to create state
 import React, { useState } from 'react';
+//custom alert plugin
 import swal from 'sweetalert'
 //require faker.js npm  to be used to generate dummy data
 const faker = require('faker')
-
 //Import for TypeScript types 
 import { tableType, inputObj } from '../../pageContainers/DataGeneration'
 
@@ -87,10 +87,12 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
       dangerMode: true,
     })  }
 
+    //change stake for number of rows
   const inputRows = () => {
     setTableRow([...tableRow, row])
   }
 
+  //entire data generator panel
   return (
     <div className="table-gen-options">
       <div className="sub-panels">

@@ -3,7 +3,8 @@
 .home {
   display: flex;
   flex-flow: column nowrap;
-  height: 100%;
+  // height: 100%;
+  width: 100%;
   margin-left: 3rem;
   align-items: center;
   justify-content: center;
@@ -12,3 +13,30 @@
   margin-top: 64px;
 }
 
+.homeLogo {
+  color:white;
+
+  margin-bottom: 100px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  width: 600px;
+  text-align:center;
+  margin-top: 100px;
+  text-shadow: 0.5px 0.5px black;
+  // text-shadow: 4px black;
+  // margin-bottom: 30px;
+}
+
+.aboutsqurl {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.welcome {
+  text-shadow: 1px 1px black;
+}

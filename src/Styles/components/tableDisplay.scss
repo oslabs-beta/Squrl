@@ -1,11 +1,17 @@
 // @import 'abstracts/variables.scss';
-
+.tableHeader {
+  margin-top: 30px;
+  width: 200px;
+  display: inline-flex;
+}
 .deleteAllColumns {
   background-color: $Warning;
   color:white;
   width: 190px;
   height: 30px;
   border-radius: 40px;
+  // display: inline-flex;
+  
 }
 
 .deleteTableButton {
@@ -26,11 +32,41 @@ font-size: 20px;
 }
 
 
+.table-wrapper {
+  border: 1px solid black;
+  display: inline-flex;
+  width: 240px;
+  flex-direction: column;
+}
 
+.columntr {
+  border: 1px solid red
+}
 
+.tableContainer {
+  border: 1px solid white;
+  height: 160px;
+  border-radius: 20px;
+}
 
+.columnth {
+  background-color:$PrimaryBrand;
+  width: 240px;
+  height: 50px;
+  // font-size: 20px;
+}
 
-
+#colTitle {
+  font-size: 20px;
+}
+.columntd {
+  background-color: white;
+  color: black;
+  width: 240px;
+  height: 50px;
+  text-align: center;
+  // justify-content: center;
+}
 
 
 

@@ -57,7 +57,7 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
                       <thead>
                         <tr className="columntr row-first row-last">
                           <th className="columnth first last">
-                            <span>{colInfo.columnName}</span>
+                            <span id="colTitle">{colInfo.columnName}</span>
                             {/* deletes individual column from table */}
                             <button 
                             className='deleteColumnButton'
@@ -69,7 +69,7 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>
+                          <td className="columntd">
                            {colInfo.sampleData}
                          </td>
                         </tr>

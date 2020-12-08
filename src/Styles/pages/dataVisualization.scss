@@ -1,17 +1,37 @@
-// @import 'abstracts/variables.scss';
+@import '../abstracts/variables.scss';
 
-.dataVisualization
- {
+
+.data-viz-container{
   display: grid;
-  grid-template-columns: minmax(200px, 30%) 2fr;
+  grid-template-columns: auto repeat(11, 1fr);
+  grid-template-rows: auto repeat(3, 1fr);
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
   height: 100%;
   width: 100%;
-  padding-left: 6rem;
+  background-color: $DarkGrey2;
 }
 
-.chart{
-  display: flex;
-  margin-top: 64px;
-  width:100%;
-  padding: 32px;
+.data-viz-panel {
+  grid-column: 2/ 4;
+  grid-row: 2 / -1;
+  background-color:$DarkGrey1 ;
+}
+
+.data-viz-dash-wrapper{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column: 4 / -1;
+  grid-row: 2 / -1;
+  height: 100%;
+  width: 100%;
+}
+
+.data-viz-dash{
+  grid-column: 2 / 12;
+  grid-row: 2 / 12;
+  border: 3px solid $LightGrey1;
+  border-radius: 20px;
+  background-color: $LightGrey1;
 }

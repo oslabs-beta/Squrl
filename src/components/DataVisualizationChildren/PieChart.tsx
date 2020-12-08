@@ -1,6 +1,6 @@
 import React from 'react';
-import {Pie} from 'react-chartjs-2';
-import randomColor from 'randomcolor'; // import the script
+import Chart, {Pie, Doughnut} from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 
 const bytes = require('bytes');
@@ -19,8 +19,7 @@ export class PieChart extends React.Component<props, state>{
       pieData:[]
     }
   }
-  
-  // }
+
   render(){
 
 
@@ -28,7 +27,29 @@ export class PieChart extends React.Component<props, state>{
 // console.log(this.state.pieData)
     return(
       <div className='chart'> 
-        <Pie data={this.props.data} />
+        <Doughnut 
+        data={this.props.data}
+        plugins={[ChartDataLabels]}
+        options={{
+          legend: {
+            position: 'left',
+            labels:{
+              fontColor: '#E4E7EB',
+              fontSize: 16,
+              fontFamily: 'Montserrat'
+            }
+          },
+          plugins: {
+            // Change options for ALL labels of THIS CHART
+            datalabels: {
+              formatter:function(value:any){
+                return value+' kB'
+              },
+              color: '#E4E7EB',
+            }
+        }
+        }} 
+        />
       </div>
     )
   }

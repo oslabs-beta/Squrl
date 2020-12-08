@@ -65,6 +65,8 @@
     "axios": "^0.21.0",
     "bytes": "^3.1.0",
     "chart.js": "^2.9.4",
+    "chartjs-plugin-datalabels": "^0.7.0",
+    "chartjs-plugin-labels": "^1.1.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
     "custom-electron-titlebar": "^3.2.5",

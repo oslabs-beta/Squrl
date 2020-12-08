@@ -1,14 +1,16 @@
 // @import 'abstracts/variables.scss';
 
-// .home {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   height: 100%;
-//   margin-left: 3rem;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: 10rem;
-//   color: #f3eff5;
-//   margin-top: 64px;
-// }
+.home-container {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  padding: 5rem 5rem;
+}
 
+.home-background-frame{
+  background-color: $LightGrey1;
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  height: 100%;
+  border: 3px solid $LightGrey1;
+  border-radius: 20px;
+}

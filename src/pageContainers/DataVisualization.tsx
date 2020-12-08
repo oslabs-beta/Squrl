@@ -34,7 +34,8 @@ const DataVisualization: React.FC = () => {
         })
         let colorArray = randomColor({
           count: tableNameArr.length,
-          hue: 'blue'
+          hue: 'blue',
+          luminosity: 'dark'
         })
         const dataset: any = {
           labels: [...tableNameArr],
@@ -44,13 +45,6 @@ const DataVisualization: React.FC = () => {
             backgroundColor: [...colorArray],
             hoverBackgroundColor: [...colorArray]
           }],
-          options: {
-            plugins: {
-              legend: {
-                position: "bottom"
-              }
-            }
-          }
         };
         setSizeData(({ ...dataset }))
       })
@@ -98,6 +92,7 @@ const DataVisualization: React.FC = () => {
         setIndexUsage(({ ...barChartData }))
       })
   }
+
 
   const changeDB = () => {
     axios.post('http://localhost:30000/api', { input })

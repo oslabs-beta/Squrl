@@ -10,7 +10,7 @@ const [style, setStyle] = useState<{}>({})
 setTimeout(()=> {
   let color = ''
   if (+done >= 99) color = '#95d1be'
-  else if (+done < 99 && +done >= 92 ) color = '#fdad34'
+  else if (+done < 99 && +done >= 90 ) color = '#fdad34'
   else color = '#e05a61'
 
   const newObj = {opacity: 1, width: `${done}%`, backgroundColor: color }

@@ -10,7 +10,6 @@ import './Styles/main.scss'
 import SideNav from './pageContainers/SideNav';
 import TopNav from './pageContainers/TopNav';
 import Home from './pageContainers/Home';
-import About from './pageContainers/About';
 import DataVisualization from './pageContainers/DataVisualization';
 import DataGeneration from './pageContainers/DataGeneration';
 import Percentages from '../src/components/DataVisualizationChildren/Percentages'
@@ -118,7 +117,6 @@ const App: React.FC = () => {
           <Route path='/DataVisualization' component={() => {
             return <DataVisualization />
           }} />
-          <Route path='/About' component={About} />
         </Switch>
       </Router>
     </div>

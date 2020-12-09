@@ -92,10 +92,8 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
   const inputRows = () => {
     setTableRow([...tableRow, row])
   }
-  console.log(tableStateData);
   return (
     <div className="table-gen-options">
-      {/* <div className="sub-panels"> */}
 
         <div className="create-table ">
           <h1 className="GennyTitle">Generator</h1>
@@ -123,7 +121,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
               onChange={(event) => setRowAmount(event)}
               placeholder="Number of Rows"
               value={row === 0 ? '' : row}
-            // value={row}
             />
           </div>
 
@@ -137,8 +134,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
             <span>Create Table</span>
           </button>
         </div>
-      {/* </div> */}
-      {/* <div className="sub-panels"> */}
+  
         <div className="create-column">
           <h2 id="createTable" className="createTable">Create Columns</h2>
 
@@ -172,7 +168,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
             
             <div>
             <label className="input-label">Select Category</label>
-          {/* <select className="categorySelector" name="" id="" onChange={selectTableName}> */}
             <br></br>
           <select className="category"
             name='category'
@@ -181,7 +176,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
               if (category === 'phone_number') {
                 category = 'phone'
                 return (
-                  // <option></option>
                   <option key={index} value={category}>
                     {category}
                   </option>
@@ -217,7 +211,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           </button>
 
         </div>
-      {/* </div> */}
     </div >
   )
 }

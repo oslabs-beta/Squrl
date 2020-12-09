@@ -5,54 +5,56 @@ const faker = require('faker')
 
 //Import for TypeScript types 
 
-type props ={
+type props = {
   input: string;
   setInput: any;
   updateDB: any;
   changeDB: any;
-} 
+}
 
 
 //passed down state/tableProps are passed in as arguments for our functional componenet 
-const DataVisualizationPanel: React.FC<props> = ({input,setInput,updateDB,changeDB}) => {
+const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, changeDB }) => {
   return (
-    <div className="table-gen-options">
-      <div className="sub-panels">
-
-        <div className="create-table">
-        <h1 className="GennyTitle">Database Dashboard</h1>
-
-          <div className="input-container">
-            <input
-              className='create-table-input'
-              type="text"
-              placeholder='Table Name'
-              value={input} onChange={updateDB}
-            />
-            <label className="input-label">Database Connection</label>
-          </div>
-
-          <select className='categorySelector'>
-            <optgroup label="SQL">
-              <option value="PostgreSQL">PostgreSQL</option>
-              <option value="MySQL">MySQL</option>
-              <option value="SQLite">SQLite</option>
-            </optgroup>
-            <optgroup label="NoSQL">
-              <option value="MongoDB">Mercedes</option>
-              <option value="Redis">Redis</option>
-            </optgroup>
-          </select>
-
-          <button
-            className='panel-buttons'
-            onClick={() => {changeDB()}}>
-            <span>Connect to Database</span>
-          </button>
-
-        </div>
+    <div className="data-viz-inputs">
+      <div className="headings-div">
+        <h1>Database Analytics</h1>
       </div>
+      <div className="headings-div">
+        <h3>Database Connection</h3>
       </div>
+
+      <div className="input-div">
+        <h6>Select Database</h6>
+        <select className='select'>
+          <optgroup label="SQL">
+            <option value="PostgreSQL">PostgreSQL</option>
+            <option value="MySQL">MySQL</option>
+            <option value="SQLite">SQLite</option>
+          </optgroup>
+          <optgroup label="NoSQL">
+            <option value="MongoDB">Mercedes</option>
+            <option value="Redis">Redis</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div className="input-div">
+        <h6>Database URI</h6>
+        <input
+          className='uri-input'
+          type="text"
+          value={input} onChange={updateDB}
+        />
+      </div>
+
+      <div className="panel-btn">
+        <button onClick={() => { changeDB() }}>
+          Connect
+        </button>
+      </div>
+
+    </div>
   )
 }
 

@@ -17,15 +17,16 @@
   grid-column: 2/ 4;
   grid-row: 2 / -1;
   background-color:$DarkGrey1 ;
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: repeat(12, 1fr);
+  // display: grid;
+  // grid-template-columns: 1;
+  // grid-template-rows: repeat(12, 1fr);
+  border-right: 1px solid $LightGrey1;
 }
 
 .data-preview-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(13, 1fr);
   grid-column: 4 / -1;
   grid-row: 2 / -1;
   height: 100%;
@@ -49,8 +50,9 @@
   color: white;
   // display: flex;
   // width: 500px;'
+  text-shadow: 1px 1px $PrimaryBlack;
   // height: 60px;
-  font-family: $Content;
+  font-family: $Display;
   justify-content: center;
   grid-column: 6;
   grid-row: 1;
@@ -66,4 +68,8 @@
 .downloadbutt {
   grid-column: 6;
   grid-row: 12;
+}
+
+.download {
+margin-bottom: 35px;
 }

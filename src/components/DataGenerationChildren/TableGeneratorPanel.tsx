@@ -95,10 +95,10 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
   console.log(tableStateData);
   return (
     <div className="table-gen-options">
-      <div className="sub-panels">
+      {/* <div className="sub-panels"> */}
 
         <div className="create-table ">
-          <h1 className="GennyTitle">Data Generator</h1>
+          <h1 className="GennyTitle">Generator</h1>
 
           <h2 className="createTable">Create a Table</h2>
 
@@ -136,12 +136,9 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
             }>
             <span>Create Table</span>
           </button>
-
         </div>
-
-      </div>
-
-      <div className="sub-panels">
+      {/* </div> */}
+      {/* <div className="sub-panels"> */}
         <div className="create-column">
           <h2 id="createTable" className="createTable">Create Columns</h2>
 
@@ -220,7 +217,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           </button>
 
         </div>
-      </div>
+      {/* </div> */}
     </div >
   )
 }

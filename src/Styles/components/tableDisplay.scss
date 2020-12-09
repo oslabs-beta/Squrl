@@ -2,11 +2,14 @@
 .tableHeader {
   margin-top: 30px;
   // width: 100px;
+  text-shadow: 1px 1px $PrimaryBlack;
   font-size: 40px;
   display: inline-flex;
   display: flex;
-  margin-right: 60px;
-    align-items: flex-end;
+  justify-content: center;
+  // margin-right: 60px;
+  margin-bottom: 4px;
+  align-items: flex-end;
 }
 .deleteAllColumns {
   background-color: gray;
@@ -24,6 +27,10 @@
   }
 }
 
+.container {
+  // border-right: solid 10px $LightGrey1;
+  // z-index: 3;
+}
 .deleteTableButton {
   background-color: gray;
   color:white;
@@ -42,12 +49,21 @@
 
 
   .buttonDiv {
-    display: flex;
-    align-content: flex-end;
-    grid-column: 1;
+    // display: inline-flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // align-content: flex-end;
+    justify-content: center;
+    grid-column: 2;
     align-items: flex-end;
     margin-bottom: 4px;
   }
+
+.deletebuttondiv {
+  display: inline-flex;
+  justify-content: flex;
+}
+
 
 .deleteColumnButton {
   color: gray;
@@ -71,8 +87,9 @@ font-size: 20px;
   // border: 1px solid black;
   display: inline-flex;
   width: 240px;
-  // border: right solid 1px $LightGrey1;
+
   flex-direction: column;
+
 }
 
 .columntr {
@@ -86,6 +103,7 @@ font-size: 20px;
   border-radius: 20px;
   grid-column: 1/5;
   display: flex;
+  justify-content: center;
   flex-wrap: nowrap;
   overflow: auto;
   overflow-x: auto;
@@ -95,23 +113,31 @@ font-size: 20px;
   background-color:$PrimaryBrand;
   min-width: 240px;
   height: 50px;
+  // border-right: solid 2px white;
+  z-index: 0;
 
   // font-size: 20px;
 }
 
-.container {
-  // border-right: 1px solid white;
-}
+// .container {
+//   border-right: 1px solid white;
+//   z-index: 3;
+// }
 
 #colTitle {
   font-size: 20px;
+  font-family: $Content;
+  margin-left: 20px;
 }
+
 .columntd {
   background-color: white;
   color: black;
   min-width: 240px;
   height: 50px;
   text-align: center;
+  font-family: $Content;
+
   // justify-content: center;
 }
 

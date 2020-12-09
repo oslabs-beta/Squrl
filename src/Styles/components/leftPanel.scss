@@ -1,9 +1,6 @@
 @import '../abstracts/variables.scss';
-
-
-.data-viz-panel{
-  display: flex;
-  flex-flow: column nowrap;
+.panel-inputs{
+  height: 100%;
 }
 
 .headings-div {
@@ -81,6 +78,16 @@
   }
 }
 
-#gen-heading{
-  padding: 0rem;
+.gen-headings{
+  margin: 1rem 2rem;
+  h1{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.panel-gen-btn{
+  button{
+    padding: .5rem .5rem;
+  }
 }

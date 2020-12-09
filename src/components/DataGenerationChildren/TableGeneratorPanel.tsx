@@ -93,13 +93,13 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
     setTableRow([...tableRow, row])
   }
   return (
-    <div className="table-gen-options">
+    <div className="panel-inputs">
 
-      <div className="headings-div" >
-        <h1 id='gen-heading'>Generator</h1>
+      <div className="headings-div gen-headings" >
+        <h1>Generator</h1>
       </div>
 
-      <div className="headings-div">
+      <div className="headings-div gen-headings">
         <h3 className="createTable">Create a Table</h3>
       </div>
 
@@ -123,7 +123,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
         />
       </div>
 
-      <div className="panel-btn">
+      <div className="panel-btn panel-gen-btn">
         <button
           onClick={(event) => {
             createTable(event);
@@ -134,7 +134,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
         </button>
       </div>
 
-      <div className="headings-div">
+      <div className="headings-div gen-headings">
         <h3 className="createTable">Create a Table</h3>
       </div>
 
@@ -203,7 +203,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
         </select>
       </div>
 
-      <div className="panel-btn">
+      <div className="panel-btn panel-gen-btn">
         <button
           onClick={addColumn}>
           Create Column

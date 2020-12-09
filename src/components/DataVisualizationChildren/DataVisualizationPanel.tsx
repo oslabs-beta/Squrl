@@ -12,7 +12,7 @@ type props = {
 //passed down state/tableProps are passed in as arguments for our functional componenet 
 const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, changeDB }) => {
   return (
-    <div className="data-viz-inputs">
+    <div className="panel-inputs">
 
       <div className="headings-div">
         <h1>Database Analytics</h1>

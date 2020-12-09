@@ -25,7 +25,7 @@
 .data-preview-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(13, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   grid-column: 4 / -1;
   grid-row: 2 / -1;
   height: 100%;
@@ -59,11 +59,12 @@
   width: 400px;
 }
 
-.downloadbutt {
-  grid-column: 6;
+.download-btn {
+  grid-column: 5/ 9;
   grid-row: 12;
-}
-
-.download {
-margin-bottom: 35px;
+  margin-left: 3rem;
+  button{
+    width: 100%;
+  }
+  
 }

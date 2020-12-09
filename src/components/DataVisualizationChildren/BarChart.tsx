@@ -17,6 +17,7 @@ export class BarChart extends React.Component<props> {
     console.log(this.props.data)
     return (
       <div className='barchart-container'>
+        <h3>Index Usage by Table</h3>
         {
           Object.keys(this.props.data).length !== 0
             ?
@@ -55,12 +56,6 @@ export class BarChart extends React.Component<props> {
                       fontSize: 12,
                       stepSize: 1,
                       beginAtZero: true
-                    },
-                    scaleLabel: {
-                      display: true,
-                      labelString: "Percent Used",
-                      fontSize: 24,
-                      fontColor: '#E4E7EB'
                     },
                     gridLines: {
                       display: false,

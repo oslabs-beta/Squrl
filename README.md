@@ -6,14 +6,14 @@
 ## Data Generation 
 
 ### Create As Many Tables And Columns As You Want
-<p align='center'> 
+<!-- <p align='center'> 
 <img src='./src/extension/build/assets/timeTravel.gif' width=600 height=300/>
-</p>
+</p> -->
 
 ### Populate Your Tables With Meaningful Data
-<p align='center'> 
+<!-- <p align='center'> 
 <img src='./src/extension/build/assets/timeTravel.gif' width=600 height=300/>
-</p>
+</p> -->
 
 ### Export 100+ Million Queries To A SQL File
 gif

@@ -9,11 +9,9 @@ const fakerController_1 = require("../controllers/fakerController");
 const path_1 = __importDefault(require("path"));
 exports.router = express_1.default.Router();
 exports.router.post('/create', fakerController_1.fakerController.create, (req, res) => {
-    console.log('inside create');
     res.status(200).json({});
 });
 exports.router.get('/create', (req, res) => {
-    console.log("here i am");
     res.status(200).download(path_1.default.resolve(__dirname, "../../../Output.sql"));
 });
 //# sourceMappingURL=fakerRoute.js.map

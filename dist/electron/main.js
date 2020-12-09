@@ -34,8 +34,6 @@ function createWindow() {
     mainWindow = new electron_1.BrowserWindow({
         width: 1500,
         height: 1000,
-        // minHeight: 1000,
-        // minWidth: 1500,
         icon: "./assets/logo.png",
         webPreferences: {
             nodeIntegration: true,
@@ -61,7 +59,6 @@ function createWindow() {
     });
 }
 electron_1.ipcMain.on("download", (event, arg) => {
-    console.log(arg);
     electron_1.dialog.showSaveDialog({
         title: "Save file",
         properties: ['createDirectory']
@@ -69,7 +66,6 @@ electron_1.ipcMain.on("download", (event, arg) => {
         if (filePath_obj.canceled)
             console.log("canceled");
         else {
-            console.log('absolute path: ', filePath_obj.filePath);
             const dest = fs_1.default.createWriteStream(filePath_obj.filePath + '.sql');
             const request = http_1.default.get("http://localhost:30000/faker/create", arg, function (response) {
                 response.pipe(dest);

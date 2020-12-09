@@ -32,7 +32,6 @@ require("./Styles/main.scss");
 const SideNav_1 = __importDefault(require("./pageContainers/SideNav"));
 const TopNav_1 = __importDefault(require("./pageContainers/TopNav"));
 const Home_1 = __importDefault(require("./pageContainers/Home"));
-const About_1 = __importDefault(require("./pageContainers/About"));
 const DataVisualization_1 = __importDefault(require("./pageContainers/DataVisualization"));
 const DataGeneration_1 = __importDefault(require("./pageContainers/DataGeneration"));
 //div we will append REACT components too
@@ -109,8 +108,7 @@ const App = () => {
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/DataGeneration', component: () => (react_1.default.createElement(DataGeneration_1.default, { tableStateData: tableStateData, setTableStateData: setTableStateData, tableRow: tableRow, setTableRow: setTableRow })) }),
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/DataVisualization', component: () => {
                         return react_1.default.createElement(DataVisualization_1.default, null);
-                    } }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: '/About', component: About_1.default })))));
+                    } })))));
 };
 // renders react Parent component to html 
 react_dom_1.default.render(react_1.default.createElement(App, null), mainElement);

@@ -23,7 +23,7 @@ export class PieChart extends React.Component<props, state>{
       <div className='piechart-container'>
         <h3>Database Size by Table</h3>
         <Doughnut
-          height={100}
+          height={75}
           data={this.props.data}
           plugins={[ChartDataLabels]}
           options={{

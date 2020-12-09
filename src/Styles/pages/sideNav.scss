@@ -38,6 +38,19 @@ li {
     justify-content: center;
     height: 3.5rem;
     width: 3.5rem;
+    &:hover {
+      svg {
+        path{
+          stroke: $PrimaryWhite;
+        }
+        ellipse{
+          stroke: $PrimaryWhite;
+        }
+        polyline {
+          stroke: $PrimaryWhite;
+        }
+      }
+    }
     &:focus {
       border-left: 2px solid $SecondaryBrand;
       svg {

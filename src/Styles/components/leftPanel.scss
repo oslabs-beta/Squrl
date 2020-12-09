@@ -1,9 +1,7 @@
 @import '../abstracts/variables.scss';
 
-
-.data-viz-panel{
-  display: flex;
-  flex-flow: column nowrap;
+.panel-inputs{
+  height: 100%;
 }
 
 .headings-div {
@@ -66,17 +64,34 @@
   button {
     height: 2.5rem;
     width: 100%;
-    background-color: $Affirmation;
+    background-color: $PrimaryBrand;
     font-size: 1rem;
     font-weight: bold;
     font-family: $Content;
-    color: $PrimaryBlack;
+    color: $PrimaryWhite;
     padding: .5rem 2rem;
-    border: 1px solid $Affirmation;
+    border: 1px solid $PrimaryBlack;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 8px;
     &:hover {
       cursor: pointer;
+      background-color: $Affirmation;
+      border: 1px solid $PrimaryBlack;
+      color: $PrimaryBlack;
     }
+  }
+}
+
+.gen-headings{
+  margin: 1rem 2rem;
+  h1{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.panel-gen-btn{
+  button{
+    padding: .5rem .5rem;
   }
 }

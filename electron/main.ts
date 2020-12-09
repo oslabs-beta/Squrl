@@ -11,10 +11,13 @@ let mainWindow: any;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1500,
-    height: 1000,
-    // minHeight: 1000,
-    // minWidth: 1500,
+    width: 1368,
+    height: 798,
+    resizable: false,
+    // 'minWidth': 665,
+    // 'minHeight': 30,
+    // 'maxWidth': 1080,
+    // 'maxHeight': 1920,
     icon: "./assets/logo.png",
     webPreferences: {
       nodeIntegration: true,
@@ -26,7 +29,7 @@ function createWindow() {
   }
   if (process.env.NODE_ENV === "development") {
     mainWindow.loadURL(`http://localhost:3000`);
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
   } else {
     mainWindow.loadURL(
       url.format({

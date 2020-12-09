@@ -13,16 +13,18 @@ type props = {
 const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, changeDB }) => {
   return (
     <div className="data-viz-inputs">
+
       <div className="headings-div">
         <h1>Database Analytics</h1>
       </div>
+
       <div className="headings-div">
         <h3>Database Connection</h3>
       </div>
 
       <div className="input-div">
         <h6>Select Database</h6>
-        <select className='select'>
+        <select>
           <optgroup label="SQL">
             <option value="PostgreSQL">PostgreSQL</option>
             <option value="MySQL">MySQL</option>
@@ -38,7 +40,6 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
       <div className="input-div">
         <h6>Database URI</h6>
         <input
-          className='uri-input'
           type="text"
           value={input} onChange={updateDB}
         />

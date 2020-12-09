@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .top-nav-container {
-  position: fixed;
-  width: 100%;
-  height: 4.5rem;
-  background-color: $PrimaryBlack;
+  grid-area: h;
   display: flex;
+  height: 4.5rem;
+    background-color: $PrimaryBlack;
   border-bottom: 1px solid $LightGrey1;
 }
 
 .top-icons{
 display: flex;
-justify-content: space-between;
 width: 100%;
+justify-content: space-between;
 padding: 0rem 4.5rem;
 align-items: center;
 li {
   height: 2.5rem;
   img{
     height: 2.5rem;
+    padding-left: 5rem;
   }
   a{
+    padding-right: .5rem;
     svg {
       stroke: $PrimaryWhite;
       path {

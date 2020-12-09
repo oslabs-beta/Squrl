@@ -1,26 +1,75 @@
-// @import 'abstracts/variables.scss
+@import '../abstracts/variables.scss';
 
 .data-gen-container {
   display: grid;
-  grid-template-columns: minmax(150px, 25%) 1fr;
+  grid-template-columns: auto repeat(11, 1fr);
+  grid-template-rows: auto repeat(3, 1fr);
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
   height: 100%;
   width: 100%;
-  padding-left: 6rem;
+  background-color: $DarkGrey2;
 }
 
+
+
 .data-panel-container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  grid-column: 2/ 4;
+  grid-row: 2 / -1;
+  background-color:$DarkGrey1 ;
+  // display: grid;
+  // grid-template-columns: 1;
+  // grid-template-rows: repeat(12, 1fr);
+  border-right: 1px solid $LightGrey1;
 }
 
 .data-preview-container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-column: 4 / -1;
+  grid-row: 2 / -1;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.data-preview-scroll-y{
+  grid-column: 2 / 12;
+  grid-row: 2 / 12;
+  border: 3px solid $LightGrey1;
+  border-radius: 20px;
+  background-color: $LightGrey1;
+  overflow-y: auto;
+}
+
+
+//htable preview
+.tablePreview {
+  color: white;
+  // display: flex;
+  // width: 500px;'
+  text-shadow: 1px 1px $PrimaryBlack;
+  // height: 60px;
+  font-family: $Display;
   justify-content: center;
+  grid-column: 6;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 44px;
+  width: 400px;
+  // align-content: center;
+  // justify-content: center;
 }
 
 .downloadbutt {
-  margin-bottom: 40px;
+  grid-column: 6;
+  grid-row: 12;
+}
+
+.download {
+margin-bottom: 35px;
 }

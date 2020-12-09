@@ -12,7 +12,7 @@ export type inputObj = {
   category: string;
   subcategory: string;
   percent: string;
-  sampleData : string;
+  sampleData: string;
 }
 
 //The state type will be an array of inputObj that was defined above 
@@ -29,13 +29,13 @@ type props = {
   setTableRow: any;
 }
 //Container that will passdown state to TableGeneratorPanel and TableView Panel
-const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData,tableRow,setTableRow}) => {
+const DataGeneration: React.FC<props> = ({ tableStateData, setTableStateData, tableRow, setTableRow }) => {
   // console.log(tableStateData)
   //initialize the different states that will be used 
   // const [tableStateData, setTableStateData] = useState<tableType>({})
 
   const [tableName, setTableName] = useState<string>('');
-  
+
   //creates data table by checking if table name is input. If there is input, copies previous tableStateData and adds a new table. If no table name, do nothing. Resets table name to empty at end.
   const createTable = () => {
     if (tableName) {
@@ -53,7 +53,7 @@ const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData,table
         ipcRenderer.send('download')
       })
   }
-
+  console.log('datagenpage:', tableStateData)
   //Render react components TableGeneratorPanel and TableViewPanel with state passed down as props
   return (
     <div className="data-gen-container">
@@ -69,11 +69,16 @@ const DataGeneration: React.FC<props> = ({tableStateData,setTableStateData,table
         />
       </div>
       <div className='data-preview-container' >
-        <TableDisplay
-          tableStateData={tableStateData}
-          setTableStateData={setTableStateData}
-        />
-        <button className='panel-buttons downloadbutt' style={{}} onClick={createFile}><span>Download</span></button>
+        <h1 className="tablePreview">Table Preview</h1>
+        <div className="data-preview-scroll-y">
+          <TableDisplay
+            tableStateData={tableStateData}
+            setTableStateData={setTableStateData}
+          />
+        </div>
+        <div className="downloadbutt">
+        <button className='download panel-buttons' style={{}} onClick={createFile}><span>Download</span></button>
+        </div>
       </div>
     </div>
   )

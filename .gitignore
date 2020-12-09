@@ -26,7 +26,11 @@ build/Release
 .eslintcache
 
 # dist folder should be re-bundled
+<<<<<<< HEAD
 dist/
+=======
+/dist/
+>>>>>>> 54eab25ead3d9eb5018dfac51cbf36d74b838da6
 
 #SQL database
 output.sql

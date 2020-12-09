@@ -11,7 +11,7 @@ type props ={
 
 const Percentages: React.FC<props> = ({data, indexHit}) => {
   // const [percentages, setPercentages] = useState<number>(0)
-
+console.log('h', data)
 const createCacheRatioPercent = () => {
 let newCacheHit = (data[0]["ratio"] * 100).toFixed(2)
   return (
@@ -33,7 +33,7 @@ const createIndexHitRatio = () => {
 }
 
 return (
-  <div>
+  <div className="percentagesDiv">
       {data[0] === undefined ? null : createCacheRatioPercent() }
       {indexHit[0] === undefined ? null : createIndexHitRatio()}
   </div>  

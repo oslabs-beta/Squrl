@@ -30,7 +30,7 @@
     color: $PrimaryWhite;
     border: 1px solid $DarkGrey2;
     box-sizing: border-box;
-    border-radius: 1px;
+    border-radius: .25rem;
     &:hover{
       background-color: $Warning;
       border: 1px solid $Warning;
@@ -46,10 +46,10 @@
   color: $PrimaryWhite;
   border: 1px solid $DarkGrey2;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: .25rem;
   margin-left: 1rem;
   font-size: .75rem;
-  padding: 0rem .5rem;
+  padding: 0rem 1rem;
   &:hover {
     border: 1px solid $Warning;
     background-color: $Warning;

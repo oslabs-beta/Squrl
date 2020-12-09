@@ -70,13 +70,13 @@
     font-family: $Content;
     color: $PrimaryWhite;
     padding: .5rem 2rem;
-    border: 1px solid $PrimaryBrand;
+    border: 1px solid $PrimaryBlack;
     box-sizing: border-box;
     border-radius: 8px;
     &:hover {
       cursor: pointer;
       background-color: $Affirmation;
-      border: 1px solid $Affirmation;
+      border: 1px solid $PrimaryBlack;
       color: $PrimaryBlack;
     }
   }

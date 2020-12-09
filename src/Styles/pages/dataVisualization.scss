@@ -1,6 +1,6 @@
 @import '../abstracts/variables.scss';
 
-
+//-----structural layout of page----//
 .data-viz-container{
   display: grid;
   grid-template-columns: auto repeat(11, 1fr);
@@ -15,7 +15,8 @@
 .data-viz-panel {
   grid-column: 2/ 4;
   grid-row: 2 / -1;
-  background-color:$DarkGrey1 ;
+  background-color:$DarkGrey1;
+  border-right: 1px solid $LightGrey1;
 }
 
 .data-viz-dash-wrapper{
@@ -29,9 +30,80 @@
 }
 
 .data-viz-dash{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   grid-column: 2 / 12;
   grid-row: 2 / 12;
-  border: 3px solid $LightGrey1;
+  border: 1px solid $LightGrey1;
   border-radius: 20px;
   background-color: $LightGrey1;
+  padding: 2rem;
+}
+
+
+//----css to layout graphs appropiately within data-viz dash----//
+.barchart{
+  grid-column: 1 / -1;
+  grid-row: 9/ 13;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.barchart-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  h3{
+    font-family: $Display;
+    font-size: 1.5rem;
+  }
+}
+
+.piechart{
+  grid-column: 1 / -1;
+  grid-row: 1 / 7;
+}
+
+.piechart-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  h3{
+    font-family: $Display;
+    font-size: 1.5rem;
+  }
+}
+
+.percentages{
+  grid-column: 1 / -1;
+  grid-row: 7 / 9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+//found in /dataVizualizationChildren 
+.percentage-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  h2{
+    font-family: $Display;
+    font-size: 1.5rem;
+  }
+  .progress{
+    position: relative;
+  }
 }

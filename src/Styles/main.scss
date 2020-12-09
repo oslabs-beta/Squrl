@@ -1,14 +1,12 @@
 @import "abstracts/variables.scss";
-@import "components/exports.scss";
 @import "components/tableDisplay.scss";
 @import "components/tableGeneratorPanel.scss";
-@import "pages/about.scss";
+@import "./components/dataVisualizationPanel.scss";
 @import "pages/dataGeneration.scss";
 @import "pages/dataVisualization.scss";
 @import "pages/home.scss";
 @import "pages/sideNav.scss";
 @import "pages/topNav.scss";
-@import "components/percentages.scss";
 @import "./App.scss";
 @import "components/ProgressBar.scss";
 
@@ -19,6 +17,9 @@
   font-size: 16px;
   list-style: none;
   text-decoration: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 html body {

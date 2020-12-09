@@ -1,22 +1,17 @@
 //creates shell of desktop application in electron
-import { app, BrowserWindow, ipcMain ,dialog } from "electron";
+import { app, BrowserWindow, ipcMain, dialog } from "electron";
 import * as path from "path";
 import * as url from "url";
 import fs from 'fs'
 import http from 'http'
-import axios from 'axios'
 
 // let mainWindow: Electron.BrowserWindow | null;
 let mainWindow: any;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1368,
-    height: 798,
-    // 'minWidth': 665,
-    // 'minHeight': 30,
-    // 'maxWidth': 1080,
-    // 'maxHeight': 1920,
+    width: 1500,
+    height: 1000,
     icon: "./assets/logo.png",
     webPreferences: {
       nodeIntegration: true,
@@ -42,22 +37,20 @@ function createWindow() {
     mainWindow = null;
   });
 }
-  ipcMain.on("download", (event, arg) => {
-    console.log(arg)
+ipcMain.on("download", (event, arg) => {
   dialog.showSaveDialog({
     title: "Save file",
-    properties:['createDirectory']
-  }).then((filePath_obj:any)=>{
+    properties: ['createDirectory']
+  }).then((filePath_obj: any) => {
     if (filePath_obj.canceled)
-        console.log("canceled")
-    else{
-      console.log('absolute path: ', filePath_obj.filePath);
-      const dest : any = fs.createWriteStream(filePath_obj.filePath+'.sql');
-      const request = http.get("http://localhost:30000/faker/create",arg, function(response) {
-      response.pipe(dest);
+      console.log("canceled")
+    else {
+      const dest: any = fs.createWriteStream(filePath_obj.filePath + '.sql');
+      const request = http.get("http://localhost:30000/faker/create", arg, function (response) {
+        response.pipe(dest);
       });
     }
-  }).catch(err=>{
+  }).catch(err => {
     console.log(err)
   })
 });

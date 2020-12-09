@@ -1,171 +1,82 @@
 @import '../abstracts/variables.scss';
 
-// .table-gen-options {
-//   display: grid;
-//   height: 100%;
-//   width: 100%;
-//   background-color: #1a1d1e;
-//   background: red;
-//   margin-top: 64px;
-// }
 
+.data-viz-panel{
+  display: flex;
+  flex-flow: column nowrap;
+}
 
-// .sub-panels {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   justify-content: center;
-//   align-items: center;
+.headings-div {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2rem 2rem;
+  h1 {
+    font-family: $Display;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $PrimaryWhite;
+    padding: 3rem 0rem;
+  }
+  h3 {
+    font-family: $Display;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $PrimaryWhite;
+  }
 
-//   h1 {
-//     color: white;
-//     font-size: 3rem;
-//     // display: flex;
-//     // justify-content: center;
-//     padding: 1rem 0rem;
-//   }
-// }
+}
 
+//select and input div
+.input-div {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  width: 75%;
+  margin: 2rem;
+    h6{
+    font-family: $Content;
+    font-size: .75rem;
+    color: $LightGrey1;
+  }
+  select{
+    height: 2.5rem;
+    background-color: $PrimaryBlack;
+    border: 1px solid $LightGrey1;
+    box-sizing: border-box;
+    font-family: $Content;
+    color: $PrimaryWhite;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  input{
+    height: 2.5rem;
+    background-color: $PrimaryBlack;
+    border: 1px solid $LightGrey1;
+    box-sizing: border-box;
+    font-family: $Content;
+    color: $PrimaryWhite;
+  }
+}
 
-// .create-table{
-//   display: flex;
-//   flex-flow: column nowrap;
-//   height: 100%;
-//   width: 100%;
-//   background: $darkgray;
-
-//   h2{
-//     color: $white;
-//     font-size: 1.5rem;
-//   }
-
-//   button {
-//     margin-top: 2rem;
-//   }
-
-// }
-
-// .create-column{
-//   display: flex;
-//   flex-flow: column nowrap;
-//   height: 100%;
-//   width: 100%;
-//   padding: 3rem;
-//   background: $darkgray;
-//   justify-content: space-around;
-
-//   h2{
-//     color: $white;
-//     font-size: 1.5rem;
-//   }
-
-//   button {
-//     margin-top: 2rem;
-//   }
-
-//   select {
-//     width: 50%;
-//     font-size: 2rem;
-//     color: $gray;
-//     background-color: $black;
-//   }
-
-//   select:active, select:hover {
-//     outline-color: red
-//   }
-
-// }
-
-// //////////-----css for the table inputs //////////
-
-// .input-container {
-//   position: relative;
-//   padding: 2rem 0 0;
-//   width: 50%;
-// }
-
-// .create-table-input {
-//   font-family: inherit;
-//   width: 100%;
-//   border: 0;
-//   border-bottom: 2px solid $gray;
-//   outline: 0;
-//   font-size: 1.3rem;
-//   color: $white;
-//   padding: 1rem 0;
-//   background: transparent;
-//   transition: border-color 0.2s;
-
-//   &::placeholder {
-//     color: transparent;
-//   }
-
-//   &:placeholder-shown ~ .input-label {
-//     font-size: 1.3rem;
-//     cursor: text;
-//     top: 20px;
-//   }
-// }
-
-
-// .input-label {
-//   position: absolute;
-//   top: 0;
-//   display: block;
-//   transition: 0.2s;
-//   font-size: 1rem;
-//   color: $gray;
-// }
-
-// .create-table-input:focus {
-//   ~ .input-label {
-//     position: absolute;
-//     top: 0;
-//     display: block;
-//     transition: 0.2s;
-//     font-size: 1rem;
-//     color: #FFBF00;
-//     font-weight:700;    
-//   }
-//   padding-bottom: 6px;  
-//   font-weight: 700;
-//   border-width: 3px;
-//   border-image: linear-gradient(to right, #FFBF00, rgb(159, 125, 25));
-//   border-image-slice: 1;
-// }
-// /* reset input */
-// .create-table-input{
-//   &:required,&:invalid { box-shadow:none; }
-// }
-
-// /////////////////////left panel create button///////////@at-root
-// .panel-buttons {
-//   letter-spacing: .02rem;
-//   cursor: pointer;
-//   width: 75%;
-//   background: transparent;
-//   border: .1rem solid currentColor;
-//   padding: 1.5rem 2rem;
-//   color: #FFBF00;
-//   position: relative;
-//   transition: color .3s;
-  
-//   span {
-//     font-size: 2rem;
-//   }
-// }
-
-// .downloadbutt{
-//   width: 50%;
-// }
-
-// .panel-buttons:hover {
-//   background-color: #FFBF00;
-//   color: black;
-// }
-
-
-
-// .GennyTitle {
-//   height: 100px;
-//   width: 100%;
-// }
+//button css
+.panel-btn{
+  width: 75%;
+  margin: 2rem;
+  button {
+    height: 2.5rem;
+    width: 100%;
+    background-color: $Affirmation;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: $Content;
+    color: $PrimaryBlack;
+    padding: .5rem 2rem;
+    border: 1px solid $Affirmation;
+    box-sizing: border-box;
+    border-radius: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

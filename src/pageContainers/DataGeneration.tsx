@@ -30,7 +30,6 @@ type props = {
 }
 //Container that will passdown state to TableGeneratorPanel and TableView Panel
 const DataGeneration: React.FC<props> = ({ tableStateData, setTableStateData, tableRow, setTableRow }) => {
-  // console.log(tableStateData)
   //initialize the different states that will be used 
   // const [tableStateData, setTableStateData] = useState<tableType>({})
 
@@ -47,13 +46,11 @@ const DataGeneration: React.FC<props> = ({ tableStateData, setTableStateData, ta
   }
 
   const createFile = () => {
-    console.log(tableStateData, tableRow)
     axios.post('http://localhost:30000/faker/create', { tableData: tableStateData, tableRow })
       .then(() => {
         ipcRenderer.send('download')
       })
   }
-  console.log('datagenpage:', tableStateData)
   //Render react components TableGeneratorPanel and TableViewPanel with state passed down as props
   return (
     <div className="data-gen-container">

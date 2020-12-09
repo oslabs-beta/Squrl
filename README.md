@@ -2,17 +2,16 @@
 
 ## Data Generation 
 
-### 
 
 
 ## Contribute To Our Project
 
 ### Get SQURL on your machine
-Fork and clone the SQURL repo from OS Labs
-For major issues, reach out to the team to discuss your ideas!
-Pull requests are welcome
+<p>Fork and clone the SQURL repo from OS Labs</p>
+<p>For major issues, reach out to the team to discuss your ideas!</p>
+<p>Pull requests are welcome</p>
 
-### Before You do Anything
+### Before You Do Anything
 Install the dependencies
 ```js
 npm install

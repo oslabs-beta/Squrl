@@ -48,56 +48,56 @@ const App = () => {
     const [tableStateData, setTableStateData] = react_1.useState({});
     const [tableRow, setTableRow] = react_1.useState([]);
     // const [tableStateData, setTableStateData] = useState<tableType>(
-    //   {
-    //     'test1':
-    //       [
-    //         {
-    //           columnName: 'test',
-    //           category: 'test',
-    //           subcategory: 'test',
-    //           percent: 'test',
-    //           sampleData: 'test',
-    //         },
-    //         {
-    //           columnName: 'test2',
-    //           category: 'test2',
-    //           subcategory: 'test2',
-    //           percent: 'test2',
-    //           sampleData: 'test2',
-    //         },
-    //         {
-    //           columnName: 'test3',
-    //           category: 'test3',
-    //           subcategory: 'test3',
-    //           percent: 'test3',
-    //           sampleData: 'test3',
-    //         }
-    //       ],
-    //     'test2':
-    //       [
-    //         {
-    //           columnName: 'test',
-    //           category: 'test',
-    //           subcategory: 'test',
-    //           percent: 'test',
-    //           sampleData: 'test',
-    //         },
-    //         {
-    //           columnName: 'test2',
-    //           category: 'test2',
-    //           subcategory: 'test2',
-    //           percent: 'test2',
-    //           sampleData: 'test2',
-    //         },
-    //         {
-    //           columnName: 'test3',
-    //           category: 'test3',
-    //           subcategory: 'test3',
-    //           percent: 'test3',
-    //           sampleData: 'test3',
-    //         }
-    //       ]
-    //   }
+    // {
+    //   'test1':
+    //     [
+    //       {
+    //         columnName: 'test',
+    //         category: 'test',
+    //         subcategory: 'test',
+    //         percent: 'test',
+    //         sampleData: 'test',
+    //       },
+    //       {
+    //         columnName: 'test2',
+    //         category: 'test2',
+    //         subcategory: 'test2',
+    //         percent: 'test2',
+    //         sampleData: 'test2',
+    //       },
+    //       {
+    //         columnName: 'test3',
+    //         category: 'test3',
+    //         subcategory: 'test3',
+    //         percent: 'test3',
+    //         sampleData: 'test3',
+    //       }
+    //     ],
+    //   'test2':
+    //     [
+    //       {
+    //         columnName: 'test',
+    //         category: 'test',
+    //         subcategory: 'test',
+    //         percent: 'test',
+    //         sampleData: 'test',
+    //       },
+    //       {
+    //         columnName: 'test2',
+    //         category: 'test2',
+    //         subcategory: 'test2',
+    //         percent: 'test2',
+    //         sampleData: 'test2',
+    //       },
+    //       {
+    //         columnName: 'test3',
+    //         category: 'test3',
+    //         subcategory: 'test3',
+    //         percent: 'test3',
+    //         sampleData: 'test3',
+    //       }
+    //     ]
+    // }
     // )
     return (react_1.default.createElement("div", { className: "app-container" },
         react_1.default.createElement(react_router_dom_1.BrowserRouter, null,

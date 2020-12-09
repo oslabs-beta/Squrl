@@ -1,36 +1,27 @@
-// @import 'abstracts/variables.scss';
+@import '../abstracts/variables.scss';
+
 .tableHeader {
   margin-top: 30px;
-  // width: 100px;
   text-shadow: 1px 1px $PrimaryBlack;
   font-size: 40px;
   display: inline-flex;
   display: flex;
   justify-content: center;
-  // margin-right: 60px;
   margin-bottom: 4px;
   align-items: flex-end;
 }
+
 .deleteAllColumns {
   background-color: gray;
   color:white;
   width: 190px;
   height: 30px;
-  border-radius: 40px;
-  // display: inline-flex;
+  border-radius: 40px;;
   grid-row: 1;
   grid-column: 1;
-  // text-align: center;
-  &:hover {
-    background-color: $Warning;
-
+  background-color: $Warning;
   }
-}
 
-.container {
-  // border-right: solid 10px $LightGrey1;
-  // z-index: 3;
-}
 .deleteTableButton {
   background-color: gray;
   color:white;
@@ -40,7 +31,6 @@
   border-radius: 40px;
   grid-row: 1;
     grid-column: 1;
-    // align-content: flex-end;
       &:hover {
         background-color: $Warning;
 
@@ -49,10 +39,6 @@
 
 
   .buttonDiv {
-    // display: inline-flex;
-    // justify-content: center;
-    // flex-direction: column;
-    // align-content: flex-end;
     justify-content: center;
     grid-column: 2;
     align-items: flex-end;
@@ -73,9 +59,6 @@
 background: none;
 margin-left: 20px;
 font-size: 20px;
-// bottom: 0;
-// grid-row: 1;
-//     grid-column: 3;
 &:hover {
  color: $Warning;
  border: 0.5px solid $Warning;
@@ -84,7 +67,6 @@ font-size: 20px;
 
 
 .table-wrapper {
-  // border: 1px solid black;
   display: inline-flex;
   width: 240px;
 
@@ -98,7 +80,6 @@ font-size: 20px;
 }
 
 .tableContainer {
-  // border: 1px solid white;
   height: 160px;
   border-radius: 20px;
   grid-column: 1/5;
@@ -113,16 +94,8 @@ font-size: 20px;
   background-color:$PrimaryBrand;
   min-width: 240px;
   height: 50px;
-  // border-right: solid 2px white;
   z-index: 0;
-
-  // font-size: 20px;
 }
-
-// .container {
-//   border-right: 1px solid white;
-//   z-index: 3;
-// }
 
 #colTitle {
   font-size: 20px;
@@ -140,108 +113,3 @@ font-size: 20px;
 
   // justify-content: center;
 }
-
-
-
-// .columnth {
-//   color: green;
-//   // border: 1px solid white;
-// }
-
-// .columntr {
-//   color: green;
-// }
-
-// //also surrounds columns and rows
-// .container {
-//   background-color: grey;
-// }
-
-// //surrounds columns and rows
-// .tableContainer {
-//   border: 1px solid white;
-// }
-
-//surrounds all tables
-
-// table {
-//   align-self: center;
-//   font-family: "Arial";
-//   border-collapse: collapse;
-//   border: 1px solid #eee;
-//   border-bottom: 2px solid #00cccc;
-//   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05),
-//     0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
-//   tr {
-//     &:hover {
-//       background: #f4f4f4;
-
-//       td {
-//         color: #555;
-//       }
-//     }
-//   }
-//   th,
-//   td {
-//     color: #999;
-//     border: 1px solid #eee;
-//     padding: 12px 35px;
-//     border-collapse: collapse;
-//   }
-//   th {
-//     background: $PrimaryBlack;
-//     color: $PrimaryBrand;
-//     text-transform: uppercase;
-//     font-size: 12px;
-//     &.last {
-//       border-right: none;
-//     }
-//   }
-// }
-
-// .tableHeader {
-//   font-size: 32px;
-//   margin-top: 64px;
-// }
-
-// .tableContainer {
-//   display: flex;
-//   height: 100px;
-//   margin-top: 32px;
-//   width: 800px;
-//   overflow-y: hidden;
-//   overflow-x: scroll;
-// }
-
-// .table-view-container {
-//   display: flex;
-//   height: 100%;
-//   width: 100%;
-//   margin-top: 64px;
-//   justify-content: center;
-// }
-// //WHAT DOES THIS DO?
-// .table-wrapper {
-//   display: flex;
-// }
-
-// //surrounds entire table
-// .table {
-//   text-align: center;
-// }
-
-// //need to align button to right of cell
-// .deleteColumnButton {
-//   color: white;
-//   background-color: rgb(221, 79, 79);
-// }
-
-// .deleteAllColumns {
-//   color: white;
-//   background-color: rgb(221, 79, 79);
-// }
-
-// .deleteTableButton {
-//   color: white;
-//   background-color: rgb(221, 79, 79);
-// }

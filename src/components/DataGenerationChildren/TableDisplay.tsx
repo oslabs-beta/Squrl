@@ -1,7 +1,5 @@
 import React from 'react'
-import { inputObj, tableType } from '../../pageContainers/DataGeneration'
-const faker = require('faker')
-
+import { tableType } from '../../pageContainers/DataGeneration'
 
 type props = {
   tableStateData: tableType;
@@ -13,20 +11,17 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
   const deleteTable = (tableName: string) => {
     let newTableStateData = JSON.parse(JSON.stringify(tableStateData))
     delete newTableStateData[tableName]
-    setTableStateData({...newTableStateData})
+    setTableStateData({ ...newTableStateData })
   }
   const deleteColumn = (tableName: string, index: number) => {
-    // console.log({...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)]})
-   setTableStateData({...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)]})
-    
+    setTableStateData({ ...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)] })
+
   }
   const deleteAllColumns = (tableName: string) => {
-    // console.log({...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)]})
-   setTableStateData({...tableStateData, [tableName]: []})
-    
+    setTableStateData({ ...tableStateData, [tableName]: [] })
+
   }
   const wheel = (event: any) => {
-    // console.log(document.getElementById(event.target.id))
     event.currentTarget.scrollLeft += event.deltaY
     // document.getElementById(event.target.id).scrollLeft += event.deltaY;
   }
@@ -37,18 +32,18 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
         <>
           <h1 className="tableHeader" style={{ color: 'white' }}>{table}</h1>
           {/* deletes entire table from window */}
-          <button 
-            className='deleteTableButton' 
+          <button
+            className='deleteTableButton'
             onClick={() => deleteTable(table)}>
             Delete Table
           </button>
           {/* deletes all columns from specified table */}
-          <button 
-            className='deleteAllColumns' 
+          <button
+            className='deleteAllColumns'
             onClick={() => deleteAllColumns(table)}>
             Delete All Columns
           </button>
-          <div className="tableContainer"  style={{color: 'white' }}
+          <div className="tableContainer" style={{ color: 'white' }}
             onWheel={(e) => wheel(e)}
             key={table}>
             {
@@ -61,9 +56,9 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
                           <th className="columnth first last">
                             <span>{colInfo.columnName}</span>
                             {/* deletes individual column from table */}
-                            <button 
-                            className='deleteColumnButton'
-                            onClick={() => deleteColumn(table, index)}>
+                            <button
+                              className='deleteColumnButton'
+                              onClick={() => deleteColumn(table, index)}>
                               X
                             </button>
                           </th>
@@ -72,8 +67,8 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
                       <tbody>
                         <tr>
                           <td>
-                           {colInfo.sampleData}
-                         </td>
+                            {colInfo.sampleData}
+                          </td>
                         </tr>
                       </tbody>
                     </table>

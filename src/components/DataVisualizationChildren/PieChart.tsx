@@ -1,9 +1,6 @@
 import React from 'react';
-import Chart, { Pie, Doughnut } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-
-
-const bytes = require('bytes');
 
 type props = {
   data: {}
@@ -22,9 +19,6 @@ export class PieChart extends React.Component<props, state>{
 
   render() {
 
-
-    // console.log(colorArray)
-    // console.log(this.state.pieData)
     return (
       <div className='piechart-container'>
         <h3>Database Size by Table</h3>

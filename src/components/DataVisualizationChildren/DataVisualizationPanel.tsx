@@ -1,17 +1,13 @@
 //import useState hook to create state
-import React, { useState } from 'react';
-//require faker.js npm  to be used to generate dummy data
-const faker = require('faker')
+import React from 'react';
 
 //Import for TypeScript types 
-
 type props = {
   input: string;
   setInput: any;
   updateDB: any;
   changeDB: any;
 }
-
 
 //passed down state/tableProps are passed in as arguments for our functional componenet 
 const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, changeDB }) => {

@@ -1,6 +1,5 @@
 import React from 'react';
-import randomColor from 'randomcolor'; // import the script
-import { Bar, HorizontalBar } from 'react-chartjs-2'
+import { HorizontalBar } from 'react-chartjs-2'
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 
@@ -14,7 +13,6 @@ export class BarChart extends React.Component<props> {
   }
 
   render() {
-    console.log(this.props.data)
     return (
       <div className='barchart-container'>
         <h3>Index Usage by Table</h3>

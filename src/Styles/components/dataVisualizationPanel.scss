@@ -6,9 +6,6 @@
   flex-flow: column nowrap;
 }
 
-.data-viz-inputs {}
-
-
 .headings-div {
   display: flex;
   flex-flow: row wrap;
@@ -29,6 +26,7 @@
 
 }
 
+//select and input div
 .input-div {
   display: flex;
   justify-content: flex-start;
@@ -41,6 +39,7 @@
     color: $LightGrey1;
   }
   select{
+    height: 2.5rem;
     background-color: $PrimaryBlack;
     border: 1px solid $LightGrey1;
     box-sizing: border-box;
@@ -51,6 +50,7 @@
     }
   }
   input{
+    height: 2.5rem;
     background-color: $PrimaryBlack;
     border: 1px solid $LightGrey1;
     box-sizing: border-box;
@@ -59,10 +59,12 @@
   }
 }
 
+//button css
 .panel-btn{
   width: 75%;
   margin: 2rem;
   button {
+    height: 2.5rem;
     width: 100%;
     background-color: $Affirmation;
     font-size: 1rem;

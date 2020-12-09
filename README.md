@@ -23,7 +23,7 @@ gif
 ## Monitor KPI
 ### Connect To Your Database 
 <p align='center'> 
-<img src='./assets/testgifone.gif' width=600 height=300/>
+<img src='./assets/testgifone.gif' width=700 height=452/>
 </p>
 
 ### Review Your Analytics In Interactive Dashboard

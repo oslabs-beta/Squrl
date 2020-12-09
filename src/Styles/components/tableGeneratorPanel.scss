@@ -2,16 +2,20 @@
 
 .GennyTitle {
 font-size: 44px;
-margin-bottom: 150px;
-margin-top: 50px;
 color: $PrimaryWhite;
+grid-row: 5 / 9;
+font-family: $Content;
+
 }
 
+
+//sude bar
 .table-gen-options{
   grid-column: 2 / 4;
   grid-row: 2 / -1;
   background-color: $DarkGrey1;
   margin-left: 1rem;
+  font-family: $Content;
   color: $PrimaryWhite;
 }
 
@@ -19,7 +23,9 @@ color: $PrimaryWhite;
   margin-bottom: 100px;
 }
  
-
+.table-preview-container {
+  display: flex;
+}
 //input fields on generator
 .create-table-input{
   background-color: $PrimaryBlack;
@@ -34,13 +40,11 @@ color: $PrimaryWhite;
 //select table dropdown
 .categorySelector {
   background-color: $PrimaryBlack;
-  // color: $PrimaryWhite;
   border: 2px solid white;
-  // margin-top: 20px;
   width: 20rem;
   height: 60px;
-  color: $PrimaryWhite
-
+  color: $PrimaryWhite;
+  margin-bottom: 20px;
 }
 
 //catgegory and subcategory
@@ -59,24 +63,20 @@ color: $PrimaryWhite;
 .createTable { 
   color: $PrimaryWhite;
   font-size: 40px;
-  margin-bottom: 40px;
-  // border: 2px solid white;
-  margin-top: 50px;
+  // margin-bottom: 40px;
+  // margin-top: 50px;
 }
 
 
 //green create table, create column buttons
 .panel-buttons {
-  display: flex;
   justify-content: center;
   background-color: $Affirmation;
   height: 60px;
   width: 260px;
   margin-top: 35px;
-  // font-size: 20px;
   border-radius: 100px;
   border: 1px solid black;
-  // font-size: 40px;
 
 }
 
@@ -91,7 +91,6 @@ color: $PrimaryWhite;
 }
 
 .input-container {
-  // margin-top: 20px;
 }
 
 
@@ -100,10 +99,19 @@ color: $PrimaryWhite;
 }
 
 
+.downloadbutt {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 
 
-
-
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  font-family: $Display;
+}
 
 
 

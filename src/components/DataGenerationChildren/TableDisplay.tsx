@@ -33,6 +33,7 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
     for (const table in tableStateData) {
       arr.push(
         <>
+       <div className="buttonDiv">
           <h1 className="tableHeader" style={{ color: 'white' }}>{table}</h1>
           {/* deletes entire table from window */}
           <button 
@@ -46,6 +47,8 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
             onClick={() => deleteAllColumns(table)}>
             Delete All Columns
           </button>
+          </div>
+         
           <div className="tableContainer"  style={{color: 'white' }}
             onWheel={(e) => wheel(e)}
             key={table}>

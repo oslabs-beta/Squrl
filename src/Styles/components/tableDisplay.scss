@@ -1,59 +1,106 @@
 // @import 'abstracts/variables.scss';
 .tableHeader {
   margin-top: 30px;
-  width: 200px;
+  // width: 100px;
+  font-size: 40px;
   display: inline-flex;
+  display: flex;
+  margin-right: 60px;
+    align-items: flex-end;
 }
 .deleteAllColumns {
-  background-color: $Warning;
+  background-color: gray;
   color:white;
   width: 190px;
   height: 30px;
   border-radius: 40px;
   // display: inline-flex;
-  
+  grid-row: 1;
+  grid-column: 1;
+  // text-align: center;
+  &:hover {
+    background-color: $Warning;
+
+  }
 }
 
 .deleteTableButton {
-  background-color: $Warning;
+  background-color: gray;
   color:white;
+  margin-right: 10px;
   width: 140px;
   height: 30px;
   border-radius: 40px;
-}
+  grid-row: 1;
+    grid-column: 1;
+    // align-content: flex-end;
+      &:hover {
+        background-color: $Warning;
+
+      }
+  }
+
+
+  .buttonDiv {
+    display: flex;
+    align-content: flex-end;
+    grid-column: 1;
+    align-items: flex-end;
+    margin-bottom: 4px;
+  }
 
 .deleteColumnButton {
-  color: $Warning;
+  color: gray;
   font-weight: bold;
-  border: none;
+  border: 0.5px solid grey;
+  border-radius: 50px;
 background: none;
 margin-left: 20px;
 font-size: 20px;
+// bottom: 0;
+// grid-row: 1;
+//     grid-column: 3;
+&:hover {
+ color: $Warning;
+ border: 0.5px solid $Warning;
+}
 }
 
 
 .table-wrapper {
-  border: 1px solid black;
+  // border: 1px solid black;
   display: inline-flex;
   width: 240px;
+  // border: right solid 1px $LightGrey1;
   flex-direction: column;
 }
 
 .columntr {
   border: 1px solid red
+  
 }
 
 .tableContainer {
-  border: 1px solid white;
+  // border: 1px solid white;
   height: 160px;
   border-radius: 20px;
+  grid-column: 1/5;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  overflow-x: auto;
 }
 
 .columnth {
   background-color:$PrimaryBrand;
-  width: 240px;
+  min-width: 240px;
   height: 50px;
+
   // font-size: 20px;
+}
+
+.container {
+  // border-right: 1px solid white;
 }
 
 #colTitle {
@@ -62,7 +109,7 @@ font-size: 20px;
 .columntd {
   background-color: white;
   color: black;
-  width: 240px;
+  min-width: 240px;
   height: 50px;
   text-align: center;
   // justify-content: center;

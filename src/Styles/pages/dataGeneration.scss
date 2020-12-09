@@ -17,6 +17,9 @@
   grid-column: 2/ 4;
   grid-row: 2 / -1;
   background-color:$DarkGrey1 ;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .data-preview-container {
@@ -37,12 +40,30 @@
   border: 3px solid $LightGrey1;
   border-radius: 20px;
   background-color: $LightGrey1;
+  overflow-y: auto;
 }
 
+
+//htable preview
 .tablePreview {
   color: white;
-  display: flex;
+  // display: flex;
   // width: 500px;'
   // height: 60px;
+  font-family: $Content;
   justify-content: center;
+  grid-column: 6;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 44px;
+  width: 400px;
+  // align-content: center;
+  // justify-content: center;
+}
+
+.downloadbutt {
+  grid-column: 6;
+  grid-row: 12;
 }

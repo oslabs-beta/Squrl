@@ -116,8 +116,9 @@ var mainWindow;
 
 function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
-    width: 1920,
-    height: 1080,
+    width: 1665,
+    height: 937,
+    // resizable: false,
     // 'minHeight': 960,
     // 'minWidth': 540,
     // 'maxHeight': 1920,

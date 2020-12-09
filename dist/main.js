@@ -116,13 +116,10 @@ var mainWindow;
 
 function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
-    width: 1368,
-    height: 798,
-    resizable: false,
-    // 'minWidth': 665,
-    // 'minHeight': 30,
-    // 'maxWidth': 1080,
-    // 'maxHeight': 1920,
+    width: 1500,
+    height: 1000,
+    // minHeight: 1000,
+    // minWidth: 1500,
     icon: "./assets/logo.png",
     webPreferences: {
       nodeIntegration: true
@@ -134,7 +131,8 @@ function createWindow() {
   }
 
   if (true) {
-    mainWindow.loadURL("http://localhost:3000"); // mainWindow.webContents.openDevTools();
+    mainWindow.loadURL("http://localhost:3000");
+    mainWindow.webContents.openDevTools();
   } else {}
 
   mainWindow.on("closed", function () {

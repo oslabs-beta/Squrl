@@ -32,13 +32,10 @@ const http_1 = __importDefault(require("http"));
 let mainWindow;
 function createWindow() {
     mainWindow = new electron_1.BrowserWindow({
-        width: 1665,
-        height: 937,
-        // resizable: false,
-        // 'minHeight': 960,
-        // 'minWidth': 540,
-        // 'maxHeight': 1920,
-        // 'maxWidth': 1080,
+        width: 1500,
+        height: 1000,
+        // minHeight: 1000,
+        // minWidth: 1500,
         icon: "./assets/logo.png",
         webPreferences: {
             nodeIntegration: true,
@@ -50,7 +47,7 @@ function createWindow() {
     }
     if (process.env.NODE_ENV === "development") {
         mainWindow.loadURL(`http://localhost:3000`);
-        // mainWindow.webContents.openDevTools();
+        mainWindow.webContents.openDevTools();
     }
     else {
         mainWindow.loadURL(url.format({

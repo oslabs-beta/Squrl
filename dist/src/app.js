@@ -33,6 +33,7 @@ const SideNav_1 = __importDefault(require("./pageContainers/SideNav"));
 const TopNav_1 = __importDefault(require("./pageContainers/TopNav"));
 const Home_1 = __importDefault(require("./pageContainers/Home"));
 const About_1 = __importDefault(require("./pageContainers/About"));
+const Settings_1 = __importDefault(require("./pageContainers/Settings"));
 const DataVisualization_1 = __importDefault(require("./pageContainers/DataVisualization"));
 const DataGeneration_1 = __importDefault(require("./pageContainers/DataGeneration"));
 //div we will append REACT components too
@@ -46,57 +47,60 @@ corresponding menu tab is selected. SideNav is always displated since it
 is outside of the switch tag.
 */
 const App = () => {
-    // const [tableStateData, setTableStateData] = useState<tableType>({})
+    const [tableStateData, setTableStateData] = react_1.useState({});
     const [tableRow, setTableRow] = react_1.useState([]);
-    const [tableStateData, setTableStateData] = react_1.useState({
-        'test1': [
-            {
-                columnName: 'test',
-                category: 'test',
-                subcategory: 'test',
-                percent: 'test',
-                sampleData: 'test',
-            },
-            {
-                columnName: 'test2',
-                category: 'test2',
-                subcategory: 'test2',
-                percent: 'test2',
-                sampleData: 'test2',
-            },
-            {
-                columnName: 'test3',
-                category: 'test3',
-                subcategory: 'test3',
-                percent: 'test3',
-                sampleData: 'test3',
-            }
-        ],
-        'test2': [
-            {
-                columnName: 'test',
-                category: 'test',
-                subcategory: 'test',
-                percent: 'test',
-                sampleData: 'test',
-            },
-            {
-                columnName: 'test2',
-                category: 'test2',
-                subcategory: 'test2',
-                percent: 'test2',
-                sampleData: 'test2',
-            },
-            {
-                columnName: 'test3',
-                category: 'test3',
-                subcategory: 'test3',
-                percent: 'test3',
-                sampleData: 'test3',
-            }
-        ]
-    });
-    return (react_1.default.createElement("div", { className: "app-container" },
+    //     const [tableStateData, setTableStateData] = useState<tableType>(
+    //   {'test1':
+    //     [
+    //       {
+    //         columnName: 'test',
+    //         category: 'test',
+    //         subcategory: 'test',
+    //         percent: 'test',
+    //         sampleData : 'test',
+    //       },
+    //       {
+    //         columnName: 'test2',
+    //         category: 'test2',
+    //         subcategory: 'test2',
+    //         percent: 'test2',
+    //         sampleData : 'test2',
+    //       },
+    //       {
+    //         columnName: 'test3',
+    //         category: 'test3',
+    //         subcategory: 'test3',
+    //         percent: 'test3',
+    //         sampleData : 'test3',
+    //       }
+    //     ],
+    //     'test2':
+    //     [
+    //       {
+    //         columnName: 'test',
+    //         category: 'test',
+    //         subcategory: 'test',
+    //         percent: 'test',
+    //         sampleData : 'test',
+    //       },
+    //       {
+    //         columnName: 'test2',
+    //         category: 'test2',
+    //         subcategory: 'test2',
+    //         percent: 'test2',
+    //         sampleData : 'test2',
+    //       },
+    //       {
+    //         columnName: 'test3',
+    //         category: 'test3',
+    //         subcategory: 'test3',
+    //         percent: 'test3',
+    //         sampleData : 'test3',
+    //       }
+    //     ]
+    //   }
+    // )
+    return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
             react_1.default.createElement(TopNav_1.default, null),
             react_1.default.createElement(SideNav_1.default, null),
@@ -106,7 +110,8 @@ const App = () => {
                 react_1.default.createElement(react_router_dom_1.Route, { path: '/DataVisualization', component: () => {
                         return react_1.default.createElement(DataVisualization_1.default, null);
                     } }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: '/About', component: About_1.default })))));
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/About', component: About_1.default }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/Settings', component: Settings_1.default })))));
 };
 // renders react Parent component to html 
 react_dom_1.default.render(react_1.default.createElement(App, null), mainElement);

@@ -35,6 +35,7 @@
     "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
+    "identity-obj-proxy": "^3.0.0",
     "react-devtools-electron": "^4.7.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
@@ -106,6 +107,9 @@
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/__tests__/jest.config.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      ".+\\.(svg|png|jpg)$": "identity-obj-proxy"
+    }
   }
 }

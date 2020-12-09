@@ -116,13 +116,13 @@ var mainWindow;
 
 function createWindow() {
   mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
-    width: 1665,
-    height: 937,
-    // resizable: false,
-    // 'minHeight': 960,
-    // 'minWidth': 540,
-    // 'maxHeight': 1920,
+    width: 1368,
+    height: 798,
+    resizable: false,
+    // 'minWidth': 665,
+    // 'minHeight': 30,
     // 'maxWidth': 1080,
+    // 'maxHeight': 1920,
     icon: "./assets/logo.png",
     webPreferences: {
       nodeIntegration: true

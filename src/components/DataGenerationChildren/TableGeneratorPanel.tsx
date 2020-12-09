@@ -1,9 +1,9 @@
 //import useState hook to create state
 import React, { useState } from 'react';
+//custom alert plugin
 import swal from 'sweetalert'
 //require faker.js npm  to be used to generate dummy data
 const faker = require('faker')
-
 //Import for TypeScript types 
 import { tableType, inputObj } from '../../pageContainers/DataGeneration'
 
@@ -88,30 +88,34 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
       })
   }
 
+    //change stake for number of rows
   const inputRows = () => {
     setTableRow([...tableRow, row])
   }
   return (
     <div className="table-gen-options">
-      <div className="sub-panels">
+      {/* <div className="sub-panels"> */}
 
         <div className="create-table ">
-          <h1 className="GennyTitle">Dummy Data Generator</h1>
+          <h1 className="GennyTitle">Generator</h1>
 
-          <h2>Create a Table</h2>
+          <h2 className="createTable">Create a Table</h2>
 
           <div className="input-container">
+          <label className="input-label">Table Name</label>
+          <br></br>
             <input
               className='create-table-input'
               type="text"
-              placeholder='Table Name'
+              placeholder=''
               onChange={createTableName}
               value={tableName}
             />
-            <label className="input-label">Table Name</label>
           </div>
 
           <div className="input-container">
+          <label className="input-label">Number of Rows</label>
+          <br></br>
             <input
               className='create-table-input'
               type="number"
@@ -120,7 +124,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
               value={row === 0 ? '' : row}
             // value={row}
             />
-            <label className="input-label">Number of Rows</label>
           </div>
 
           <button
@@ -132,17 +135,16 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
             }>
             <span>Create Table</span>
           </button>
-
         </div>
-
-      </div>
-
-      <div className="sub-panels">
+      {/* </div> */}
+      {/* <div className="sub-panels"> */}
         <div className="create-column">
-          <h2>Create Columns</h2>
+          <h2 id="createTable" className="createTable">Create Columns</h2>
 
+          <label className="input-label">Select Table</label>
+          <br></br>
           <select className="categorySelector" name="" id="" onChange={selectTableName}>
-            <option style={{ width: '200px' }}>Select Table</option>
+            <option style={{ width: '200px' }}></option>
             {
               Object.keys(tableStateData).map((table_name, index) => {
                 return <option
@@ -155,24 +157,30 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           </select>
 
           <div className="input-container">
+          <label className="input-label">Column Name</label>
+          <br></br>
             <input
               className='create-table-input'
               type='text'
-              placeholder='Column Name'
+              placeholder=''
               name="columnName"
               value={columnState.columnName}
               onChange={(event) => updateColumn(event)}
             />
-            <label className="input-label">Column Name</label>
           </div>
-
-          <select
+            
+            <div>
+            <label className="input-label">Select Category</label>
+          {/* <select className="categorySelector" name="" id="" onChange={selectTableName}> */}
+            <br></br>
+          <select className="category"
             name='category'
             onChange={(event) => updateCategory(event)}>
             {Object.keys(faker.definitions).map((category, index) => {
               if (category === 'phone_number') {
                 category = 'phone'
                 return (
+                  // <option></option>
                   <option key={index} value={category}>
                     {category}
                   </option>
@@ -186,8 +194,12 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
                 )
             })}
           </select>
-
-          <select name='subcategory' onChange={(event) => updateColumn(event)}>
+            </div>
+          
+          <div>
+          <label className="input-label">Select Subcategory</label>
+          <br></br>
+          <select className="category" name='subcategory' onChange={(event) => updateColumn(event)}>
             {Object.keys(faker[columnState.category]).map((subcategory, index) => {
               return (
                 <option key={index} value={subcategory}>
@@ -196,15 +208,15 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
               )
             })}
           </select>
-
+          </div>
           <button
             className='panel-buttons'
             onClick={addColumn}>
-            <span>Add Column</span>
+            <span>Create Column</span>
           </button>
 
         </div>
-      </div>
+      {/* </div> */}
     </div >
   )
 }

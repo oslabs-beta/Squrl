@@ -1,4 +1,147 @@
 // @import 'abstracts/variables.scss';
+.tableHeader {
+  margin-top: 30px;
+  // width: 100px;
+  text-shadow: 1px 1px $PrimaryBlack;
+  font-size: 40px;
+  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  // margin-right: 60px;
+  margin-bottom: 4px;
+  align-items: flex-end;
+}
+.deleteAllColumns {
+  background-color: gray;
+  color:white;
+  width: 190px;
+  height: 30px;
+  border-radius: 40px;
+  // display: inline-flex;
+  grid-row: 1;
+  grid-column: 1;
+  // text-align: center;
+  &:hover {
+    background-color: $Warning;
+
+  }
+}
+
+.container {
+  // border-right: solid 10px $LightGrey1;
+  // z-index: 3;
+}
+.deleteTableButton {
+  background-color: gray;
+  color:white;
+  margin-right: 10px;
+  width: 140px;
+  height: 30px;
+  border-radius: 40px;
+  grid-row: 1;
+    grid-column: 1;
+    // align-content: flex-end;
+      &:hover {
+        background-color: $Warning;
+
+      }
+  }
+
+
+  .buttonDiv {
+    // display: inline-flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // align-content: flex-end;
+    justify-content: center;
+    grid-column: 2;
+    align-items: flex-end;
+    margin-bottom: 4px;
+  }
+
+.deletebuttondiv {
+  display: inline-flex;
+  justify-content: flex;
+}
+
+
+.deleteColumnButton {
+  color: gray;
+  font-weight: bold;
+  border: 0.5px solid grey;
+  border-radius: 50px;
+background: none;
+margin-left: 20px;
+font-size: 20px;
+// bottom: 0;
+// grid-row: 1;
+//     grid-column: 3;
+&:hover {
+ color: $Warning;
+ border: 0.5px solid $Warning;
+}
+}
+
+
+.table-wrapper {
+  // border: 1px solid black;
+  display: inline-flex;
+  width: 240px;
+
+  flex-direction: column;
+
+}
+
+.columntr {
+  border: 1px solid red
+  
+}
+
+.tableContainer {
+  // border: 1px solid white;
+  height: 160px;
+  border-radius: 20px;
+  grid-column: 1/5;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: auto;
+  overflow-x: auto;
+}
+
+.columnth {
+  background-color:$PrimaryBrand;
+  min-width: 240px;
+  height: 50px;
+  // border-right: solid 2px white;
+  z-index: 0;
+
+  // font-size: 20px;
+}
+
+// .container {
+//   border-right: 1px solid white;
+//   z-index: 3;
+// }
+
+#colTitle {
+  font-size: 20px;
+  font-family: $Content;
+  margin-left: 20px;
+}
+
+.columntd {
+  background-color: white;
+  color: black;
+  min-width: 240px;
+  height: 50px;
+  text-align: center;
+  font-family: $Content;
+
+  // justify-content: center;
+}
+
+
 
 // .columnth {
 //   color: green;

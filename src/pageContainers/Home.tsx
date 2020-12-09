@@ -1,4 +1,5 @@
 import React from 'react'
+// import LogoType from '../../assets/insidelogo.png'
 
 const Home: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-# About SQURL
 <p align='center'>
 <img src='./assets/banner.png' width=100%>
 </p>
@@ -45,6 +44,6 @@ npm run node
 <p>Seamus Ryan <a href='https://github.com/dsryan8197' target="_blank">  @github </a><a  href='https://www.linkedin.com/in/dseamusryan/' target="_blank">  @linkedin</a></p>
 
 ## Contact SQURL
-<a href='https://twitter.com/SqurlDB' target="_blank">Twitter </a> <p>|</p>
-<a href='https://www.linkedin.com/company/squrldb/' target="_blank">Linkedin </a> <p>|</p>
-<a href='https://www.squrldb.io' target="_blank">Website </a>
+<p><a href='https://twitter.com/SqurlDB' target="_blank">Twitter </a><p>|</p>
+<p><a href='https://www.linkedin.com/company/squrldb/' target="_blank">Linkedin </a><p>|</p>
+<a href='https://www.squrldb.io' target="_blank">Website </a></p>

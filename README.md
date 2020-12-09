@@ -1,14 +1,20 @@
 <p align='center'>
-<img src='./assets/banner.png' width=100%>
+<img src='./assets/squrlheader.png' width=100%>
 </p>
 
 # Features
 ## Data Generation 
 
 ### Create As Many Tables And Columns As You Want
-gif
+<p align='center'> 
+<img src='./src/extension/build/assets/timeTravel.gif' width=600 height=300/>
+</p>
+
 ### Populate Your Tables With Meaningful Data
-gif 
+<p align='center'> 
+<img src='./src/extension/build/assets/timeTravel.gif' width=600 height=300/>
+</p>
+
 ### Export 100+ Million Queries To A SQL File
 gif
 

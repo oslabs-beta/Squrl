@@ -1,11 +1,11 @@
 import React from 'react'
-import LogoType from '../../assets/blueSquirrel.png'
+// import LogoType from '../../assets/blueSquirrel.png'
 
 const Home: React.FC = () => {
   return (
     <div className="home-container">
       <div className="home-background-frame">
-        <img className="homeIcon" src={LogoType}></img>
+        {/* <img className="homeIcon" src={LogoType}></img> */}
         <div className="homeInfo">
          <p className="welcome">Welcome to SQURL!</p>
           <p className="introP">

@@ -1,6 +1,9 @@
-# Squrl
-<p>Check Out Our Features Below</p>
+# About SQURL
+<p align='center'>
+<img src='./assets/banner.png' width=100%>
+</p>
 
+# Features
 ## Data Generation 
 
 ### Create As Many Tables And Columns As You Want
@@ -36,12 +39,12 @@ npm run node
 ```
 
 ## Contributors
-<p>Trent Currie<a href='https://github.com/trentcurrie' target="_blank">@github </a><a  href='https://www.linkedin.com/in/trentdcurrie/' target="_blank">@linkedin</a></p>
-<p>Andy Heng<a href='https://github.com/a4heng' target="_blank">@github </a><a  href='https://www.linkedin.com/in/Andy-Heng/' target="_blank">@linkedin</a></p>
-<p>Carlos Pena<a href='https://github.com/capena91' target="_blank">@github </a><a  href='https://www.linkedin.com/in/carlospena91/' target="_blank">@linkedin</a></p>
+<p>Trent Currie<a href='https://github.com/trentcurrie' target="_blank">  @github </a><a  href='https://www.linkedin.com/in/trentdcurrie/' target="_blank">  @linkedin</a></p>
+<p>Andy Heng<a href='https://github.com/a4heng' target="_blank">  @github </a><a  href='https://www.linkedin.com/in/Andy-Heng/' target="_blank">  @linkedin</a></p>
+<p>Carlos Pena<a href='https://github.com/capena91' target="_blank">  @github </a><a  href='https://www.linkedin.com/in/carlospena91/' target="_blank">  @linkedin</a></p>
 <p>Seamus Ryan <a href='https://github.com/dsryan8197' target="_blank">  @github </a><a  href='https://www.linkedin.com/in/dseamusryan/' target="_blank">  @linkedin</a></p>
 
 ## Contact SQURL
-<a href='https://twitter.com/SqurlDB' target="_blank">Twitter </a>
-<a href='https://www.linkedin.com/company/squrldb/' target="_blank">Linkedin </a>
+<a href='https://twitter.com/SqurlDB' target="_blank">Twitter </a> <p>|</p>
+<a href='https://www.linkedin.com/company/squrldb/' target="_blank">Linkedin </a> <p>|</p>
 <a href='https://www.squrldb.io' target="_blank">Website </a>

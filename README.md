@@ -18,9 +18,14 @@
 ### Export 100+ Million Queries To A SQL File
 gif
 
+ no need to add .sql at end of filename *
+
 ## Monitor KPI
 ### Connect To Your Database 
-gif
+<p align='center'> 
+<img src='./assets/oneGif.gif' width=600 height=300/>
+</p>
+
 ### Review Your Analytics In Interactive Dashboard
 gif
 

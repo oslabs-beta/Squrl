@@ -18,10 +18,10 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
     setTableStateData({ ...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)] })
   }
   //delete all columns
-  const deleteAllColumns = (tableName: string) => {
-    setTableStateData({ ...tableStateData, [tableName]: [] })
+  // const deleteAllColumns = (tableName: string) => {
+  //   setTableStateData({ ...tableStateData, [tableName]: [] })
 
-  }
+  // }
   const wheel = (event: any) => {
     event.currentTarget.scrollLeft += event.deltaY
   }
@@ -31,22 +31,20 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
     for (const table in tableStateData) {
       arr.push(
         <>
-          <div className="buttonDiv">
-            <h1 className="tableHeader" style={{ color: 'white' }}>{table}</h1>
-            {/* deletes entire table from window */}
-            <div className="deletebuttondiv">
+          <div className="heading-div">
+            <h1>{table}</h1>
+            <div id='delete-btn-tb' className="panel-btn">
               <button
-                className='deleteTableButton'
                 onClick={() => deleteTable(table)}>
                 Delete Table
-          </button>
-              {/* deletes all columns from specified table */}
-              <button
-                className='deleteAllColumns'
-                onClick={() => deleteAllColumns(table)}>
-                Delete All Columns
-          </button>
+                </button>
             </div>
+            {/* <div id='delete-btn-all-cl' className="panel-btn delete-btn">
+                <button
+                  onClick={() => deleteAllColumns(table)}>
+                  Delete All Columns
+                </button>
+              </div> */}
 
           </div>
 
@@ -64,7 +62,7 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
                             <span id="colTitle">{colInfo.columnName}</span>
                             {/* deletes individual column from table */}
                             <button
-                              className='deleteColumnButton'
+                              className='delete-cl-btn'
                               onClick={() => deleteColumn(table, index)}>
                               X
                             </button>

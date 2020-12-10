@@ -11,7 +11,7 @@
     "react": "cross-env NODE_ENV=production webpack --config webpack.react.config.js --mode production",
     "electron": "cross-env NODE_ENV=production webpack --config webpack.electron.config.js --mode production",
     "build": "npm run react && npm run electron && electron .",
-    "electron:run" : "electron .",
+    "electron:run": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
@@ -109,7 +109,7 @@
     "productName": "SQURL",
     "directories": {
       "output": "build",
-      "buildResources" : "dist"
+      "buildResources": "dist"
     },
     "files": [
       "dist/**/*",
@@ -117,8 +117,10 @@
       "assets/**/*"
     ],
     "mac": {
-      "target" : ["dmg"],
-      "identity": null 
+      "target": [
+        "dmg"
+      ],
+      "identity": null
     },
     "dmg": {
       "iconSize": 100,

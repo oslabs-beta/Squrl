@@ -5,6 +5,7 @@ import * as path from "path";
 import * as url from "url";
 import fs from 'fs'
 import http from 'http'
+const server = require('../backend/server');
 // const { remote } = window.require('electron')
 // console.log('My path:', remote.app.getAppPath())
 

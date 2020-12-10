@@ -4,8 +4,6 @@ import TableDisplay from '../components/DataGenerationChildren/TableDisplay';
 import { ipcRenderer } from 'electron'
 import axios from 'axios'
 
-
-
 //DOES THIS NEED TO BE HERE?
 export type inputObj = {
   columnName: string;

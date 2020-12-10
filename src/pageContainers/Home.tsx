@@ -1,4 +1,5 @@
 import React from 'react'
+//squrl logo
 import LogoType from '../../assets/SQURL-Green.svg'
 
 const Home: React.FC = () => {
@@ -8,7 +9,6 @@ const Home: React.FC = () => {
         <div id="homeIcon">
         <img className="homeIcon" src={LogoType}></img>
         </div>
-        {/* <div className="homeInfo"> */}
         <div id="welcome">
         <p className="welcome">Welcome to SQURL!</p>
         </div>
@@ -29,7 +29,6 @@ const Home: React.FC = () => {
            or contribute to the open source project on <a className="aTag" href="https://github.com/oslabs-beta/Squrl">Github</a>
           </p>
         </div>
-        {/* </div> */}
       </div>
     </div>
   )

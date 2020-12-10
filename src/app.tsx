@@ -234,7 +234,8 @@ const App: React.FC = () => {
   )
   return (
     <div className="app-container">
-
+{/* react router allows for SPA to appear as multi page by rendering components when called */}
+{/* these paths are called on sidenav tab (icons) */}
       <Router>
         <TopNav />
         <SideNav />

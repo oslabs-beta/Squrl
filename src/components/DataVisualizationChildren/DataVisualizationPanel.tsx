@@ -21,7 +21,7 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
       <div className="headings-div">
         <h3>Database Connection</h3>
       </div>
-
+    {/* right now the app only works with postgres so maybe take this out */}
       <div className="input-div">
         <h6>Select Database</h6>
         <select>
@@ -44,7 +44,7 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
           value={input} onChange={updateDB}
         />
       </div>
-
+    {/* changeDB is being passed down from the parent. changeDB also invokes helper functions that run all the metrics */}
       <div className="panel-btn">
         <button onClick={() => { changeDB() }}>
           Connect

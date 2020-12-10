@@ -14,6 +14,7 @@ const DataVisualization: React.FC = () => {
   const [cacheData, setCacheData] = useState<{}[]>([])
   const [indexHitRate, setIndexHitRate] = useState<{}[]>([])
   const [indexUsage, setIndexUsage] = useState<{}>({})
+  const [chartRender, setChartRender] = useState<boolean>(false)
 
 
 
@@ -43,7 +44,8 @@ const DataVisualization: React.FC = () => {
             hoverBackgroundColor: [...colorArray]
           }],
         };
-        setSizeData(({ ...dataset }))
+        setSizeData(({ ...dataset }));
+        setChartRender(true);
       })
   }
 
@@ -108,13 +110,13 @@ const DataVisualization: React.FC = () => {
       <div className='data-viz-dash-wrapper'>
         <div className="data-viz-dash">
           <div className='piechart'>
-            <PieChart data={sizeData} />
+            <PieChart data={sizeData} chartRender={chartRender} />
           </div>
           <div className='percentages'>
             <Percentages indexHit={indexHitRate} data={cacheData} />
           </div>
           <div className='barchart'>
-            <BarChart data={indexUsage} />
+            <BarChart data={indexUsage} chartRender={chartRender} />
           </div>
         </div>
       </div>

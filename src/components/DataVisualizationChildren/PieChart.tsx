@@ -3,7 +3,8 @@ import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 type props = {
-  data: {}
+  data: {},
+  chartRender: boolean
 }
 
 interface state {
@@ -21,7 +22,7 @@ export class PieChart extends React.Component<props, state>{
 
     return (
       <div className='piechart-container'>
-        {Object.keys(this.props.data).length > 0 ? <h3>Database Size by Table</h3> : null}
+        {this.props.chartRender ? <h3>Database Size by Table</h3> : null}
         <Doughnut
           height={80}
           data={this.props.data}

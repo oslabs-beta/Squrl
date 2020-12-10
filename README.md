@@ -3,16 +3,15 @@
 </p>
 
 # Features
-## Data Generation 
-
-### Create As Many Tables And Columns As You Want & Download 100+ Million Rows Of Unique Data To A SQL File
-<p align='left'> 
-<img src='./assets/finalGif2.gif' width=560 height=361/>
-</p>
 
 ### Connect Your Database and Visualize Your KPI's In An Interactive Dashboard
 <p align='left'> 
 <img src='./assets/finalGif.gif' width=560 height=361/>
+</p>
+
+### Create As Many Tables And Columns As You Want & Download 100+ Million Rows of Unique Data To A SQL File
+<p align='left'> 
+<img src='./assets/finalGif2.gif' width=560 height=361/>
 </p>
 
 ## Contribute To Our Project

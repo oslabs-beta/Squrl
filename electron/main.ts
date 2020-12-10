@@ -30,7 +30,7 @@ function createWindow() {
   }
   if (process.env.NODE_ENV === "development") {
     mainWindow.loadURL(`http://localhost:3000`);
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
   } else {
     const value = url.format({
       pathname: path.resolve(app.getAppPath(), "dist/renderer/index.html"),

@@ -6,7 +6,7 @@
 
 ### Connect Your Database and Visualize Your KPI's In An Interactive Dashboard
 <p align='left'> 
-<img src='./assets/finalGif.gif' width=560 height=361/>
+<img src='./assets/gifv3.gif' width=560 height=361/>
 </p>
 
 ### Create As Many Tables And Columns As You Want 

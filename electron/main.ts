@@ -4,15 +4,7 @@ import * as path from "path";
 import * as url from "url";
 import fs from 'fs'
 import http from 'http'
-// import axios from "axios"
-// import express, {Request, Response} from "express";
-// import * as fakerRouter from "../backend/routes/fakerRoute"
-// import * as modelRouter from "../backend/routes/api"
-// import cors from 'cors';
-// const { remote } = window.require('electron')
-// console.log('My path:', remote.app.getAppPath())
 
-// let mainWindow: Electron.BrowserWindow | null;
 let mainWindow: any;
 
 function createWindow() {

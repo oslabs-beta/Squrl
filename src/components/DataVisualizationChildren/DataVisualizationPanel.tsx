@@ -47,7 +47,7 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
     {/* changeDB is being passed down from the parent. changeDB also invokes helper functions that run all the metrics */}
       <div className="panel-btn">
         <button onClick={() => { changeDB() }}>
-          Connect
+          Get Data
         </button>
       </div>
 

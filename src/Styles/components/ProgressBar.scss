@@ -1,3 +1,5 @@
+@import '../abstracts/variables.scss';
+
 .progress {
   background-color: #d8d8d8;
   border-radius: 20px;
@@ -10,7 +12,9 @@
 .progress-done {
   // background-color: green;
   border-radius: 20px;
-  color: white;
+  font-family: $Content;
+  font-weight: bold;
+  color: $DarkGrey1;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -34,9 +34,6 @@ const TopNav_1 = __importDefault(require("./pageContainers/TopNav"));
 const Home_1 = __importDefault(require("./pageContainers/Home"));
 const DataVisualization_1 = __importDefault(require("./pageContainers/DataVisualization"));
 const DataGeneration_1 = __importDefault(require("./pageContainers/DataGeneration"));
-//div we will append REACT components too
-const mainElement = document.createElement('div');
-document.body.appendChild(mainElement);
 const bytes = require('bytes');
 const randomColor = require('randomcolor');
 /*
@@ -239,5 +236,5 @@ const App = () => {
                     } })))));
 };
 // renders react Parent component to html 
-react_dom_1.default.render(react_1.default.createElement(App, null), mainElement);
+react_dom_1.default.render(react_1.default.createElement(App, null), document.getElementById("root"));
 //# sourceMappingURL=app.js.map

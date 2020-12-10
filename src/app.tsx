@@ -14,9 +14,6 @@ import DataVisualization from './pageContainers/DataVisualization';
 import DataGeneration from './pageContainers/DataGeneration';
 import Percentages from '../src/components/DataVisualizationChildren/Percentages'
 //div we will append REACT components too
-const mainElement = document.createElement('div');
-document.body.appendChild(mainElement);
-
 
 //DOES THIS NEED TO BE HERE?
 export type inputObj = {
@@ -261,4 +258,4 @@ const App: React.FC = () => {
 }
 
 // renders react Parent component to html 
-ReactDom.render(<App />, mainElement)
+ReactDom.render(<App />, document.getElementById("root"));

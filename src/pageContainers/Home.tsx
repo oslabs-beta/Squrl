@@ -1,25 +1,35 @@
 import React from 'react'
-import LogoType from '../../assets/blueSquirrel.png'
+import LogoType from '../../assets/SQURL-Green.svg'
 
 const Home: React.FC = () => {
   return (
     <div className="home-container">
       <div className="home-background-frame">
+        <div id="homeIcon">
         <img className="homeIcon" src={LogoType}></img>
-        <div className="homeInfo">
-         <p className="welcome">Welcome to SQURL!</p>
-          <p className="introP">
-            To get started, simply link your database URI to visualize
-            your KPI's in interactive and easy to understand GUI'<s></s></p>
-          <p className="introP">
-            No data? No Problem! Head over to our generator page and download 100+ Million unique SQL 
-          queries. As many tables as you want, as many columns as you want. With data that makes sense!
+        </div>
+        {/* <div className="homeInfo"> */}
+        <div id="welcome">
+        <p className="welcome">Welcome to SQURL!</p>
+        </div>
+        <div id="introP2">
+        <p className="introP">
+            Database Populated? Simply connect your database with your URI to visualize
+            its KPI's in the easy to understand dashboard</p>
+        </div>  
+        <div id="introP1">
+        <p className="introP">
+            No data? No Problem! Generate and download 50+ million unique rows of dummy data.
+            As many tables and columns as you want. With data that makes sense!
          </p>
-         <p className="introP">
-           Want to make SQURL better? Contact our team 
-          or contribute to our open source project @squrldb.io
+        </div>
+        <div id="introP3">
+        <p className="introP">
+           Want to make SQURL better? Contact the team at <a className="aTag" href="mailto:team@squrldb.io">team@squrldb.io</a>
+           or contribute to the open source project on <a className="aTag" href="https://github.com/oslabs-beta/Squrl">Github</a>
           </p>
         </div>
+        {/* </div> */}
       </div>
     </div>
   )

@@ -13,15 +13,10 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
     delete newTableStateData[tableName]
     setTableStateData({ ...newTableStateData })
   }
-  //delete column
+  //delete column in state
   const deleteColumn = (tableName: string, index: number) => {
     setTableStateData({ ...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)] })
   }
-  //delete all columns
-  // const deleteAllColumns = (tableName: string) => {
-  //   setTableStateData({ ...tableStateData, [tableName]: [] })
-
-  // }
   const wheel = (event: any) => {
     event.currentTarget.scrollLeft += event.deltaY
   }
@@ -39,15 +34,7 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
                 Delete Table
                 </button>
             </div>
-            {/* <div id='delete-btn-all-cl' className="panel-btn delete-btn">
-                <button
-                  onClick={() => deleteAllColumns(table)}>
-                  Delete All Columns
-                </button>
-              </div> */}
-
           </div>
-
           <div className="tableContainer" style={{ color: 'white' }}
             onWheel={(e) => wheel(e)}
             key={table}>

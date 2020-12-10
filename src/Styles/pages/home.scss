@@ -14,34 +14,53 @@
   border: 3px solid $LightGrey1;
   border-radius: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   justify-items: center;
   // align-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
-//logo
+
+// //logo
 .homeIcon {
-  height: 400px;
-grid-row: 4;
-grid-column: 2;
+  height: 100%;
+// grid-row: 4;
+// grid-column: 2;
 // margin-bottom: 50px;;
+
 }
+
+#homeIcon {
+  height: 100%;
+grid-row: 3 / 6;
+grid-column: 4 / 7;
+padding-top: 3rem;
+}
+
 
 //wekcome to squrl
 .welcome {
-  font-size: 50px;
-  margin-bottom: 50px;
+  font-size: 4rem;
+  font-weight: bold;
+  // margin-bottom: 50px;
+  color: $PrimaryWhite;
+  font-family: $Display;
+}
+
+#welcome {
+  grid-row: 2;
+  grid-column: 1/-1;
 }
 
 //three p tags in div
 .homeInfo {
-  grid-column: 1 / 4;
-grid-row: 7;
+  // grid-column: 1 / 4;
+// grid-row: 7;
 // margin-bottom: 20px;
 // text-shadow: 0.2px 0.2px black;
-width: 500px;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -53,6 +72,33 @@ width: 500px;
 }
 //each individual p tag
 .introP {
-  font-size: 20px;
-  margin-bottom: 30px;;
+  font-size: 2rem;
+  font-family: $Content;
+  padding: 1rem;
+  line-height: 3rem;
+  color: $PrimaryWhite;
+  text-align: center;
+}
+
+a#aTag {
+  color: $PrimaryWhite;  
+  text-decoration: none;
+}
+
+
+#introP1, #introP2, #introP3{
+  grid-row: 7 / -1;
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+ #introP2{
+  grid-column: 4 / 7;
+}
+
+ #introP3{
+  grid-column: 7 / -1;
 }

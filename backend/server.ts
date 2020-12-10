@@ -3,19 +3,19 @@ import * as fakerRouter from "./routes/fakerRoute"
 import * as modelRouter from "./routes/api"
 import cors from 'cors';
 
-const app = express();
+const exp = express();
 
-app.use(express.json());
+exp.use(express.json());
 
-app.use(cors());
+exp.use(cors());
 
-app.options('*', cors());
+exp.options('*', cors());
 
-app.get('/', (req: Request, res: Response) => {
+exp.get('/', (req: Request, res: Response) => {
   res.send('<div>Hello World!</div>');
 })
 
-app.use("/faker", fakerRouter.router)
-app.use("/api", modelRouter.router)
+exp.use("/faker", fakerRouter.router)
+exp.use("/api", modelRouter.router)
 
-app.listen(30000, () => console.log("listening on port 30000"))
+exp.listen(30000, () => console.log("listening on port 30000"))

@@ -1,11 +1,13 @@
 //creates shell of desktop application in electron
 import { app, BrowserWindow, ipcMain, dialog } from "electron";
-import express from "express"
 import * as path from "path";
 import * as url from "url";
 import fs from 'fs'
 import http from 'http'
-const server = require('../backend/server');
+import express, {Request, Response} from "express";
+import * as fakerRouter from "../backend/routes/fakerRoute"
+import * as modelRouter from "../backend/routes/api"
+import cors from 'cors';
 // const { remote } = window.require('electron')
 // console.log('My path:', remote.app.getAppPath())
 
@@ -40,6 +42,26 @@ function createWindow() {
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
+
+  //load server
+  const exp = express();
+
+  exp.use(express.json());
+
+  exp.use(cors());
+
+  exp.options('*', cors());
+
+  exp.get('/', (req: Request, res: Response) => {
+    res.send('<div>Welcome to Squrl!</div>');
+  })
+
+  exp.use("/faker", fakerRouter.router)
+  exp.use("/api", modelRouter.router)
+
+  exp.listen(30000, () => console.log("listening on port 30000"))
+
+
 }
 ipcMain.on("download", (event, arg) => {
   dialog.showSaveDialog({

@@ -26,7 +26,6 @@ export const modelController = {
     pool.query('select relname as table_name, pg_size_pretty(pg_total_relation_size(relname::regclass)) as full_size, pg_size_pretty(pg_relation_size(relname::regclass)) as table_size, pg_size_pretty(pg_total_relation_size(relname::regclass) - pg_relation_size(relname::regclass)) as index_size from pg_stat_user_tables order by pg_total_relation_size(relname::regclass)')
       .then((data: any) => {
         res.locals.data = data.rows
-
         next();
       })
   },

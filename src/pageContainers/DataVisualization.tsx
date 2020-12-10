@@ -64,7 +64,6 @@ const DataVisualization: React.FC = () => {
   const getIndexUsage = () => {
     axios.get('http://localhost:30000/api/indexUsage')
       .then((data: any) => {
-        // setIndexUsage(([...data.data]))
         let relName = []
         let indexUsed = []
         for (let i = 0; i < data.data.length; i++) {

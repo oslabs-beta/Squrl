@@ -1,7 +1,7 @@
 /*https://medium.com/better-programming/start-a-new-electron-app-with-react-and-typescript-cdd6d9997933 */
 
 const path = require('path');
-
+const webpack = require('webpack')
 module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -25,4 +25,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
   },
+  plugins: [
+    new webpack.IgnorePlugin(/^pg-native$/)
+  ],
 };

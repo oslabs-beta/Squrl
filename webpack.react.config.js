@@ -44,7 +44,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, '../dist/renderer'),
+    contentBase: path.join(__dirname, './dist/renderer'),
     historyApiFallback: true,
     compress: true,
     hot: true,
@@ -52,12 +52,13 @@ module.exports = {
     publicPath: '/',
   },
   output: {
-    path: path.resolve(__dirname, '../dist/renderer'),
-    filename: 'js/[name].js',
+    path: path.resolve(__dirname, './dist/renderer'),
+    filename: 'js/index.js',
     publicPath: './'
   },
   plugins: [
     new HtmlWebpackPlugin({
+      template: "./index.html",
       title: "Squrl"
     }),
     new FaviconsWebpackPlugin(path.resolve(__dirname, './assets/logo.png')),

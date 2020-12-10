@@ -17,88 +17,80 @@
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 1fr);
   justify-items: center;
-  // align-content: center;
   align-items: center;
   padding: 2rem;
 }
 
-
-// //logo
-.homeIcon {
-  height: 100%;
-// grid-row: 4;
-// grid-column: 2;
-// margin-bottom: 50px;;
-
-}
-
-#homeIcon {
-  height: 100%;
-grid-row: 3 / 6;
-grid-column: 4 / 7;
-padding-top: 3rem;
-}
-
-
-//wekcome to squrl
-.welcome {
-  font-size: 4rem;
-  font-weight: bold;
-  // margin-bottom: 50px;
-  color: $PrimaryWhite;
-  font-family: $Display;
-}
-
-#welcome {
-  grid-row: 2;
+.home-heading {
+  grid-row: 1;
   grid-column: 1/-1;
+  p {
+    font-size: 4rem;
+    font-weight: bold;
+    color: $PrimaryWhite;
+    font-family: $Display;
+  }
 }
 
-//three p tags in div
-.homeInfo {
-  // grid-column: 1 / 4;
-// grid-row: 7;
-// margin-bottom: 20px;
-// text-shadow: 0.2px 0.2px black;
-  width: 500px;
+#home-logo{
+  height: 100%;
+  grid-row: 3 / 6;
+  grid-column: 4 / 7;
+  img {
+    height: 100%;
+  }
+}
+.content-div{
   display: flex;
-  justify-content: center;
-  align-content: center;
-  // max-height: 100px;
-  text-align: center;
-  flex-direction: column;
-  color: white;
-  font-family: $Content;
-}
-//each individual p tag
-.introP {
-  font-size: 2rem;
-  font-family: $Content;
-  padding: 1rem;
-  line-height: 3rem;
-  color: $PrimaryWhite;
-  text-align: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-a#aTag {
-  color: $PrimaryWhite;  
-  text-decoration: none;
-}
-
-
-#introP1, #introP2, #introP3{
-  grid-row: 7 / -1;
-  grid-column: 1 / 4;
+.icon-div{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
+  width: 100%;
 }
 
- #introP2{
+
+.p-div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: $Content;
+  padding: 1rem;
+  color: $PrimaryWhite;
+  p{
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  a{
+    color: $PrimaryWhite;
+    text-decoration: underline
+  }
+  &:hover{
+    cursor: pointer;
+
+  }
+    
+}
+
+#content-placement-1{
+  grid-row: 7 / -1;
+  grid-column: 1 / 4;
+}
+
+#content-placement-2{
+  grid-row: 7 / -1;
   grid-column: 4 / 7;
 }
 
- #introP3{
+#content-placement-3{
+  grid-row: 7 / -1;
   grid-column: 7 / -1;
 }
+

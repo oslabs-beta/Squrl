@@ -33,6 +33,7 @@ export class BarChart extends React.Component<props> {
                   display: false,
                   labels: {
                     fontColor: '#f5f7fa',
+                    fontFamily: 'Montserrat'
                   }
                 },
                 scales: {
@@ -52,6 +53,7 @@ export class BarChart extends React.Component<props> {
                   xAxes: [{
                     ticks: {
                       fontColor: "#f5f7fa",
+                      fontFamily: 'Montserrat',
                       fontSize: 12,
                       stepSize: 1,
                       beginAtZero: true

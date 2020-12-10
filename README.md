@@ -7,28 +7,28 @@
 
 ### Create As Many Tables And Columns As You Want
 <p align='center'> 
-<img src='./assets/testgifthree.gif' width=700 height=452/>
+<img src='./assets/testgifthree.gif' width=420 height=271/>
 </p>
 
 ### Populate Your Tables With Meaningful Data
 <p align='center'> 
-<img src='./assets/testgiffour.gif' width=700 height=452/>
+<img src='./assets/testgiffour.gif' width=420 height=271/>
 </p>
 
 ### Export 100+ Million Queries To A SQL File
 <p align='center'> 
-<img src='./assets/testgiffive.gif' width=700 height=452/>
+<img src='./assets/testgiffive.gif' width=420 height=271/>
 </p>
 
 ## Monitor KPI
 ### Connect To Your Database 
 <p align='center'> 
-<img src='./assets/testgifone.gif' width=700 height=452/>
+<img src='./assets/testgifone.gif' width=420 height=271/>
 </p>
 
 ### Review Your Analytics In Interactive Dashboard
 <p align='center'> 
-<img src='./assets/testgiftwo.gif' width=700 height=452/>
+<img src='./assets/testgiftwo.gif' width=420 height=271/>
 </p>
 
 ## Contribute To Our Project

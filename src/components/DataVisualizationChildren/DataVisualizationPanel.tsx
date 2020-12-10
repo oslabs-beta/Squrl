@@ -47,7 +47,7 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
 
       <div className="panel-btn">
         <button onClick={() => { changeDB() }}>
-          Connect
+          Get Data
         </button>
       </div>
 

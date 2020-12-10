@@ -8,7 +8,6 @@ function isNumeric(value: string) {
 export const fakerController = {
 
   create: function (req: Request, res: Response, next: any) {
-    console.log("HEY THERE*******   ", __dirname)
     let writeStream = fs.createWriteStream('output.sql');
     const { tableData, tableRow } = req.body;
     const tableNameArray = Object.keys(tableData);

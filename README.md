@@ -20,8 +20,6 @@
 <img src='./assets/testgiffive.gif' width=700 height=452/>
 </p>
 
- no need to add .sql at end of filename *
-
 ## Monitor KPI
 ### Connect To Your Database 
 <p align='center'> 

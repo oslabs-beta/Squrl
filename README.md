@@ -9,7 +9,8 @@
 <img src='./assets/finalGif.gif' width=560 height=361/>
 </p>
 
-### Create As Many Tables And Columns As You Want & Download 100+ Million Rows of Unique Data To A SQL File
+### Create As Many Tables And Columns As You Want 
+### & Download 100+ Million Rows of Unique Data To A SQL File
 <p align='left'> 
 <img src='./assets/finalGif2.gif' width=560 height=361/>
 </p>

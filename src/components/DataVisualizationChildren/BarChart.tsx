@@ -4,7 +4,8 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 
 type props = {
-  data: {}
+  data: {},
+  chartRender: boolean
 }
 
 export class BarChart extends React.Component<props> {
@@ -15,7 +16,7 @@ export class BarChart extends React.Component<props> {
   render() {
     return (
       <div className='barchart-container'>
-        <h3>Index Usage by Table</h3>
+        {this.props.chartRender ? <h3>Index Usage by Table</h3> : null}
         {
           Object.keys(this.props.data).length !== 0
             ?
@@ -32,6 +33,7 @@ export class BarChart extends React.Component<props> {
                   display: false,
                   labels: {
                     fontColor: '#f5f7fa',
+                    fontFamily: 'Montserrat'
                   }
                 },
                 scales: {
@@ -51,6 +53,7 @@ export class BarChart extends React.Component<props> {
                   xAxes: [{
                     ticks: {
                       fontColor: "#f5f7fa",
+                      fontFamily: 'Montserrat',
                       fontSize: 12,
                       stepSize: 1,
                       beginAtZero: true

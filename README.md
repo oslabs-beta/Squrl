@@ -5,30 +5,14 @@
 # Features
 ## Data Generation 
 
-### Create As Many Tables And Columns As You Want
+### Create As Many Tables And Columns As You Want & Download 100+ Million Rows Of Unique Data To A SQL File
 <p align='left'> 
-<img src='./assets/testgifthree.gif' width=560 height=361/>
+<img src='./assets/finalGif2.gif' width=560 height=361/>
 </p>
 
-### Populate Your Tables With Meaningful Data
+### Connect Your Database and Visualize Your KPI's In An Interactive Dashboard
 <p align='left'> 
-<img src='./assets/testgiffour.gif' width=560 height=361/>
-</p>
-
-### Export 100+ Million Queries To A SQL File
-<p align='left'> 
-<img src='./assets/testgiffive.gif' width=560 height=361/>
-</p>
-
-## Monitor KPI
-### Connect To Your Database 
-<p align='left'> 
-<img src='./assets/testgifone.gif' width=560 height=361/>
-</p>
-
-### Review Your Analytics In Interactive Dashboard
-<p align='left'> 
-<img src='./assets/testgiftwo.gif' width=560 height=361/>
+<img src='./assets/finalGif.gif' width=560 height=361/>
 </p>
 
 ## Contribute To Our Project

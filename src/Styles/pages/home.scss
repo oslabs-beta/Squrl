@@ -13,4 +13,46 @@
   height: 100%;
   border: 3px solid $LightGrey1;
   border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  justify-items: center;
+  // align-content: center;
+  align-items: center;
+}
+
+//logo
+.homeIcon {
+  height: 400px;
+grid-row: 4;
+grid-column: 2;
+// margin-bottom: 50px;;
+}
+
+//wekcome to squrl
+.welcome {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+//three p tags in div
+.homeInfo {
+  grid-column: 1 / 4;
+grid-row: 7;
+// margin-bottom: 20px;
+// text-shadow: 0.2px 0.2px black;
+width: 500px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  // max-height: 100px;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-family: $Content;
+}
+//each individual p tag
+.introP {
+  font-size: 20px;
+  margin-bottom: 30px;;
 }

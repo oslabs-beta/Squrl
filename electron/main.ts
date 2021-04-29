@@ -9,8 +9,9 @@ let mainWindow: any;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1500,
-    height: 1000,
+    width: 1400,
+    height: 800,
+    resizable: false,
     icon: path.resolve(app.getAppPath(), "assets/logo.png"),
     webPreferences: {
       nodeIntegration: true,

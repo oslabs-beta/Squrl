@@ -27,12 +27,12 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
         <select>
           <optgroup label="SQL">
             <option value="PostgreSQL">PostgreSQL</option>
-            <option value="MySQL">MySQL</option>
-            <option value="SQLite">SQLite</option>
+            <option disabled value="MySQL">MySQL</option>
+            <option disabled value="SQLite">SQLite</option>
           </optgroup>
-          <optgroup label="NoSQL">
-            <option value="MongoDB">Mercedes</option>
-            <option value="Redis">Redis</option>
+          <optgroup disabled label="NoSQL">
+            <option disabled value="MongoDB">Mercedes</option>
+            <option disabled value="Redis">Redis</option>
           </optgroup>
         </select>
       </div>

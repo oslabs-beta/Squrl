@@ -96,7 +96,8 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
   const inputRows = () => {
     setTableRow([...tableRow, row])
   }
-
+  // let fakerDef = Object.keysfaker.definitions(faker.definitions)
+  let VersionIIObj = ["address", "animal", "commerce", "company", "database", "date", "finance", "music", "hacker", "internet", "lorem", "phone", "name", "system", "vehicle", "datatype", "git", "image", "time", "mersenne", "helpers"]
 
   return (
     <div className="panel-inputs">
@@ -179,7 +180,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           onChange={(event) => updateCategory(event)}>
             {/* faker api is massive object of dummy data. faker.definitions holds the title ie: address, name, city  */}
             {/* loop through those definitions and create drop down selections for them (changed phone number for bug) */}
-          {Object.keys(faker.definitions).map((category, index) => {
+          {VersionIIObj.map((category, index) => {
             if (category === 'phone_number') {
               category = 'phone'
               return (
@@ -219,6 +220,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           onClick={addColumn}>
           Create Column
         </button>
+        <button onClick={() => console.log(faker.definitions)}>s</button>
       </div>
 
     </div >

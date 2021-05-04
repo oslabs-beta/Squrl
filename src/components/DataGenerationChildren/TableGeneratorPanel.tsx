@@ -60,7 +60,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
     let { value, name } = event.target;
     setColumnState({ ...columnState, [name]: value })
   }
-
   //handles the subcategory 
   const updateCategory = (event: React.ChangeEvent<any>) => {
     let { value, name } = event.target;
@@ -97,7 +96,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
     setTableRow([...tableRow, row])
   }
   // let fakerDef = Object.keysfaker.definitions(faker.definitions)
-  let VersionIIObj = ["address", "animal", "commerce", "company", "database", "date", "finance", "music", "hacker", "internet", "lorem", "phone", "name", "system", "vehicle", "datatype", "git", "image", "time", "mersenne", "helpers"]
+  let VersionIIObj = ["address", "animal", "commerce", "company", "database", "finance", "music", "hacker", "internet", "lorem", "phone", "name", "system", "vehicle", "datatype", "git", "image", "time", "mersenne"]
 
   return (
     <div className="panel-inputs">
@@ -204,6 +203,7 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
         <h6>Select Subcategory</h6>
         <select name='subcategory' onChange={(event) => updateColumn(event)}>
           {Object.keys(faker[columnState.category]).map((subcategory, index) => {
+             if (subcategory !== "boolean" && subcategory !== "datetime")
             //faker[whatever category the user selects] -> gives us the subcategory -> passed into array
             //loops over array and creates option dropdown menu for subcategories
             return (
@@ -220,7 +220,6 @@ const TableGeneratorPanel: React.FC<tableProps> = ({ tableStateData, tableName, 
           onClick={addColumn}>
           Create Column
         </button>
-        <button onClick={() => console.log(faker.definitions)}>s</button>
       </div>
 
     </div >

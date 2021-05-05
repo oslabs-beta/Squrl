@@ -1,13 +1,14 @@
 import React from 'react'
 import { tableType } from '../../pageContainers/DataGeneration'
 
+//props for typescript
 type props = {
   tableStateData: tableType;
   setTableStateData: any;
 }
 
 const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) => {
-  //delete column
+  //delete table in state
   const deleteTable = (tableName: string) => {
     let newTableStateData = JSON.parse(JSON.stringify(tableStateData))
     delete newTableStateData[tableName]
@@ -17,12 +18,15 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
   const deleteColumn = (tableName: string, index: number) => {
     setTableStateData({ ...tableStateData, [tableName]: [...tableStateData[tableName].slice(0, index), ...tableStateData[tableName].slice(index + 1)] })
   }
+  //horizontal scrolling on table
   const wheel = (event: any) => {
     event.currentTarget.scrollLeft += event.deltaY
   }
 
+  //creates a new table for each table in state rendering a new table in html
   const createTable = (tableStateData: tableType) => {
     let arr = [];
+    //creates array of all the tables
     for (const table in tableStateData) {
       arr.push(
         <>
@@ -74,6 +78,8 @@ const TableDisplay: React.FC<props> = ({ tableStateData, setTableStateData }) =>
     }
     return arr
   }
+
+  //createTable creates as many tables as there are in state. 
   return (
     <div className="table-view-container">
       <div className="table">

@@ -21,18 +21,18 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
       <div className="headings-div">
         <h3>Database Connection</h3>
       </div>
-
+    {/* right now the app only works with postgres so maybe take this out */}
       <div className="input-div">
         <h6>Select Database</h6>
         <select>
           <optgroup label="SQL">
             <option value="PostgreSQL">PostgreSQL</option>
-            <option value="MySQL">MySQL</option>
-            <option value="SQLite">SQLite</option>
+            <option disabled value="MySQL">MySQL</option>
+            <option disabled value="SQLite">SQLite</option>
           </optgroup>
-          <optgroup label="NoSQL">
-            <option value="MongoDB">Mercedes</option>
-            <option value="Redis">Redis</option>
+          <optgroup disabled label="NoSQL">
+            <option disabled value="MongoDB">Mercedes</option>
+            <option disabled value="Redis">Redis</option>
           </optgroup>
         </select>
       </div>
@@ -44,7 +44,7 @@ const DataVisualizationPanel: React.FC<props> = ({ input, setInput, updateDB, ch
           value={input} onChange={updateDB}
         />
       </div>
-
+    {/* changeDB is being passed down from the parent. changeDB also invokes helper functions that run all the metrics */}
       <div className="panel-btn">
         <button onClick={() => { changeDB() }}>
           Get Data

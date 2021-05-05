@@ -9,8 +9,9 @@ let mainWindow: any;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1500,
-    height: 1000,
+    width: 1400,
+    height: 800,
+    resizable: false,
     icon: path.resolve(app.getAppPath(), "assets/logo.png"),
     webPreferences: {
       nodeIntegration: true,
@@ -22,7 +23,7 @@ function createWindow() {
   }
   if (process.env.NODE_ENV === "development") {
     mainWindow.loadURL(`http://localhost:3000`);
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
   } else {
     const value = url.format({
       pathname: path.resolve(app.getAppPath(), "dist/renderer/index.html"),

@@ -7,6 +7,7 @@ const SideNav: React.FC = () => {
     <div className='side-nav-container'>
       <nav className='side-nav-bar'>
         <ul className='nav-tab-items'>
+          {/* loops over side nav object and creates li element for each object */}
           {SideNavTabs.map((tab, index) => (
             <li key={index} title={tab.title}>
               <Link to={tab.path}>

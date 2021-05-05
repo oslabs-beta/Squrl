@@ -1,6 +1,6 @@
 import React from "react";
-
-//array that holds the icons in sidebar
+//array that holds the icons in sidebar. these are grabbed by sidenav tsx to create icons in li elements
+// the path is for react router to render different divs in SPA
 export const SideNavTabs = [
   {
     title: "Home",

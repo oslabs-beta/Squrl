@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import PieChart from '../components/DataVisualizationChildren/PieChart'
 import DataVisualizationPanel from '../components/DataVisualizationChildren/DataVisualizationPanel'
+//generates random colors that go well together
 import randomColor from 'randomcolor';
 import axios from 'axios'
+//converts all data sizes to bytes
 const bytes = require('bytes');
 import Percentages from '../components/DataVisualizationChildren/Percentages'
 import BarChart from '../components/DataVisualizationChildren/BarChart'
@@ -17,7 +19,7 @@ const DataVisualization: React.FC = () => {
   const [chartRender, setChartRender] = useState<boolean>(false)
 
 
-
+//gets invoked when you invoke changeDB and it gets data for pie chart
   const clicked = () => {
     axios.get('http://localhost:30000/api')
       .then((data: any) => {
@@ -49,6 +51,9 @@ const DataVisualization: React.FC = () => {
       })
   }
 
+// next three functions get invoked after ChangeDB function 
+  //next two functions  do fetch requests that have queries 
+  //that return the correct object from pg stats
   const getCache = () => {
     axios.get('http://localhost:30000/api/cache')
       .then((data: any) => {
@@ -63,6 +68,8 @@ const DataVisualization: React.FC = () => {
       })
   }
 
+  //does fetch with a query to get index usage and then creates object that matches
+  //the object that bar chart needs to run
   const getIndexUsage = () => {
     axios.get('http://localhost:30000/api/indexUsage')
       .then((data: any) => {
@@ -83,7 +90,7 @@ const DataVisualization: React.FC = () => {
       })
   }
 
-
+//this function gets invoked on connect to db button. does fetch request for the database but also invokes helper functions
   const changeDB = () => {
     axios.post('http://localhost:30000/api', { input })
       .then((data: any) => {
@@ -93,6 +100,8 @@ const DataVisualization: React.FC = () => {
         getIndexUsage();
       })
   }
+  //updates the input field for you to connect to db. doesnt
+  // this do the same as changeDB?. i dont think this is being used
   const updateDB = (e: any) => {
     setInput(e.target.value)
   }

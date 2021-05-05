@@ -1,4 +1,5 @@
 import React from 'react';
+//native to chart.js
 import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
@@ -10,6 +11,7 @@ type props = {
 interface state {
   pieData: {}
 }
+
 export class PieChart extends React.Component<props, state>{
   constructor(props: props) {
     super(props)

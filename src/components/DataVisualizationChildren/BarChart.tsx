@@ -1,13 +1,17 @@
 import React from 'react';
+
+//chart.js import
 import { HorizontalBar } from 'react-chartjs-2'
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-
+//typescript
 type props = {
   data: {},
   chartRender: boolean
 }
 
+
+//this component renders the bar chart at bottom of data visualization page
 export class BarChart extends React.Component<props> {
   constructor(props: props) {
     super(props)

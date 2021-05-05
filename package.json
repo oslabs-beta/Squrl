@@ -89,7 +89,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "express": "^4.17.1",
-    "faker": "^5.1.0",
+    "faker": "^5.5.3",
     "file-saver": "^2.0.5",
     "file-url": "^3.0.0",
     "http": "0.0.1-security",

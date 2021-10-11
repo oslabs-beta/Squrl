@@ -3,7 +3,7 @@
 </p>
 
 ### Download
-<a href="https://github.com/dsryan8197/SqurlApp/blob/main/SQURL-1.0.0copy.dmg" download>Download Squrl</a>
+<a href="https://github.com/dsryan8197/SqurlApp/blob/main/SQURL-1.0.0copy.dmg" download>Download Squrl for MacOS</a>
 
 # Features
 

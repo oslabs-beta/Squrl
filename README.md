@@ -1,6 +1,8 @@
 <p align='center'>
 <img src='./assets/squrlheader.png' width=100%>
 </p>
+# Download 
+<a href="https://github.com/dsryan8197/SqurlApp/blob/main/SQURL-1.0.0copy.dmg" download>Download Squrl</a>
 
 # Features
 
